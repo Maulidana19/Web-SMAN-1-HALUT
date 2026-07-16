@@ -138,16 +138,16 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateToAbout, onNavigateToTeach
 
               {/* Social Media Links */}
               <div className="flex gap-2 sm:gap-3 w-full sm:w-auto justify-center sm:justify-start">
-                <a href="#" aria-label="Instagram" className="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-500 hover:bg-pink-50 hover:text-pink-600 hover:border-pink-200 transition-all shadow-sm hover:shadow-md hover:-translate-y-1">
+                <a href="https://www.instagram.com/osissman1halut?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-500 hover:bg-pink-50 hover:text-pink-600 hover:border-pink-200 transition-all shadow-sm hover:shadow-md hover:-translate-y-1">
                   <Instagram size={18} />
                 </a>
-                <a href="#" aria-label="Facebook" className="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-500 hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200 transition-all shadow-sm hover:shadow-md hover:-translate-y-1">
+                <a href="https://www.facebook.com/osis.s.halut" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-500 hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200 transition-all shadow-sm hover:shadow-md hover:-translate-y-1">
                   <Facebook size={18} />
                 </a>
-                <a href="#" aria-label="YouTube" className="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-500 hover:bg-red-50 hover:text-red-600 hover:border-red-200 transition-all shadow-sm hover:shadow-md hover:-translate-y-1">
+                <a href="https://youtube.com/@osissmansahalut6442?si=ZMusjWKn2AFE1E6n" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-500 hover:bg-red-50 hover:text-red-600 hover:border-red-200 transition-all shadow-sm hover:shadow-md hover:-translate-y-1">
                   <Youtube size={18} />
                 </a>
-                <a href="#contact-section" aria-label="WhatsApp / Chat" className="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-500 hover:bg-green-50 hover:text-green-600 hover:border-green-200 transition-all shadow-sm hover:shadow-md hover:-translate-y-1">
+                <a href="https://www.whatsapp.com/channel/0029VatILbOBA1esTd3ce63h?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGn82g1FTiIuLj4q0_9FvpWswbAvk4wfYx5K8DBSksC_HSGGWGwDCNE_vUQUmA_aem_gGA5kYCQNITa8n6he-C0Jw" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp / Chat" className="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-500 hover:bg-green-50 hover:text-green-600 hover:border-green-200 transition-all shadow-sm hover:shadow-md hover:-translate-y-1">
                   <MessageCircle size={18} />
                 </a>
               </div>
