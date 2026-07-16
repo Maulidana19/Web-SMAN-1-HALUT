@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
@@ -8,8 +8,20 @@ import { Achievements } from './components/Achievements';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 import { NewsSection } from './components/NewsSection';
+
 export default function App() {
   const [activeSection, setActiveSection] = useState<string>('home');
+
+  useEffect(() => {
+    const sectionTitles: Record<string, string> = {
+      home: 'Beranda',
+      about: 'Tentang Kami',
+      teachers: 'Guru & Tendik',
+      achievements: 'Prestasi',
+      contact: 'Kontak',
+    };
+    document.title = sectionTitles[activeSection] || 'Beranda';
+  }, [activeSection]);
 
   // Renders the component matching the active view/section
   const renderContent = () => {
