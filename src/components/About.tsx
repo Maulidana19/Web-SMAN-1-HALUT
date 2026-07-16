@@ -53,7 +53,7 @@ export const About: React.FC = () => {
         </div>
 
         {/* Vision & Mission Row */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start mb-24">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start mb-24">
 
           {/* Vision card */}
           <motion.div
@@ -62,16 +62,16 @@ export const About: React.FC = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-5 bg-gradient-to-br from-blue-600 to-blue-800 text-white p-8 sm:p-10 rounded-2xl shadow-xl shadow-blue-900/10 relative overflow-hidden"
+            className="lg:col-span-5 bg-gradient-to-br from-blue-600 to-blue-800 text-white p-6 sm:p-10 rounded-2xl shadow-xl shadow-blue-900/10 relative overflow-hidden"
           >
             {/* Background pattern */}
             <div className="absolute -right-10 -bottom-10 w-40 h-40 bg-blue-500/20 rounded-full" />
             <div className="absolute top-10 right-10 w-20 h-20 bg-white/5 rounded-full" />
 
-            <h3 className="text-xl sm:text-2xl font-bold mb-6 flex items-center gap-2 border-b border-white/20 pb-4 font-display">
+            <h3 className="text-lg sm:text-2xl font-bold mb-4 sm:mb-6 flex items-center gap-2 border-b border-white/20 pb-3 sm:pb-4 font-display">
               <span>Visi Sekolah</span>
             </h3>
-            <p className="text-lg sm:text-xl font-medium leading-relaxed italic">
+            <p className="text-base sm:text-xl font-medium leading-snug sm:leading-relaxed italic">
               "{SCHOOL_INFO.vision}"
             </p>
           </motion.div>
@@ -85,16 +85,16 @@ export const About: React.FC = () => {
             transition={{ duration: 0.6 }}
             className="lg:col-span-7"
           >
-            <h3 className="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-2 font-display">
+            <h3 className="text-xl sm:text-2xl font-bold text-slate-900 mb-4 sm:mb-6 flex items-center gap-2 font-display">
               <span className="text-blue-600">Misi Sekolah</span>
             </h3>
-            <div className="space-y-4">
+            <div className="space-y-2.5 sm:space-y-4">
               {SCHOOL_INFO.missions.map((mission, index) => (
-                <div key={index} className="flex gap-3.5 items-start bg-slate-50 p-4 rounded-xl border border-slate-100 hover:border-blue-200 hover:bg-blue-50/20 transition-all duration-200">
-                  <div className="mt-0.5 text-blue-600 flex-shrink-0">
-                    <CheckCircle2 size={20} className="stroke-2" />
+                <div key={index} className="flex gap-2.5 sm:gap-3.5 items-start bg-slate-50 p-3 sm:p-4 rounded-lg sm:rounded-xl border border-slate-100 hover:border-blue-200 hover:bg-blue-50/20 transition-all duration-200">
+                  <div className="mt-0.5 sm:mt-0.5 text-blue-600 flex-shrink-0">
+                    <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 stroke-2" />
                   </div>
-                  <span className="text-slate-600 font-medium text-sm sm:text-base leading-relaxed">
+                  <span className="text-slate-600 font-medium text-[13px] sm:text-base leading-snug sm:leading-relaxed">
                     {mission}
                   </span>
                 </div>
@@ -139,9 +139,11 @@ export const About: React.FC = () => {
             <h3 className="text-xl sm:text-2xl font-extrabold text-slate-900 mb-4 font-display">
               Sambutan Kepala Sekolah
             </h3>
-            <p className="text-slate-600 text-base sm:text-lg leading-relaxed italic mb-4">
-              {SCHOOL_INFO.principal.message}
-            </p>
+            <div className="text-slate-600 text-base sm:text-lg leading-relaxed italic mb-4 space-y-4 text-justify">
+              {SCHOOL_INFO.principal.message.split('\n\n').map((paragraph, idx) => (
+                <p key={idx}>{paragraph}</p>
+              ))}
+            </div>
             <span className="text-3xl text-blue-300 font-serif leading-none h-3 text-right select-none -mt-2">”</span>
           </div>
 
@@ -153,7 +155,7 @@ export const About: React.FC = () => {
             <h3 className="text-2xl font-bold text-slate-900 font-display">Jajaran Wakil Kepala Sekolah</h3>
             <p className="text-slate-500 text-sm sm:text-base mt-2">Tim pimpinan yang berdedikasi mendukung kelancaran operasional dan akademik sekolah.</p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-8">
             {[1, 2, 3, 4].map((idx) => (
               <motion.div
                 key={idx}
@@ -161,19 +163,19 @@ export const About: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0, transition: { duration: 0.5, delay: idx * 0.1 } }}
                 whileHover={{ y: -8, scale: 1.02, transition: { type: "spring", stiffness: 400, damping: 25 } }}
                 viewport={{ once: true, margin: "-50px" }}
-                className="bg-white border border-slate-200 rounded-2xl p-5 shadow-md hover:shadow-2xl hover:border-blue-300 transition-colors transition-shadow duration-300 group text-center relative overflow-hidden"
+                className="bg-white border border-slate-200 rounded-2xl p-3 sm:p-5 shadow-md hover:shadow-2xl hover:border-blue-300 transition-colors transition-shadow duration-300 group text-center relative overflow-hidden"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-blue-50/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-                <div className="relative z-10 w-full aspect-[3/4] bg-slate-50 rounded-xl overflow-hidden mb-5 border-4 border-white shadow-md flex items-center justify-center">
+                <div className="relative z-10 w-full aspect-[3/4] bg-slate-50 rounded-xl overflow-hidden mb-3 sm:mb-5 border-2 sm:border-4 border-white shadow-md flex items-center justify-center">
                   <div className="absolute inset-0 flex flex-col items-center justify-center text-slate-400 z-0">
-                    <svg className="w-10 h-10 mb-2 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="w-6 h-6 sm:w-10 sm:h-10 mb-2 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                     </svg>
-                    <span className="font-bold text-[10px] tracking-wide">waka{idx}.jpg</span>
+                    <span className="font-bold text-[8px] sm:text-[10px] tracking-wide">waka{idx}.jpg</span>
                   </div>
                   <img
-                    src={`/src/assets/waka${idx}.jpg`}
+                    src={`/assets/waka${idx}.jpg`}
                     alt={`Wakil Kepala Sekolah ${idx}`}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 absolute inset-0 z-20"
                     onError={(e) => {
@@ -183,10 +185,10 @@ export const About: React.FC = () => {
                 </div>
 
                 <div className="relative z-10">
-                  <h3 className="font-bold text-slate-900 text-base mb-1 font-display leading-tight">
+                  <h3 className="font-bold text-slate-900 text-xs sm:text-base mb-0.5 sm:mb-1 font-display leading-tight">
                     {['Fendy V. Hitipeuw, S.Pd.', 'Donal R. Ollo, S.Pd.', 'Thomas Salfister Matrutty, S.Pd.', 'Reny Uktolseja, S.E., S.Pd.'][idx - 1]}
                   </h3>
-                  <p className="text-blue-600 text-xs font-semibold uppercase tracking-wide">
+                  <p className="text-blue-600 text-[9px] sm:text-xs font-semibold uppercase tracking-wide">
                     {['Bidang Kurikulum', 'Bidang Kesiswaan', 'Bidang Sarpras', 'Bidang Humas'][idx - 1]}
                   </p>
                 </div>
@@ -202,21 +204,23 @@ export const About: React.FC = () => {
             <p className="text-slate-500 text-sm sm:text-base mt-2">Pilar utama yang menuntun segenap proses belajar dan mengajar di sekolah kami.</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-8">
             {coreValues.map((val, idx) => (
               <div
                 key={idx}
-                className="bg-white p-8 rounded-2xl border border-slate-100 hover:shadow-2xl hover:translate-y-[-4px] transition-all duration-300 group text-left"
+                className="bg-white p-5 sm:p-8 rounded-2xl border border-slate-100 hover:shadow-2xl hover:translate-y-[-4px] transition-all duration-300 group text-left flex flex-row sm:flex-col items-start gap-4 sm:gap-0"
               >
-                <div className="p-3 bg-blue-50 text-blue-600 rounded-xl w-fit group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 mb-6">
+                <div className="p-3 bg-blue-50 text-blue-600 rounded-xl w-fit flex-shrink-0 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 sm:mb-6">
                   {val.icon}
                 </div>
-                <h4 className="text-lg font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors font-display">
-                  {val.title}
-                </h4>
-                <p className="text-slate-500 text-sm sm:text-base leading-relaxed">
-                  {val.desc}
-                </p>
+                <div>
+                  <h4 className="text-base sm:text-lg font-bold text-slate-900 mb-1.5 sm:mb-3 group-hover:text-blue-600 transition-colors font-display">
+                    {val.title}
+                  </h4>
+                  <p className="text-slate-500 text-sm sm:text-base leading-relaxed">
+                    {val.desc}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
@@ -242,7 +246,7 @@ export const About: React.FC = () => {
                   {/* Avatar Image Frame */}
                   <div className="w-11 h-11 rounded-full bg-slate-100 flex items-center justify-center text-sm shadow-md flex-shrink-0 overflow-hidden border-2 border-white relative">
                     <img
-                      src={`/src/assets/${['mahasiswa.png', 'orangtua.png', 'siswa.png'][idx]}`}
+                      src={`/assets/${['mahasiswa.png', 'orangtua.png', 'siswa.png'][idx]}`}
                       alt={`Foto ${t.name}`}
                       className="absolute inset-0 w-full h-full object-cover z-10"
                       onError={(e) => {

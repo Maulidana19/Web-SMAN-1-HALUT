@@ -73,28 +73,28 @@ export const Contact: React.FC = () => {
         </div>
 
         {/* Info Cards Row */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-8 mb-12 sm:mb-16">
           
           {/* Card 1: Address */}
-          <div className="bg-white p-8 rounded-2xl border border-slate-100 flex items-start gap-4 text-left shadow-sm">
-            <div className="p-3 bg-blue-50 text-blue-600 rounded-xl flex-shrink-0">
-              <MapPin size={24} />
+          <div className="bg-white p-4 sm:p-8 rounded-xl sm:rounded-2xl border border-slate-100 flex items-start gap-3 sm:gap-4 text-left shadow-sm">
+            <div className="p-2.5 sm:p-3 bg-blue-50 text-blue-600 rounded-lg sm:rounded-xl flex-shrink-0">
+              <MapPin className="w-5 h-5 sm:w-6 sm:h-6" />
             </div>
             <div>
-              <h4 className="font-bold text-slate-850 text-base mb-1 font-display">Alamat Sekolah</h4>
-              <p className="text-slate-500 text-sm leading-relaxed">{SCHOOL_INFO.contact.address}</p>
+              <h4 className="font-bold text-slate-800 text-sm sm:text-base mb-0.5 sm:mb-1 font-display">Alamat Sekolah</h4>
+              <p className="text-slate-500 text-xs sm:text-sm leading-snug sm:leading-relaxed">{SCHOOL_INFO.contact.address}</p>
             </div>
           </div>
 
           {/* Card 2: Phone & Email */}
-          <div className="bg-white p-8 rounded-2xl border border-slate-100 flex items-start gap-4 text-left shadow-sm">
-            <div className="p-3 bg-blue-50 text-blue-600 rounded-xl flex-shrink-0">
-              <Mail size={24} />
+          <div className="bg-white p-4 sm:p-8 rounded-xl sm:rounded-2xl border border-slate-100 flex items-start gap-3 sm:gap-4 text-left shadow-sm">
+            <div className="p-2.5 sm:p-3 bg-blue-50 text-blue-600 rounded-lg sm:rounded-xl flex-shrink-0">
+              <Mail className="w-5 h-5 sm:w-6 sm:h-6" />
             </div>
             <div className="w-full min-w-0">
-              <h4 className="font-bold text-slate-800 text-base mb-1 font-display">Hubungi Kami</h4>
-              <p className="text-slate-500 text-sm font-medium">Telepon: {SCHOOL_INFO.contact.phone}</p>
-              <div className="text-slate-500 text-sm font-medium mt-1">
+              <h4 className="font-bold text-slate-800 text-sm sm:text-base mb-0.5 sm:mb-1 font-display">Hubungi Kami</h4>
+              <p className="text-slate-500 text-xs sm:text-sm font-medium">Telepon: {SCHOOL_INFO.contact.phone}</p>
+              <div className="text-slate-500 text-xs sm:text-sm font-medium mt-0.5 sm:mt-1">
                 <span>Email: </span>
                 <span className="break-all text-blue-600">{SCHOOL_INFO.contact.email}</span>
               </div>
@@ -102,17 +102,17 @@ export const Contact: React.FC = () => {
           </div>
 
           {/* Card 3: School Hours */}
-          <div className="bg-white p-8 rounded-2xl border border-slate-100 flex items-start gap-4 text-left shadow-sm">
-            <div className="p-3 bg-blue-50 text-blue-600 rounded-xl flex-shrink-0">
-              <Clock size={24} />
+          <div className="bg-white p-4 sm:p-8 rounded-xl sm:rounded-2xl border border-slate-100 flex items-start gap-3 sm:gap-4 text-left shadow-sm">
+            <div className="p-2.5 sm:p-3 bg-blue-50 text-blue-600 rounded-lg sm:rounded-xl flex-shrink-0">
+              <Clock className="w-5 h-5 sm:w-6 sm:h-6" />
             </div>
             <div>
-              <h4 className="font-bold text-slate-850 text-base mb-1 font-display">Jam Operasional</h4>
-              <div className="text-slate-500 text-sm leading-relaxed">
+              <h4 className="font-bold text-slate-800 text-sm sm:text-base mb-0.5 sm:mb-1 font-display">Jam Operasional</h4>
+              <div className="text-slate-500 text-xs sm:text-sm leading-snug sm:leading-relaxed">
                 <p>Shift Pagi: 07.00 - 12.30 WIT</p>
                 <p>Shift Siang: 12.30 - 17.40 WIT</p>
               </div>
-              <p className="text-xs text-blue-600 font-bold mt-2 uppercase tracking-wider">Sabtu & Minggu Libur</p>
+              <p className="text-[10px] sm:text-xs text-blue-600 font-bold mt-1.5 sm:mt-2 uppercase tracking-wider">Sabtu & Minggu Libur</p>
             </div>
           </div>
 

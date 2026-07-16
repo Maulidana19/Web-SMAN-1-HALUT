@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Menu, X, GraduationCap, Phone, Clock } from 'lucide-react';
+import { Menu, X, GraduationCap, Phone, Clock, Home, Info, Users, Trophy, Mail, Instagram, Facebook, Youtube } from 'lucide-react';
 import { SCHOOL_INFO } from '../data';
 
 interface NavbarProps {
@@ -12,11 +12,11 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection 
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { id: 'home', label: 'Beranda' },
-    { id: 'about', label: 'Tentang Kami' },
-    { id: 'teachers', label: 'Guru & Tendik' },
-    { id: 'achievements', label: 'Prestasi' },
-    { id: 'contact', label: 'Kontak' },
+    { id: 'home', label: 'Beranda', icon: Home },
+    { id: 'about', label: 'Tentang Kami', icon: Info },
+    { id: 'teachers', label: 'Guru & Tendik', icon: Users },
+    { id: 'achievements', label: 'Prestasi', icon: Trophy },
+    { id: 'contact', label: 'Kontak', icon: Mail },
   ];
 
   const handleNavClick = (id: string) => {
@@ -107,11 +107,11 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection 
           <div className="flex md:hidden">
             <button
               id="mobile-menu-toggle"
-              onClick={() => setIsOpen(!isOpen)}
+              onClick={() => setIsOpen(true)}
               className="p-2 text-slate-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors cursor-pointer"
               aria-label="Toggle Menu"
             >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              <Menu className="h-6 w-6" />
             </button>
           </div>
         </div>
@@ -120,43 +120,94 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection 
       {/* Mobile Menu Dropdown */}
       <AnimatePresence>
         {isOpen && (
-          <motion.div
-            id="mobile-nav-menu"
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.25, ease: 'easeInOut' }}
-            className="md:hidden border-t border-slate-100 bg-white overflow-hidden"
-          >
-            <div className="px-4 pt-2 pb-6 space-y-1.5 shadow-inner">
-              {navItems.map((item) => {
-                const isActive = activeSection === item.id;
-                return (
-                  <button
-                    key={item.id}
-                    id={`mobile-nav-btn-${item.id}`}
-                    onClick={() => handleNavClick(item.id)}
-                    className={`block w-full text-left px-4 py-3 rounded-lg text-base font-medium transition-colors ${
-                      isActive
-                        ? 'bg-blue-50 text-blue-600 border-l-4 border-blue-600'
-                        : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'
-                    }`}
-                  >
-                    {item.label}
-                  </button>
-                );
-              })}
-              <div className="pt-4 px-4">
+          <>
+            {/* Blurred Overlay */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              onClick={() => setIsOpen(false)}
+              className="fixed inset-0 z-[50] bg-slate-900/60 backdrop-blur-md md:hidden"
+            />
+            
+            {/* Side Drawer */}
+            <motion.div
+              id="mobile-nav-menu"
+              initial={{ x: '100%' }}
+              animate={{ x: 0 }}
+              exit={{ x: '100%' }}
+              transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+              className="fixed top-0 right-0 z-[60] h-screen w-[300px] bg-white/95 backdrop-blur-2xl border-l border-white/40 shadow-2xl md:hidden overflow-y-auto flex flex-col"
+            >
+              <div className="flex justify-between items-center p-5 h-20 border-b border-slate-200/50 bg-white/50">
+                <div className="flex items-center gap-2.5">
+                  <div className="w-8 h-8 flex items-center justify-center shrink-0">
+                    <img src="/assets/logo.png" alt="Logo SMAN 1" className="w-full h-full object-contain" />
+                  </div>
+                  <div>
+                    <span className="block text-[9px] font-extrabold tracking-widest text-slate-400 uppercase leading-none">SMA NEGERI 1</span>
+                    <span className="block text-[13px] font-black tracking-tight text-blue-600 uppercase leading-none mt-0.5">HALMAHERA UTARA</span>
+                  </div>
+                </div>
                 <button
-                  id="cta-ppdb-mobile"
-                  onClick={() => handleNavClick('contact')}
-                  className="block w-full text-center py-3 text-sm font-semibold text-white bg-blue-600 rounded-xl hover:bg-blue-700 transition-colors shadow-md"
+                  onClick={() => setIsOpen(false)}
+                  className="w-10 h-10 flex items-center justify-center text-slate-500 hover:text-blue-600 hover:bg-white rounded-full transition-all shadow-sm border border-slate-200 cursor-pointer"
                 >
-                  Daftar PPDB / Hubungi Kami
+                  <X className="h-5 w-5" />
                 </button>
               </div>
-            </div>
-          </motion.div>
+
+              <div className="px-5 pt-6 pb-6 space-y-3 flex-1">
+                <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-2 px-1">Menu Utama</p>
+                {navItems.map((item, i) => {
+                  const isActive = activeSection === item.id;
+                  const Icon = item.icon;
+                  return (
+                    <motion.button
+                      initial={{ opacity: 0, x: 20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0.1 + (i * 0.05) }}
+                      key={item.id}
+                      id={`mobile-nav-btn-${item.id}`}
+                      onClick={() => handleNavClick(item.id)}
+                      className={`flex items-center gap-3 w-full text-left px-4 py-3.5 rounded-xl text-[15px] font-semibold transition-all shadow-sm ${
+                        isActive
+                          ? 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-blue-600/30'
+                          : 'bg-white text-slate-600 hover:bg-slate-50 hover:text-blue-600 border border-slate-100'
+                      }`}
+                    >
+                      <Icon size={18} className={isActive ? 'text-white' : 'text-slate-400'} />
+                      {item.label}
+                    </motion.button>
+                  );
+                })}
+                <motion.div 
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.4 }}
+                  className="pt-6"
+                >
+                  <button
+                    id="cta-ppdb-mobile"
+                    onClick={() => handleNavClick('contact')}
+                    className="block w-full text-center py-4 text-sm font-bold text-white bg-slate-900 rounded-xl hover:bg-slate-800 transition-all shadow-xl active:scale-95"
+                  >
+                    Hubungi Kami
+                  </button>
+                </motion.div>
+              </div>
+
+              <div className="p-6 border-t border-slate-200/50 bg-slate-50/50">
+                <div className="flex justify-center gap-4 mb-4">
+                  <a href="#" className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-slate-400 hover:text-pink-600 hover:shadow-md transition-all border border-slate-200"><Instagram size={18} /></a>
+                  <a href="#" className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-slate-400 hover:text-blue-600 hover:shadow-md transition-all border border-slate-200"><Facebook size={18} /></a>
+                  <a href="#" className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-slate-400 hover:text-red-600 hover:shadow-md transition-all border border-slate-200"><Youtube size={18} /></a>
+                </div>
+                <p className="text-center text-[10px] font-semibold text-slate-400">© 2026 SMAN 1 Halmahera Utara</p>
+              </div>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
     </header>

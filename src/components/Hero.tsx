@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { ArrowRight, Sparkles, BookOpen, ShieldCheck, Trophy } from 'lucide-react';
+import { ArrowRight, Sparkles, BookOpen, ShieldCheck, Trophy, Instagram, Facebook, Youtube, MessageCircle } from 'lucide-react';
 import { SCHOOL_INFO } from '../data';
 import { SchoolHeroIllustration } from './Illustrations';
 
@@ -79,10 +79,12 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateToAbout, onNavigateToTeach
             {/* Highlight Tag */}
             <motion.div
               variants={itemVariants}
-              className="inline-flex items-center gap-2 bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider"
+              className="inline-flex items-center gap-3 bg-white/80 backdrop-blur-md border border-slate-200/80 shadow-xl shadow-blue-900/5 p-1.5 pr-5 rounded-full text-xs sm:text-sm font-bold uppercase tracking-widest hover:-translate-y-1 hover:shadow-blue-900/10 hover:border-blue-300 transition-all duration-300 cursor-default"
             >
-              <Sparkles size={14} className="animate-pulse" />
-              <span>Akreditasi A (Unggul)</span>
+              <div className="flex items-center justify-center bg-gradient-to-br from-blue-600 to-indigo-600 text-white rounded-full p-2 shadow-md shadow-blue-600/30">
+                <Sparkles size={14} className="animate-pulse" />
+              </div>
+              <span className="bg-gradient-to-r from-blue-800 to-indigo-600 bg-clip-text text-transparent">Akreditasi A (Unggul)</span>
             </motion.div>
 
             {/* School Name and Slogan */}
@@ -110,25 +112,45 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateToAbout, onNavigateToTeach
               {SCHOOL_INFO.shortDescription} Kami menyediakan lingkungan belajar yang inovatif, berstandar nasional, dan berfokus pada pengembangan kreativitas siswa.
             </motion.p>
 
-            {/* Call to Actions */}
+            {/* Actions Group */}
             <motion.div
               variants={itemVariants}
-              className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto pt-2"
+              className="flex flex-wrap items-center gap-4 sm:gap-6 w-full"
+              style={{ marginTop: '8px' }}
             >
-              <button
-                id="hero-cta-primary"
-                onClick={onNavigateToAbout}
-                className="bg-slate-900 text-white px-8 py-3.5 rounded-xl font-bold shadow-xl hover:translate-y-[-2px] active:scale-95 transition-transform duration-200 cursor-pointer text-base"
-              >
-                Jelajahi Profil
-              </button>
-              <button
-                id="hero-cta-secondary"
-                onClick={onNavigateToTeachers}
-                className="border-2 border-slate-200 bg-white px-8 py-3.5 rounded-xl font-bold text-slate-700 hover:bg-slate-50 hover:text-blue-600 active:scale-95 transition-all duration-200 cursor-pointer text-base"
-              >
-                Kenali Guru & Tendik
-              </button>
+              {/* Call to Actions */}
+              <div className="flex flex-row gap-2 sm:gap-4 w-full sm:w-auto">
+                <button
+                  id="hero-cta-primary"
+                  onClick={onNavigateToAbout}
+                  className="flex-1 sm:flex-none flex items-center justify-center bg-slate-900 text-white px-2 sm:px-8 py-2.5 sm:py-3.5 rounded-xl font-bold shadow-xl hover:translate-y-[-2px] active:scale-95 transition-transform duration-200 cursor-pointer text-xs sm:text-base leading-none"
+                >
+                  Jelajahi Profil
+                </button>
+                <button
+                  id="hero-cta-secondary"
+                  onClick={onNavigateToTeachers}
+                  className="flex-1 sm:flex-none flex items-center justify-center border-2 border-slate-200 bg-white px-2 sm:px-8 py-2 sm:py-3 rounded-xl font-bold text-slate-700 hover:bg-slate-50 hover:text-blue-600 active:scale-95 transition-all duration-200 cursor-pointer text-xs sm:text-base leading-none"
+                >
+                  Kenali Guru & Tendik
+                </button>
+              </div>
+
+              {/* Social Media Links */}
+              <div className="flex gap-2 sm:gap-3 w-full sm:w-auto justify-center sm:justify-start">
+                <a href="#" aria-label="Instagram" className="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-500 hover:bg-pink-50 hover:text-pink-600 hover:border-pink-200 transition-all shadow-sm hover:shadow-md hover:-translate-y-1">
+                  <Instagram size={18} />
+                </a>
+                <a href="#" aria-label="Facebook" className="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-500 hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200 transition-all shadow-sm hover:shadow-md hover:-translate-y-1">
+                  <Facebook size={18} />
+                </a>
+                <a href="#" aria-label="YouTube" className="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-500 hover:bg-red-50 hover:text-red-600 hover:border-red-200 transition-all shadow-sm hover:shadow-md hover:-translate-y-1">
+                  <Youtube size={18} />
+                </a>
+                <a href="#contact-section" aria-label="WhatsApp / Chat" className="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-500 hover:bg-green-50 hover:text-green-600 hover:border-green-200 transition-all shadow-sm hover:shadow-md hover:-translate-y-1">
+                  <MessageCircle size={18} />
+                </a>
+              </div>
             </motion.div>
 
             {/* Quick Pillars */}
@@ -158,6 +180,8 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateToAbout, onNavigateToTeach
                 <span className="text-xs text-slate-500 mt-1 font-medium">Juara tingkat nasional</span>
               </div>
             </motion.div>
+
+
           </motion.div>
 
           {/* Hero Right Visual Column */}

@@ -15,7 +15,7 @@ export const SCHOOL_INFO = {
   principal: {
     name: "Ellen Sintya Dewi, S.Pd., M.Si.",
     role: "Kepala Sekolah SMAN 1 Halmahera Utara",
-    message: "Selamat datang di website resmi SMA Negeri 1 Halmahera Utara. Kami berkomitmen untuk menyelenggarakan pendidikan berkualitas yang berfokus pada pengembangan potensi unik setiap siswa. Melalui sinergi antara akademik, pengembangan karakter, dan teknologi, kami mempersiapkan lulusan yang siap menghadapi tantangan masa depan dan berkontribusi nyata bagi bangsa."
+    message: "Selamat datang di website resmi SMA Negeri 1 Halmahera Utara. Berbekal pengalaman lebih dari 19 tahun mengabdi, saya berkomitmen menjadikan sekolah ini sebagai lingkungan belajar yang inklusif, inovatif, dan berpihak pada peserta didik. Kami tidak hanya berfokus pada peningkatan kemampuan akademik, tetapi juga berupaya kuat dalam pengembangan profesionalisme guru serta pembentukan karakter siswa yang mandiri, kreatif, dan adaptif. Dengan semangat kolaborasi, mari bersama-sama kita persiapkan generasi masa depan yang kompeten, berakhlak mulia, dan siap menghadapi tantangan perkembangan zaman."
   },
   stats: [
     { label: "NPSN", value: "60200296" },
@@ -131,14 +131,14 @@ export const TESTIMONIALS_DATA: Testimonial[] = [
 ];
 
 export const TEACHERS_DATA = [
-  { id: "teacher-1", name: "Dr. Budi Santoso, M.Pd.", image: "/assets/foto1.jpg" },
+  { id: "teacher-1", name: "Ellen Sintya Dewi, S.Pd., M.Si.", image: "/assets/foto1.jpg" },
   { id: "teacher-2", name: "Fendy V. Hitipeuw, S.Pd.", image: "/assets/foto2.jpg" },
-  { id: "teacher-3", name: "Ahmad Fauzi, S.S.", image: "/assets/foto3.jpg" },
+  { id: "teacher-3", name: "Donal R. Ollo, S.Pd.", image: "/assets/foto3.jpg" },
   { id: "teacher-4", name: "Thomas Salfister Matrutty, S.Pd.", image: "/assets/foto4.jpg" },
-  { id: "teacher-5", name: "Drs. Hendro Wibowo", image: "/assets/foto5.jpg" },
-  { id: "teacher-6", name: "Eka Setiawati, S.Pd.", image: "/assets/foto6.jpg" },
-  { id: "teacher-7", name: "Bambang Pamungkas, M.Pd.", image: "/assets/foto7.jpg" },
-  { id: "teacher-8", name: "Tri Hapsari, S.Pd.", image: "/assets/foto8.jpg" },
+  { id: "teacher-5", name: "Reny Uktolseja, S.E., S.Pd.", image: "/assets/foto5.jpg" },
+  { id: "teacher-6", name: "Nama", image: "/assets/foto6.jpg" },
+  { id: "teacher-7", name: "Nama", image: "/assets/foto7.jpg" },
+  { id: "teacher-8", name: "Nama", image: "/assets/foto8.jpg" },
   { id: "teacher-9", name: "Adeleda Letlora, S.Pd.", image: "/assets/foto9.jpg" },
   { id: "teacher-10", name: "Agustine V. Singal, S.Pd.", image: "/assets/foto10.jpg" },
   { id: "teacher-11", name: "Christina Tiawata, S.Pd.", image: "/assets/foto11.jpg" },
@@ -173,8 +173,8 @@ export const TEACHERS_DATA = [
   { id: "teacher-40", name: "Warni A. Mezak, S.Pd.", image: "/assets/foto40.jpg" },
   { id: "teacher-41", name: "Oktofianus Lasa, S.Pd.K.", image: "/assets/foto41.jpg" },
   { id: "teacher-42", name: "Haidir Yasman Kardi, S.Pd.", image: "/assets/foto42.jpg" },
-  { id: "teacher-43", name: "Faisal Riza, S.Kom.", image: "/assets/foto43.jpg" },
-  { id: "teacher-44", name: "Ratna Sari, M.Pd.", image: "/assets/foto44.jpg" }
+  { id: "teacher-43", name: "Nama", image: "/assets/foto43.jpg" },
+  { id: "teacher-44", name: "Nama", image: "/assets/foto44.jpg" }
 ];
 
 export const TENDIK_DATA = [
@@ -185,7 +185,7 @@ export const TENDIK_DATA = [
   { id: "tendik-5", name: "Meyanti Sartin Gumabo, S.T.", image: "/assets/tendik5.jpg" },
   { id: "tendik-6", name: "Novenci Garo, S.AP.", image: "/assets/tendik6.jpg" },
   { id: "tendik-7", name: "Opsalina Tawar", image: "/assets/tendik7.jpg" },
-  { id: "tendik-8", name: "Nama Tendik 8", image: "/assets/tendik8.jpg" }
+  { id: "tendik-8", name: "Nama", image: "/assets/tendik8.jpg" }
 ];
 
 export const NEWS_DATA = [

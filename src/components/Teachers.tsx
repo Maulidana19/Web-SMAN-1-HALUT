@@ -56,8 +56,8 @@ export const Teachers: React.FC = () => {
           </div>
         </div>
 
-        {/* 4 Column Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+        {/* Grid Container */}
+        <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-4 gap-2 sm:gap-8">
           {(activeTab === 'guru' ? TEACHERS_DATA : TENDIK_DATA).map((person, idx) => (
             <motion.div
               key={person.id}
@@ -65,13 +65,13 @@ export const Teachers: React.FC = () => {
               whileInView={{ opacity: 1, y: 0, transition: { duration: 0.5, delay: (idx % 4) * 0.1 } }}
               whileHover={{ y: -8, scale: 1.02, transition: { type: "spring", stiffness: 400, damping: 25, delay: 0 } }}
               viewport={{ once: true, margin: "-50px" }}
-              className="bg-white border border-slate-200 rounded-2xl p-5 sm:p-6 shadow-md hover:shadow-2xl hover:border-blue-300 transition-colors transition-shadow duration-300 group text-center relative overflow-hidden"
+              className="bg-white border border-slate-200 rounded-xl sm:rounded-2xl p-2 sm:p-6 shadow-sm sm:shadow-md hover:shadow-2xl hover:border-blue-300 transition-colors transition-shadow duration-300 group text-center relative overflow-hidden"
             >
               {/* Animasi latar belakang tipis saat di-hover */}
               <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-blue-50/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
               {/* Image Frame (Pas Foto) - Dikembalikan seperti semula */}
-              <div className="relative z-10 w-full aspect-[3/4] bg-slate-100 rounded-xl overflow-hidden mb-5 border-4 border-white shadow-md flex items-center justify-center">
+              <div className="relative z-10 w-full aspect-[3/4] bg-slate-100 rounded-md sm:rounded-xl overflow-hidden mb-2 sm:mb-5 border-2 sm:border-4 border-white shadow-sm sm:shadow-md flex items-center justify-center">
                 <img 
                   src={person.image} 
                   alt={person.name} 
@@ -80,17 +80,17 @@ export const Teachers: React.FC = () => {
                     (e.target as HTMLImageElement).style.display = 'none';
                   }}
                 />
-                <div className="text-slate-400 font-bold text-sm text-center px-4 relative z-10">
+                <div className="text-slate-400 font-bold text-[8px] sm:text-sm text-center px-1 sm:px-4 relative z-10">
                   (Tempat Foto {idx + 1})<br/>
-                  <span className="text-[10px] font-normal">
+                  <span className="text-[6px] sm:text-[10px] font-normal">
                     {activeTab === 'guru' ? `src/assets/foto${idx + 1}.jpg` : `src/assets/tendik${idx + 1}.jpg`}
                   </span>
                 </div>
               </div>
 
               {/* Text Info */}
-              <div className="relative z-10">
-                <h3 className="font-bold text-slate-900 text-lg font-display leading-tight">{person.name}</h3>
+              <div className="relative z-10 flex flex-col justify-center h-8 sm:h-auto">
+                <h3 className="font-bold text-slate-900 text-[10px] sm:text-lg font-display leading-tight line-clamp-2">{person.name}</h3>
               </div>
             </motion.div>
           ))}
