@@ -1,0 +1,6 @@
+{
+  "name": "Website Profil Sekolah SMA",
+  "description": "Website company profile sekolah SMA modern dengan desain bernuansa biru cerah, navigasi responsif, dan animasi transisi yang halus.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
