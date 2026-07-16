@@ -262,7 +262,7 @@ export const Contact: React.FC = () => {
             
             <div className="flex-1 rounded-2xl shadow-2xl overflow-hidden flex">
               <img 
-                src="/src/assets/kontak.png" 
+                src="/assets/kontak.png" 
                 alt="Ilustrasi Kontak" 
                 className="w-full h-full object-cover bg-[#f1f5f9]/50" 
               />

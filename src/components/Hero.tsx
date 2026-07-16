@@ -14,14 +14,14 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateToAbout, onNavigateToTeach
   const [currentPrestasiIndex, setCurrentPrestasiIndex] = useState(0);
   
   const fasilitasImages = [
-    '/src/assets/fasilitas1.jpg',
-    '/src/assets/fasilitas2.jpg',
-    '/src/assets/fasilitas3.jpg'
+    '/assets/fasilitas1.jpg',
+    '/assets/fasilitas2.jpg',
+    '/assets/fasilitas3.jpg'
   ];
   const prestasiImages = [
-    '/src/assets/prestasi1.jpg',
-    '/src/assets/prestasi2.jpg',
-    '/src/assets/prestasi3.jpg'
+    '/assets/prestasi1.jpg',
+    '/assets/prestasi2.jpg',
+    '/assets/prestasi3.jpg'
   ];
 
   useEffect(() => {

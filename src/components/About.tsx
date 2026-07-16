@@ -118,7 +118,7 @@ export const About: React.FC = () => {
                   <span className="font-bold text-[10px] tracking-wide">kepalasekolah.jpg</span>
                 </div>
                 <img
-                  src="/src/assets/kepalasekolah.jpg"
+                  src="/assets/kepalasekolah.jpg"
                   alt="Foto Kepala Sekolah"
                   className="absolute inset-0 w-full h-full object-cover z-10"
                   onError={(e) => {

@@ -55,7 +55,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection 
           >
             <div className="w-10 h-10 flex items-center justify-center rounded-lg overflow-hidden shrink-0 group-hover:scale-105 transition-transform duration-300">
               <img 
-                src="/src/assets/logo.png" 
+                src="/assets/logo.png" 
                 alt="Logo SMAN 1" 
                 className="w-full h-full object-contain"
                 onError={(e) => {

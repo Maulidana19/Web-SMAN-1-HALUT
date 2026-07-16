@@ -27,7 +27,7 @@ export const Footer: React.FC<FooterProps> = ({ setActiveSection }) => {
             <div className="flex items-center gap-2.5 cursor-pointer" onClick={() => handleLinkClick('home')}>
               <div className="w-10 h-10 flex items-center justify-center rounded-lg overflow-hidden shrink-0 group-hover:scale-105 transition-transform duration-300">
                 <img 
-                  src="/src/assets/logo.png" 
+                  src="/assets/logo.png" 
                   alt="Logo SMAN 1" 
                   className="w-full h-full object-contain"
                   onError={(e) => {
