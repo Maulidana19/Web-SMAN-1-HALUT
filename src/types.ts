@@ -18,7 +18,7 @@ export interface Testimonial {
   name: string;
   role: string;
   content: string;
-  avatarSeed: string;
+  image: string;
 }
 
 export interface ContactMessage {

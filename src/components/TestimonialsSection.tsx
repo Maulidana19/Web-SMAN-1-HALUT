@@ -18,7 +18,7 @@ export const TestimonialsSection: React.FC = () => {
             <div key={t.id} className="bg-white p-8 shadow-sm text-center border-t-4 border-transparent hover:border-brand-red transition-all duration-300">
               <div className="w-20 h-20 mx-auto rounded-full bg-gray-100 overflow-hidden mb-6 border-2 border-gray-100 shadow-inner">
                 <img
-                  src={`/assets/${['mahasiswa.png', 'orangtua.png', 'siswa.png'][idx]}`}
+                  src={t.image}
                   alt={`Foto ${t.name}`}
                   className="w-full h-full object-cover"
                   onError={(e) => {

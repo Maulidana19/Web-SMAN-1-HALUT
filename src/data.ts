@@ -109,24 +109,24 @@ export const ACHIEVEMENTS_DATA: Achievement[] = [
 export const TESTIMONIALS_DATA: Testimonial[] = [
   {
     id: "test-1",
-    name: "Rian Aditya",
-    role: "Alumni 2023 - Universitas Halmahera",
-    content: "SMAN 1 Halmahera Utara tidak hanya mengajarkan materi pelajaran, tetapi juga cara berpikir kritis dan kepemimpinan. Guru-gurunya sangat mendukung kami untuk mengejar mimpi akademik.",
-    avatarSeed: "Rian"
+    name: "Muh. Dimas S Handjoe",
+    role: "Alumni",
+    content: "Sebagai alumni SMAN 1 Halmahera Utara, saya berterima kasih kepada seluruh guru. Berkat ilmu dan dukungan mereka, saya dapat melanjutkan studi di Universitas Gadjah Mada, salah satu universitas terbaik di Indonesia.",
+    image: "/assets/alumni.jpg"
   },
   {
     id: "test-2",
     name: "Siti Rahmawati",
     role: "Orang Tua Siswa Kelas XII",
-    content: "Kami sangat bersyukur menyekolahkan anak kami di sini. Perkembangan karakternya luar biasa, anak menjadi lebih disiplin, sopan, dan rajin beribadah di samping prestasi akademiknya.",
-    avatarSeed: "Siti"
+    content: "Secara keseluruhan, sekolah ini memberikan lingkungan belajar yang sangat baik, membuat anak saya merasa nyaman dan aman. Terima kasih atas dedikasi para guru yang selalu mendampingi anak kami dengan setulus hati.",
+    image: "/assets/orangtua.jpg"
   },
   {
     id: "test-3",
-    name: "Faris Pratama",
-    role: "Siswa Kelas XI - Ketua OSIS",
-    content: "Fasilitas belajar di sini sangat memadai, terutama lab komputer dan perpustakaan. Program ekstrakurikuler juga sangat seru, memberi banyak ruang untuk belajar berorganisasi.",
-    avatarSeed: "Faris"
+    name: "Yemima Putri Sari Nainggolan",
+    role: "Ketua OSIS (2025-2026)",
+    content: "Bagi saya, SMANSA Halmahera Utara bukan sekadar tempat belajar, melainkan wadah pembentuk karakter. Melalui bimbingan para guru, saya belajar bahwa keberhasilan juga diukur dari integritas. Bangga menjadi bagian SMANSA.",
+    image: "/assets/ketos.jpg"
   }
 ];
 
@@ -190,6 +190,14 @@ export const TENDIK_DATA = [
 
 export const NEWS_DATA = [
   {
+    id: "news-new",
+    title: "Puluhan Siswa SMA Negeri 1 Halmahera Utara Mengikuti Diklatsar Palang Merah Remaja Angkatan I Tahun 2026",
+    excerpt: "Puluhan siswa mengikuti kegiatan Pendidikan dan Latihan Dasar (Diklatsar) PMR. Kegiatan ini bertujuan membekali siswa dengan keterampilan dasar kepalangmerahan, pertolongan pertama, dan kesiapsiagaan bencana.",
+    date: "18 Juli 2026",
+    image: "/assets/news1.jpg",
+    link: "https://makuhida.com/puluhan-siswa-sma-negeri-1-halmahera-utara-mengikuti-diklatsar-palang-merah-remaja-angkatan-i-tahun-2026/"
+  },
+  {
     id: "news-1",
     title: "SPMB SMAN 1 Halmahera Utara Tahun Ajaran 2026/2027 Resmi Dibuka",
     excerpt: "Saatnya melangkah lebih dekat menuju sekolah dengan Akreditasi A (Unggul) dan predikat Sekolah Penggerak yang siap mendukung setiap langkah, mimpi, dan prestasimu.",
@@ -204,13 +212,5 @@ export const NEWS_DATA = [
     date: "20 Januari 2026",
     image: "/assets/berita2_densus.jpg",
     link: "https://humas.polri.go.id/news/detail/2251246-densus-88-at-polri-gelar-densus-goes-to-school-di-sma-negeri-1-halmahera-utara"
-  },
-  {
-    id: "news-3",
-    title: "Siswa Baru SMAN 1 Halmahera Utara Dapat Materi Wawasan Kebangsaan Dari Kodim Tobelo",
-    excerpt: "Dalam rangka Masa Pengenalan Lingkungan Sekolah (MPLS) bagi siswa siswi baru, Pasi Pers Kodim 1508/Tobelo Kapten Inf Abd. Hadji Talaohu memberikan materi wawasan kebangsaan kepada pelajar SMA Negeri 1 Halmahera Utara.",
-    date: "19 Juli 2022",
-    image: "/assets/news3.jpg",
-    link: "https://zonamalut.id/siswa-baru-sman-1-halmahera-utara-dapat-materi-wawasan-kebangsaan-dari-kodim-tobelo/"
   }
 ];

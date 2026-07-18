@@ -21,7 +21,7 @@ export const AchievementsHighlight: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           
           {/* Card 1: Lomba Lari */}
-          <div className="group flex flex-col overflow-hidden cursor-pointer shadow-md bg-brand-red">
+          <div className="group flex flex-col overflow-hidden cursor-pointer shadow-md border border-gray-100 bg-white">
             <div className="relative w-full aspect-video overflow-hidden">
               <img 
                 src="/assets/prestasi1.jpg" 
