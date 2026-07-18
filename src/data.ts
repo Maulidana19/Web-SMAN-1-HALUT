@@ -136,8 +136,8 @@ export const TEACHERS_DATA = [
   { id: "teacher-3", name: "Donal R. Ollo, S.Pd.", image: "/assets/foto3.jpg" },
   { id: "teacher-4", name: "Thomas Salfister Matrutty, S.Pd.", image: "/assets/foto4.jpg" },
   { id: "teacher-5", name: "Reny Uktolseja, S.E., S.Pd.", image: "/assets/foto5.jpg" },
-  { id: "teacher-6", name: "Nama", image: "/assets/foto6.jpg" },
-  { id: "teacher-7", name: "Nama", image: "/assets/foto7.jpg" },
+  { id: "teacher-6", name: "Stevi Sarundayang, S.Si.", image: "/assets/foto6.jpg" },
+  { id: "teacher-7", name: "Henny Kristiana Masahe, S.Pd.", image: "/assets/foto7.jpg" },
   { id: "teacher-8", name: "Nama", image: "/assets/foto8.jpg" },
   { id: "teacher-9", name: "Adeleda Letlora, S.Pd.", image: "/assets/foto9.jpg" },
   { id: "teacher-10", name: "Agustine V. Singal, S.Pd.", image: "/assets/foto10.jpg" },
@@ -173,7 +173,7 @@ export const TEACHERS_DATA = [
   { id: "teacher-40", name: "Warni A. Mezak, S.Pd.", image: "/assets/foto40.jpg" },
   { id: "teacher-41", name: "Oktofianus Lasa, S.Pd.K.", image: "/assets/foto41.jpg" },
   { id: "teacher-42", name: "Haidir Yasman Kardi, S.Pd.", image: "/assets/foto42.jpg" },
-  { id: "teacher-43", name: "Nama", image: "/assets/foto43.jpg" },
+  { id: "teacher-43", name: "Faisal Garusu, S.Pd.", image: "/assets/foto43.jpg" },
   { id: "teacher-44", name: "Nama", image: "/assets/foto44.jpg" }
 ];
 
@@ -185,7 +185,7 @@ export const TENDIK_DATA = [
   { id: "tendik-5", name: "Meyanti Sartin Gumabo, S.T.", image: "/assets/tendik5.jpg" },
   { id: "tendik-6", name: "Novenci Garo, S.AP.", image: "/assets/tendik6.jpg" },
   { id: "tendik-7", name: "Opsalina Tawar", image: "/assets/tendik7.jpg" },
-  { id: "tendik-8", name: "Nama", image: "/assets/tendik8.jpg" }
+  { id: "tendik-8", name: "Boy G. Talaba", image: "/assets/tendik8.jpg" }
 ];
 
 export const NEWS_DATA = [
@@ -207,10 +207,10 @@ export const NEWS_DATA = [
   },
   {
     id: "news-3",
-    title: "Komite SMA 1 Halut, Sambut Baik Muhtar Taha Jadi Kepala Sekolah yang Baru",
-    excerpt: "Sekretaris Komite SMA Negeri 1 Tobelo, Halmahera Utara(Halut) Nuku Romoni menyambut baik adanya pergantian Kepala Sekolah.",
-    date: "26 Juni 2023",
-    image: "https://infopublik.id/assets/upload/headline//25062023_Papannamasmatobelo25_(1)_wmcomp.jpg",
-    link: "https://infopublik.id/kategori/nusantara/753436/komite-sma-1-halut-sambut-baik-muhtar-taha-jadi-kepala-sekolah-yang-baru"
+    title: "Siswa Baru SMAN 1 Halmahera Utara Dapat Materi Wawasan Kebangsaan Dari Kodim Tobelo",
+    excerpt: "Dalam rangka Masa Pengenalan Lingkungan Sekolah (MPLS) bagi siswa siswi baru, Pasi Pers Kodim 1508/Tobelo Kapten Inf Abd. Hadji Talaohu memberikan materi wawasan kebangsaan kepada pelajar SMA Negeri 1 Halmahera Utara.",
+    date: "19 Juli 2022",
+    image: "/assets/news3.jpg",
+    link: "https://zonamalut.id/siswa-baru-sman-1-halmahera-utara-dapat-materi-wawasan-kebangsaan-dari-kodim-tobelo/"
   }
 ];
