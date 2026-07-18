@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, X, Phone, Clock, Mail, MapPin } from 'lucide-react';
-import { SCHOOL_INFO } from '../data';
+import { Menu, X, Phone, Clock, ChevronDown, ChevronUp } from 'lucide-react';
 
 interface NavbarProps {
   activeSection: string;
@@ -9,16 +8,86 @@ interface NavbarProps {
 
 export const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [expandedMobileMenu, setExpandedMobileMenu] = useState<string | null>(null);
 
-  const navItems = [
-    { id: 'home', label: 'BERANDA' },
-    { id: 'about', label: 'TENTANG' },
-    { id: 'teachers', label: 'GURU & TENDIK' },
+  const navigationMenu = [
+    {
+      label: 'Beranda',
+      prefix: 'beranda',
+      subItems: [
+        { id: 'beranda-sekilas', label: 'Sekilas Sekolah' },
+        { id: 'beranda-sambutan', label: 'Sambutan Kepala Sekolah' },
+        { id: 'beranda-agenda', label: 'Agenda Sekolah' },
+      ]
+    },
+    {
+      label: 'Profil',
+      prefix: 'profil',
+      subItems: [
+        { id: 'profil-identitas', label: 'Identitas Sekolah' },
+        { id: 'profil-manajemen', label: 'Manajemen' },
+        { id: 'profil-guru', label: 'Direktori Guru' },
+        { id: 'profil-fasilitas', label: 'Fasilitas' },
+        { id: 'profil-akreditasi', label: 'Akreditasi' },
+      ]
+    },
+    {
+      label: 'Akademik',
+      prefix: 'akademik',
+      subItems: [
+        { id: 'akademik-kurikulum', label: 'Kurikulum' },
+        { id: 'akademik-peminatan', label: 'Peminatan' },
+        { id: 'akademik-kalender', label: 'Kalender Akademik' },
+        { id: 'akademik-portal', label: 'Tautan Portal' },
+      ]
+    },
+    {
+      label: 'Kesiswaan & Alumni',
+      prefix: 'kesiswaan',
+      subItems: [
+        { id: 'kesiswaan-osis', label: 'OSIS & MPK' },
+        { id: 'kesiswaan-ekstrakurikuler', label: 'Ekstrakurikuler' },
+        { id: 'kesiswaan-prestasi', label: 'Prestasi' },
+        { id: 'kesiswaan-alumni', label: 'Ikatan Alumni' },
+      ]
+    },
+    {
+      label: 'Informasi Publik',
+      prefix: 'informasi',
+      subItems: [
+        { id: 'informasi-ppdb', label: 'Informasi PPDB' },
+        { id: 'informasi-pengumuman', label: 'Pengumuman Resmi' },
+        { id: 'informasi-berita', label: 'Berita Kegiatan' },
+      ]
+    },
+    {
+      label: 'Media & Kontak',
+      prefix: 'media',
+      subItems: [
+        { id: 'media-galeri', label: 'Galeri Visual' },
+        { id: 'media-hubungi', label: 'Hubungi Kami' },
+        { id: 'media-lokasi', label: 'Lokasi' },
+      ]
+    }
   ];
 
   const handleNavClick = (id: string) => {
     setActiveSection(id);
     setIsOpen(false);
+    setExpandedMobileMenu(null);
+  };
+
+  const isMenuCategoryActive = (prefix: string) => {
+    if (activeSection === 'home' && prefix === 'beranda') return true;
+    return activeSection.startsWith(prefix);
+  };
+
+  const toggleMobileCategory = (prefix: string) => {
+    if (expandedMobileMenu === prefix) {
+      setExpandedMobileMenu(null);
+    } else {
+      setExpandedMobileMenu(prefix);
+    }
   };
 
   return (
@@ -46,7 +115,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection 
         <div className="flex justify-between items-center h-16 sm:h-20">
           {/* Logo Section */}
           <div 
-            onClick={() => handleNavClick('home')}
+            onClick={() => handleNavClick('beranda-sekilas')}
             className="flex items-center gap-3 cursor-pointer group"
           >
             <div className="w-12 h-12 flex items-center justify-center shrink-0">
@@ -66,31 +135,48 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection 
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8 text-sm font-semibold text-brand-navy">
-            {navItems.map((item) => {
-              const isActive = activeSection === item.id;
+          <nav className="hidden xl:flex items-center gap-6 text-sm font-semibold text-brand-navy">
+            {navigationMenu.map((menu) => {
+              const isCategoryActive = isMenuCategoryActive(menu.prefix);
               return (
-                <button
-                  key={item.id}
-                  onClick={() => handleNavClick(item.id)}
-                  className={`py-2 transition-colors duration-200 cursor-pointer border-b-2 uppercase tracking-wide ${
-                    isActive ? 'border-brand-red text-brand-red' : 'border-transparent hover:text-brand-red'
-                  }`}
-                >
-                  {item.label}
-                </button>
+                <div key={menu.prefix} className="relative group py-6">
+                  <button
+                    className={`flex items-center gap-1 cursor-pointer transition-colors duration-200 uppercase tracking-wide py-1 border-b-2 ${
+                      isCategoryActive 
+                        ? 'border-brand-red text-brand-red' 
+                        : 'border-transparent hover:text-brand-red hover:border-brand-red'
+                    }`}
+                  >
+                    <span>{menu.label}</span>
+                    <ChevronDown size={14} className="group-hover:rotate-180 transition-transform duration-200 shrink-0" />
+                  </button>
+
+                  {/* Dropdown Menu Container */}
+                  <div className="absolute top-full left-0 hidden group-hover:block bg-white shadow-2xl border border-slate-100 rounded-xl py-2.5 min-w-[240px] z-50 transform translate-y-[-4px] animate-in fade-in slide-in-from-top-2 duration-200">
+                    {menu.subItems.map((sub) => {
+                      const isSubActive = activeSection === sub.id;
+                      return (
+                        <button
+                          key={sub.id}
+                          onClick={() => handleNavClick(sub.id)}
+                          className={`block w-full text-left px-5 py-2.5 text-xs font-bold transition-all ${
+                            isSubActive 
+                              ? 'text-brand-red bg-red-50/60 border-l-4 border-brand-red' 
+                              : 'text-slate-700 hover:bg-slate-50 hover:text-brand-red border-l-4 border-transparent'
+                          }`}
+                        >
+                          {sub.label}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
               );
             })}
-            <button
-              onClick={() => handleNavClick('contact')}
-              className="bg-brand-red text-white px-6 py-2.5 font-bold hover:bg-brand-red-hover transition-colors shadow-md uppercase tracking-wider text-sm cursor-pointer ml-4"
-            >
-              HUBUNGI KAMI
-            </button>
           </nav>
 
           {/* Mobile Navigation Button */}
-          <div className="flex md:hidden">
+          <div className="flex xl:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="p-2 text-brand-navy hover:text-brand-red cursor-pointer"
@@ -104,30 +190,48 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection 
 
       {/* Mobile Menu Dropdown */}
       {isOpen && (
-        <div className="md:hidden bg-white border-t border-gray-100 absolute w-full left-0 shadow-lg">
-          <div className="px-4 pt-2 pb-6 space-y-1 flex flex-col">
-            {navItems.map((item) => {
-              const isActive = activeSection === item.id;
+        <div className="xl:hidden bg-white border-t border-gray-100 absolute w-full left-0 shadow-lg max-h-[85vh] overflow-y-auto">
+          <div className="px-4 pt-2 pb-6 space-y-2 flex flex-col">
+            {navigationMenu.map((menu) => {
+              const isCategoryActive = isMenuCategoryActive(menu.prefix);
+              const isExpanded = expandedMobileMenu === menu.prefix;
+              
               return (
-                <button
-                  key={item.id}
-                  onClick={() => handleNavClick(item.id)}
-                  className={`block w-full text-left px-4 py-3 text-sm font-bold uppercase tracking-wider ${
-                    isActive ? 'text-brand-red bg-red-50' : 'text-brand-navy hover:text-brand-red hover:bg-gray-50'
-                  }`}
-                >
-                  {item.label}
-                </button>
+                <div key={menu.prefix} className="border-b border-gray-50 pb-2">
+                  <button
+                    onClick={() => toggleMobileCategory(menu.prefix)}
+                    className={`flex items-center justify-between w-full text-left px-4 py-3 text-sm font-bold uppercase tracking-wider ${
+                      isCategoryActive ? 'text-brand-red' : 'text-brand-navy hover:text-brand-red'
+                    }`}
+                  >
+                    <span>{menu.label}</span>
+                    {isExpanded ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+                  </button>
+
+                  {/* Mobile Submenu Accordion */}
+                  {isExpanded && (
+                    <div className="mt-1 ml-4 pl-2 border-l-2 border-slate-100 flex flex-col gap-1 bg-slate-50/50 py-1 rounded-r-xl">
+                      {menu.subItems.map((sub) => {
+                        const isSubActive = activeSection === sub.id;
+                        return (
+                          <button
+                            key={sub.id}
+                            onClick={() => handleNavClick(sub.id)}
+                            className={`block w-full text-left px-4 py-2.5 text-xs font-bold uppercase tracking-wide ${
+                              isSubActive 
+                                ? 'text-brand-red font-extrabold' 
+                                : 'text-slate-600 hover:text-brand-red'
+                            }`}
+                          >
+                            {sub.label}
+                          </button>
+                        );
+                      })}
+                    </div>
+                  )}
+                </div>
               );
             })}
-            <div className="px-4 mt-4">
-              <button
-                onClick={() => handleNavClick('contact')}
-                className="w-full bg-brand-red text-white py-3 font-bold text-sm uppercase tracking-wider hover:bg-brand-red-hover"
-              >
-                Hubungi Kami
-              </button>
-            </div>
           </div>
         </div>
       )}

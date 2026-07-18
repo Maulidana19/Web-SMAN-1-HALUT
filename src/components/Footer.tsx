@@ -21,7 +21,7 @@ export const Footer: React.FC<FooterProps> = ({ setActiveSection }) => {
           
           {/* Col 1: Branding and short introduction */}
           <div className="flex flex-col items-start text-left space-y-6">
-            <div className="flex items-center gap-3 cursor-pointer" onClick={() => handleLinkClick('home')}>
+            <div className="flex items-center gap-3 cursor-pointer" onClick={() => handleLinkClick('beranda-sekilas')}>
               <div className="w-12 h-12 flex items-center justify-center shrink-0">
                 <img 
                   src="/assets/logo.png" 

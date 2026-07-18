@@ -1,8 +1,12 @@
 import React from 'react';
 import { SCHOOL_INFO } from '../data';
-import { CheckCircle2, Quote, Award, Shield, Heart, Target, Compass } from 'lucide-react';
+import { CheckCircle2, Quote, Award, Shield, Heart, Target, Compass, Users, Layers } from 'lucide-react';
 
-export const About: React.FC = () => {
+interface AboutProps {
+  view?: 'all' | 'identitas' | 'manajemen' | 'sambutan';
+}
+
+export const About: React.FC<AboutProps> = ({ view = 'all' }) => {
   const coreValues = [
     {
       icon: <Award className="w-6 h-6 sm:w-10 sm:h-10 text-brand-red" />,
@@ -26,12 +30,291 @@ export const About: React.FC = () => {
     }
   ];
 
+  // SECTION 1: Dedicated Sambutan Kepala Sekolah
+  if (view === 'sambutan') {
+    return (
+      <div id="sambutan-page" className="bg-gray-50 py-10 sm:py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <span className="text-brand-red text-xs font-bold uppercase tracking-widest block mb-2">Sambutan Resmi</span>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 font-display">
+              Sambutan Kepala Sekolah
+            </h2>
+            <div className="h-1 w-12 bg-brand-red mx-auto mt-4 rounded-full" />
+          </div>
+
+          <div className="bg-white rounded-3xl p-8 sm:p-12 shadow-xl border border-gray-100 relative overflow-hidden">
+            <Quote className="absolute top-12 right-12 w-32 h-32 text-gray-50 opacity-55 rotate-180" />
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
+              {/* Photo */}
+              <div className="md:col-span-5 lg:col-span-4 flex flex-col items-center">
+                <div className="w-full max-w-[240px] sm:max-w-[260px] lg:max-w-[280px] aspect-[3/4] rounded-2xl overflow-hidden shadow-lg mb-6 border-[6px] border-gray-50 relative">
+                  <div className="absolute inset-0 bg-gray-100 animate-pulse -z-10"></div>
+                  <img 
+                    src="/assets/foto1.jpg" 
+                    alt={SCHOOL_INFO.principal.name}
+                    className="w-full h-full object-cover object-top"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).style.opacity = '0';
+                    }}
+                  />
+                </div>
+                <div className="text-center">
+                  <h4 className="font-bold text-slate-900 text-lg sm:text-xl font-display">{SCHOOL_INFO.principal.name}</h4>
+                  <p className="text-blue-600 text-xs sm:text-sm font-semibold uppercase tracking-wide mt-1">{SCHOOL_INFO.principal.role}</p>
+                </div>
+              </div>
+
+              {/* Message */}
+              <div className="md:col-span-7 lg:col-span-8">
+                <h3 className="text-lg sm:text-2xl lg:text-3xl font-bold font-display text-slate-900 mb-6 flex items-center gap-2 sm:gap-3">
+                  <Quote className="w-6 h-6 sm:w-8 sm:h-8 text-blue-500 shrink-0" />
+                  Pesan & Visi Kepemimpinan
+                </h3>
+                <div className="text-gray-600 text-sm sm:text-base lg:text-lg leading-relaxed italic space-y-4 text-justify">
+                  <p>"{SCHOOL_INFO.principal.message}"</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    );
+  }
+
+  // SECTION 2: Dedicated Identitas Sekolah
+  if (view === 'identitas') {
+    return (
+      <div id="identitas-page" className="bg-gray-50 pb-16">
+        
+        {/* Banner Title */}
+        <div className="relative pt-16 pb-20 flex items-center justify-center overflow-hidden mb-12">
+          <div className="absolute inset-0 z-0">
+            <img 
+              src="/assets/utama.jpg" 
+              alt="Profil SMAN 1 Halmahera Utara" 
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-brand-navy/80 mix-blend-multiply"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-gray-50 via-brand-navy/20 to-black/60"></div>
+          </div>
+          <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
+            <span className="inline-block bg-brand-red text-white text-xs font-bold uppercase tracking-widest px-4 py-1.5 mb-4 shadow-lg">
+              PROFIL SEKOLAH
+            </span>
+            <h1 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight font-display drop-shadow-lg">
+              Identitas Sekolah
+            </h1>
+          </div>
+        </div>
+
+        {/* Sejarah Singkat */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+          <div className="bg-white rounded-3xl p-8 sm:p-12 shadow-xl border border-gray-100">
+            <div className="max-w-3xl mx-auto text-center">
+              <h3 className="text-xl sm:text-3xl font-bold font-display text-slate-900 mb-6">Sejarah Singkat</h3>
+              <p className="text-gray-600 text-sm sm:text-base leading-relaxed text-justify sm:text-center">
+                SMA Negeri 1 Halmahera Utara didirikan secara resmi pada tahun 1969 (dengan rintisan awal pengabdian sejak 1967). Sebagai salah satu sekolah menengah atas negeri tertua di Provinsi Maluku Utara, SMAN 1 Halmahera Utara telah mengukir sejarah panjang dalam mencetak putra-putri daerah terbaik, menyelenggarakan pendidikan berkarakter luhur, dan terus beradaptasi dengan perkembangan teknologi global demi mewujudkan visi pendidikan nasional yang unggul dan inklusif.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Visi & Misi */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
+            
+            {/* Left Column */}
+            <div className="lg:col-span-5 flex flex-col gap-6">
+              <div className="w-full aspect-[16/9] lg:aspect-auto lg:flex-1 rounded-3xl overflow-hidden shadow-lg relative bg-gray-100 group">
+                <img 
+                  src="/assets/visi.jpg" 
+                  alt="Fasilitas SMA" 
+                  className="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-105 transition-transform duration-500"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).style.opacity = '0';
+                  }}
+                />
+              </div>
+              
+              <div className="bg-brand-red text-white p-8 rounded-3xl shadow-lg transition-transform duration-300 hover:-translate-y-1">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-12 h-12 bg-white/20 text-white rounded-2xl flex items-center justify-center">
+                    <Target size={24} />
+                  </div>
+                  <h3 className="text-xl sm:text-2xl font-bold font-display tracking-wide">Visi Sekolah</h3>
+                </div>
+                <p className="text-sm sm:text-base leading-relaxed italic text-red-50">
+                  "{SCHOOL_INFO.vision}"
+                </p>
+              </div>
+            </div>
+
+            {/* Right Column */}
+            <div className="lg:col-span-7 bg-brand-navy text-white p-8 sm:p-12 rounded-3xl shadow-lg flex flex-col h-full transition-transform duration-300 hover:-translate-y-1">
+              <div className="flex items-center gap-4 mb-8">
+                <div className="w-12 h-12 bg-white/10 text-white rounded-2xl flex items-center justify-center">
+                  <Compass size={24} />
+                </div>
+                <h3 className="text-2xl font-bold font-display tracking-wide">Misi Sekolah</h3>
+              </div>
+              
+              <div className="space-y-6 flex-1">
+                {SCHOOL_INFO.missions.map((misi, idx) => (
+                  <div key={idx} className="flex gap-5 items-start group/misi">
+                    <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center shrink-0 mt-0.5 border border-white/20 text-white font-bold text-sm">
+                      {idx + 1}
+                    </div>
+                    <p className="text-gray-300 text-sm sm:text-base leading-relaxed group-hover/misi:text-white transition-colors duration-300">
+                      {misi}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        {/* Nilai Nilai Sekolah (Core Values) */}
+        <div className="bg-white py-12">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <span className="text-brand-red text-xs font-bold uppercase tracking-widest block mb-2">NILAI UTAMA</span>
+              <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 font-display">Mengapa SMAN 1 Halut?</h3>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {coreValues.map((val, idx) => (
+                <div key={idx} className="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:shadow-md transition-shadow text-left">
+                  <div className="mb-4">{val.icon}</div>
+                  <h4 className="font-bold text-slate-800 mb-2 font-display text-sm sm:text-base">{val.title}</h4>
+                  <p className="text-gray-500 text-xs sm:text-sm leading-relaxed">{val.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+      </div>
+    );
+  }
+
+  // SECTION 3: Dedicated Manajemen Sekolah
+  if (view === 'manajemen') {
+    return (
+      <div id="manajemen-page" className="bg-gray-50 pb-16">
+        
+        {/* Banner Title */}
+        <div className="relative pt-16 pb-20 flex items-center justify-center overflow-hidden mb-12">
+          <div className="absolute inset-0 z-0">
+            <img 
+              src="/assets/utama.jpg" 
+              alt="Profil SMAN 1 Halmahera Utara" 
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-brand-navy/80 mix-blend-multiply"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-gray-50 via-brand-navy/20 to-black/60"></div>
+          </div>
+          <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
+            <span className="inline-block bg-brand-red text-white text-xs font-bold uppercase tracking-widest px-4 py-1.5 mb-4 shadow-lg">
+              PROFIL SEKOLAH
+            </span>
+            <h1 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight font-display drop-shadow-lg">
+              Manajemen Sekolah
+            </h1>
+          </div>
+        </div>
+
+        {/* Jajaran Pimpinan */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+          <div className="text-center mb-10">
+            <span className="text-brand-red text-xs font-bold uppercase tracking-widest block mb-2">JAJARAN PIMPINAN</span>
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 font-display">
+              Tim Wakil Kepala Sekolah
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+            {[1, 2, 3, 4].map((idx) => {
+              const names = ['Fendy V. Hitipeuw, S.Pd.', 'Donal R. Ollo, S.Pd.', 'Thomas S. Matrutty, S.Pd.', 'Reny Uktolseja, S.E., S.Pd.'];
+              const roles = ['Bidang Kurikulum', 'Bidang Kesiswaan', 'Bidang Sarpras', 'Bidang Humas'];
+              return (
+                <div key={idx} className="relative group overflow-hidden bg-brand-navy rounded-2xl shadow-sm">
+                  <div className="aspect-[3/4] w-full">
+                    <img 
+                      src={`/assets/waka${idx}.jpg`} 
+                      alt={`Wakil Kepala Sekolah ${idx}`}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      onError={(e) => {
+                        (e.target as HTMLImageElement).style.opacity = '0';
+                      }}
+                    />
+                    <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-brand-navy/90 via-brand-navy/40 to-transparent pointer-events-none"></div>
+                  </div>
+                  <div className="absolute bottom-0 left-0 w-full p-4 text-left">
+                    <h3 className="text-white font-bold text-xs sm:text-base font-display leading-tight">{names[idx-1]}</h3>
+                    <p className="text-blue-200 text-[9px] sm:text-xs font-medium uppercase tracking-wider mt-1">{roles[idx-1]}</p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Organisasi & Komite Mockups */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            {/* Org Structure */}
+            <div className="bg-white p-6 sm:p-8 rounded-3xl border border-slate-100 shadow-sm text-left">
+              <div className="flex items-center gap-3 mb-4">
+                <Layers className="text-brand-red w-6 h-6" />
+                <h4 className="font-bold text-slate-800 text-lg font-display">Struktur Organisasi Sekolah</h4>
+              </div>
+              <p className="text-slate-500 text-xs sm:text-sm leading-relaxed mb-6">
+                Bagan pembagian komando kepemimpinan serta tanggung jawab administratif internal SMAN 1 Halmahera Utara.
+              </p>
+              <div className="border border-dashed border-slate-200 rounded-2xl p-6 bg-slate-50/50 text-center flex flex-col items-center justify-center min-h-[160px]">
+                <Users className="text-slate-400 mb-2" size={32} />
+                <span className="text-xs text-slate-500 font-bold uppercase tracking-wider">Bagan Organisasi Digital</span>
+                <span className="text-[10px] text-slate-400 mt-1">Sedang dalam proses penyusunan bagan grafis terbaru.</span>
+              </div>
+            </div>
+
+            {/* School Committee */}
+            <div className="bg-white p-6 sm:p-8 rounded-3xl border border-slate-100 shadow-sm text-left">
+              <div className="flex items-center gap-3 mb-4">
+                <Users className="text-brand-red w-6 h-6" />
+                <h4 className="font-bold text-slate-800 text-lg font-display">Komite Sekolah</h4>
+              </div>
+              <p className="text-slate-500 text-xs sm:text-sm leading-relaxed mb-6">
+                Lembaga mandiri yang mewakili peran serta orang tua siswa dalam mendukung program kerja dan peningkatan sarana mutu pendidikan.
+              </p>
+              <div className="bg-blue-50/30 p-5 rounded-2xl border border-blue-100/30">
+                <h5 className="font-bold text-brand-navy text-xs sm:text-sm mb-2">Jajaran Pengurus Komite</h5>
+                <ul className="text-slate-600 text-xs space-y-1.5">
+                  <li>• <strong>Ketua Komite:</strong> Drs. H. Muhammad Saleh</li>
+                  <li>• <strong>Wakil Ketua:</strong> Dr. Ir. Yohanes W.</li>
+                  <li>• <strong>Sekretaris:</strong> Dra. Maria K.</li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    );
+  }
+
+  // DEFAULT VIEW (Render everything in one page - original layout)
   return (
     <div id="about" className="bg-gray-50">
       
-      {/* 0. HERO SECTION */}
+      {/* HERO SECTION */}
       <div className="relative pt-16 sm:pt-20 pb-28 sm:pb-36 flex items-center justify-center overflow-hidden">
-        {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img 
             src="/assets/utama.jpg" 
@@ -42,7 +325,6 @@ export const About: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-t from-gray-50 via-brand-navy/20 to-black/60"></div>
         </div>
 
-        {/* Content */}
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
           <span className="inline-block bg-brand-red text-white text-xs font-bold uppercase tracking-widest px-4 py-1.5 mb-6 shadow-lg">
             PROFIL SEKOLAH
@@ -56,16 +338,12 @@ export const About: React.FC = () => {
         </div>
       </div>
 
-      {/* 1. SAMBUTAN KEPALA SEKOLAH */}
+      {/* SAMBUTAN KEPALA SEKOLAH */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-20 sm:-mt-24 relative z-20 mb-16">
         <div className="bg-white rounded-3xl p-8 sm:p-12 shadow-2xl border border-gray-100 relative overflow-hidden">
-          
-          {/* Decorative quote marks */}
           <Quote className="absolute top-12 right-12 w-32 h-32 text-gray-50 opacity-50 rotate-180" />
 
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
-            
-            {/* Foto Kepsek */}
             <div className="md:col-span-5 lg:col-span-4 flex flex-col items-center">
               <div className="w-full max-w-[240px] sm:max-w-[260px] lg:max-w-[280px] aspect-[3/4] rounded-2xl overflow-hidden shadow-lg mb-6 border-[6px] border-gray-50 relative">
                 <div className="absolute inset-0 bg-gray-100 animate-pulse -z-10"></div>
@@ -84,7 +362,6 @@ export const About: React.FC = () => {
               </div>
             </div>
 
-            {/* Pesan Kepsek */}
             <div className="md:col-span-7 lg:col-span-8">
               <h3 className="text-lg sm:text-2xl lg:text-3xl font-bold font-display text-slate-900 mb-6 flex items-center gap-2 sm:gap-3">
                 <Quote className="w-6 h-6 sm:w-8 sm:h-8 text-blue-500 shrink-0" />
@@ -94,18 +371,15 @@ export const About: React.FC = () => {
                 <p>"{SCHOOL_INFO.principal.message}"</p>
               </div>
             </div>
-
           </div>
         </div>
       </div>
 
-      {/* 2. VISI & MISI SECTION - NEW LAYOUT */}
+      {/* VISI & MISI SECTION */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-4 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
           
-          {/* Left Column */}
           <div className="lg:col-span-5 flex flex-col gap-6">
-            {/* Image */}
             <div className="w-full aspect-[16/9] lg:aspect-auto lg:flex-1 rounded-3xl overflow-hidden shadow-lg relative bg-gray-100 group">
               <img 
                 src="/assets/visi.jpg" 
@@ -117,7 +391,6 @@ export const About: React.FC = () => {
               />
             </div>
             
-            {/* Visi Box (Red) */}
             <div className="bg-brand-red text-white p-8 sm:p-10 rounded-3xl shadow-lg shrink-0 transition-transform duration-300 hover:-translate-y-1">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-12 h-12 bg-white/20 text-white rounded-2xl flex items-center justify-center">
@@ -131,7 +404,6 @@ export const About: React.FC = () => {
             </div>
           </div>
 
-          {/* Right Column (Misi Box - Blue) */}
           <div className="lg:col-span-7 bg-brand-navy text-white p-8 sm:p-12 rounded-3xl shadow-lg flex flex-col h-full transition-transform duration-300 hover:-translate-y-1">
             <div className="flex items-center gap-4 mb-8">
               <div className="w-12 h-12 bg-white/10 text-white rounded-2xl flex items-center justify-center">
@@ -157,7 +429,7 @@ export const About: React.FC = () => {
         </div>
       </div>
 
-      {/* 3. JAJARAN PIMPINAN */}
+      {/* JAJARAN PIMPINAN */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         <div className="text-center mb-12">
           <span className="text-brand-red text-xs font-bold uppercase tracking-widest block mb-2">JAJARAN PIMPINAN</span>
@@ -181,7 +453,6 @@ export const About: React.FC = () => {
                       (e.target as HTMLImageElement).style.opacity = '0';
                     }}
                   />
-                  {/* Overlay only for text readability */}
                   <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-brand-navy/90 via-brand-navy/40 to-transparent pointer-events-none"></div>
                 </div>
                 <div className="absolute bottom-0 left-0 w-full p-3 sm:p-6">
@@ -194,11 +465,9 @@ export const About: React.FC = () => {
         </div>
       </div>
 
-      {/* 4. MENGAPA SMAN 1 HALUT (Core Values) */}
+      {/* CORE VALUES */}
       <div className="bg-white pt-10 pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
-          {/* Top Section: Title & Description */}
           <div className="w-full mb-8">
             <div className="flex items-center gap-4 mb-6">
               <span className="text-brand-red text-xs font-bold uppercase tracking-widest">MENGAPA SMAN 1 HALUT?</span>
@@ -209,12 +478,8 @@ export const About: React.FC = () => {
             </h2>
           </div>
 
-          {/* Bottom Section: Image & Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-stretch">
-            
-            {/* Image Left */}
             <div className="lg:col-span-5 relative flex flex-col">
-              {/* Blue Decorative Box behind image */}
               <div className="absolute -bottom-6 -left-6 w-48 h-48 bg-brand-navy z-0 hidden sm:block"></div>
               
               <div className="w-full aspect-[4/3] lg:aspect-auto lg:h-full lg:flex-1 relative z-10 overflow-hidden shadow-xl bg-gray-100">
@@ -229,7 +494,6 @@ export const About: React.FC = () => {
               </div>
             </div>
 
-            {/* Grid Right */}
             <div className="lg:col-span-7 grid grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
               {coreValues.map((val, idx) => (
                 <div key={idx} className="bg-slate-50 p-4 sm:p-8 hover:-translate-y-1 transition-transform duration-300 h-full flex flex-col">
@@ -241,13 +505,10 @@ export const About: React.FC = () => {
                 </div>
               ))}
             </div>
-
           </div>
-
         </div>
       </div>
 
     </div>
   );
 };
-
