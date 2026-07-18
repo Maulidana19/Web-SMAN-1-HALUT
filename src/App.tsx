@@ -8,7 +8,10 @@ import { Achievements } from './components/Achievements';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 import { NewsSection } from './components/NewsSection';
-
+import { WelcomeSection } from './components/WelcomeSection';
+import { FacilitiesSection } from './components/FacilitiesSection';
+import { AchievementsHighlight } from './components/AchievementsHighlight';
+import { TestimonialsSection } from './components/TestimonialsSection';
 export default function App() {
   const [activeSection, setActiveSection] = useState<string>('home');
 
@@ -40,6 +43,16 @@ export default function App() {
                 window.scrollTo({ top: 0, behavior: 'smooth' });
               }}
             />
+            <WelcomeSection 
+              key="home-welcome" 
+              onNavigateToAbout={() => {
+                setActiveSection('about');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
+            />
+            <FacilitiesSection key="home-facilities" />
+            <AchievementsHighlight key="home-achievements" />
+            <TestimonialsSection key="home-testimonials" />
             <NewsSection key="home-news" />
           </>
         );

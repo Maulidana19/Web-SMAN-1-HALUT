@@ -110,8 +110,8 @@ export const TESTIMONIALS_DATA: Testimonial[] = [
   {
     id: "test-1",
     name: "Rian Aditya",
-    role: "Alumni 2023 - Mahasiswa Teknik Informatika Universitas Halmahera",
-    content: "SMAN 1 Harapan Bangsa tidak hanya mengajarkan materi pelajaran, tetapi juga cara berpikir kritis dan kepemimpinan. Guru-gurunya sangat mendukung kami untuk mengejar mimpi akademik.",
+    role: "Alumni 2023 - Universitas Halmahera",
+    content: "SMAN 1 Halmahera Utara tidak hanya mengajarkan materi pelajaran, tetapi juga cara berpikir kritis dan kepemimpinan. Guru-gurunya sangat mendukung kami untuk mengejar mimpi akademik.",
     avatarSeed: "Rian"
   },
   {
@@ -138,7 +138,7 @@ export const TEACHERS_DATA = [
   { id: "teacher-5", name: "Reny Uktolseja, S.E., S.Pd.", image: "/assets/foto5.jpg" },
   { id: "teacher-6", name: "Stevi Sarundayang, S.Si.", image: "/assets/foto6.jpg" },
   { id: "teacher-7", name: "Henny Kristiana Masahe, S.Pd.", image: "/assets/foto7.jpg" },
-  { id: "teacher-8", name: "Nama", image: "/assets/foto8.jpg" },
+  { id: "teacher-8", name: "Faisal Garusu, S.Pd.", image: "/assets/foto8.jpg" },
   { id: "teacher-9", name: "Adeleda Letlora, S.Pd.", image: "/assets/foto9.jpg" },
   { id: "teacher-10", name: "Agustine V. Singal, S.Pd.", image: "/assets/foto10.jpg" },
   { id: "teacher-11", name: "Christina Tiawata, S.Pd.", image: "/assets/foto11.jpg" },
@@ -173,7 +173,7 @@ export const TEACHERS_DATA = [
   { id: "teacher-40", name: "Warni A. Mezak, S.Pd.", image: "/assets/foto40.jpg" },
   { id: "teacher-41", name: "Oktofianus Lasa, S.Pd.K.", image: "/assets/foto41.jpg" },
   { id: "teacher-42", name: "Haidir Yasman Kardi, S.Pd.", image: "/assets/foto42.jpg" },
-  { id: "teacher-43", name: "Faisal Garusu, S.Pd.", image: "/assets/foto43.jpg" },
+  { id: "teacher-43", name: "Nama", image: "/assets/foto43.jpg" },
   { id: "teacher-44", name: "Nama", image: "/assets/foto44.jpg" }
 ];
 

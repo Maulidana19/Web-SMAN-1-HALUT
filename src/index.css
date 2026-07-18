@@ -4,4 +4,9 @@
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Outfit", sans-serif;
+  
+  --color-brand-red: #cc2027;
+  --color-brand-red-hover: #b31920;
+  --color-brand-navy: #0A2B5E;
+  --color-brand-navy-light: #104085;
 }

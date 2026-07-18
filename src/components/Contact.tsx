@@ -62,11 +62,11 @@ export const Contact: React.FC = () => {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-xs font-bold uppercase tracking-widest text-blue-600 mb-3">Kontak & Lokasi</h2>
+          <h2 className="text-xs font-bold uppercase tracking-widest text-brand-red mb-3">Kontak & Lokasi</h2>
           <p className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight font-display">
             Hubungi SMAN 1 Halmahera Utara
           </p>
-          <div className="h-1 w-12 bg-blue-600 mx-auto mt-4 rounded-full" />
+          <div className="h-1 w-12 bg-brand-red mx-auto mt-4 rounded-full" />
           <p className="text-slate-500 text-sm sm:text-base mt-4 max-w-2xl mx-auto">
             Punya pertanyaan mengenai pendaftaran (PPDB), program akademik, atau ingin berkunjung? Tim humas kami siap membantu Anda.
           </p>
@@ -77,7 +77,7 @@ export const Contact: React.FC = () => {
           
           {/* Card 1: Address */}
           <div className="bg-white p-4 sm:p-8 rounded-xl sm:rounded-2xl border border-slate-100 flex items-start gap-3 sm:gap-4 text-left shadow-sm">
-            <div className="p-2.5 sm:p-3 bg-blue-50 text-blue-600 rounded-lg sm:rounded-xl flex-shrink-0">
+            <div className="p-2.5 sm:p-3 bg-red-50 text-brand-red rounded-lg sm:rounded-xl flex-shrink-0">
               <MapPin className="w-5 h-5 sm:w-6 sm:h-6" />
             </div>
             <div>
@@ -88,7 +88,7 @@ export const Contact: React.FC = () => {
 
           {/* Card 2: Phone & Email */}
           <div className="bg-white p-4 sm:p-8 rounded-xl sm:rounded-2xl border border-slate-100 flex items-start gap-3 sm:gap-4 text-left shadow-sm">
-            <div className="p-2.5 sm:p-3 bg-blue-50 text-blue-600 rounded-lg sm:rounded-xl flex-shrink-0">
+            <div className="p-2.5 sm:p-3 bg-red-50 text-brand-red rounded-lg sm:rounded-xl flex-shrink-0">
               <Mail className="w-5 h-5 sm:w-6 sm:h-6" />
             </div>
             <div className="w-full min-w-0">
@@ -96,14 +96,14 @@ export const Contact: React.FC = () => {
               <p className="text-slate-500 text-xs sm:text-sm font-medium">Telepon: {SCHOOL_INFO.contact.phone}</p>
               <div className="text-slate-500 text-xs sm:text-sm font-medium mt-0.5 sm:mt-1">
                 <span>Email: </span>
-                <span className="break-all text-blue-600">{SCHOOL_INFO.contact.email}</span>
+                <span className="break-all text-brand-red">{SCHOOL_INFO.contact.email}</span>
               </div>
             </div>
           </div>
 
           {/* Card 3: School Hours */}
           <div className="bg-white p-4 sm:p-8 rounded-xl sm:rounded-2xl border border-slate-100 flex items-start gap-3 sm:gap-4 text-left shadow-sm">
-            <div className="p-2.5 sm:p-3 bg-blue-50 text-blue-600 rounded-lg sm:rounded-xl flex-shrink-0">
+            <div className="p-2.5 sm:p-3 bg-red-50 text-brand-red rounded-lg sm:rounded-xl flex-shrink-0">
               <Clock className="w-5 h-5 sm:w-6 sm:h-6" />
             </div>
             <div>
@@ -112,7 +112,7 @@ export const Contact: React.FC = () => {
                 <p>Shift Pagi: 07.00 - 12.30 WIT</p>
                 <p>Shift Siang: 12.30 - 17.40 WIT</p>
               </div>
-              <p className="text-[10px] sm:text-xs text-blue-600 font-bold mt-1.5 sm:mt-2 uppercase tracking-wider">Sabtu & Minggu Libur</p>
+              <p className="text-[10px] sm:text-xs text-brand-red font-bold mt-1.5 sm:mt-2 uppercase tracking-wider">Sabtu & Minggu Libur</p>
             </div>
           </div>
 
@@ -170,7 +170,7 @@ export const Contact: React.FC = () => {
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     placeholder="Nama Anda"
-                    className="w-full px-4 py-3 bg-[#f1f5f9]/50 border border-slate-200 focus:border-blue-500 focus:bg-white focus:outline-none rounded-xl text-slate-800 transition-all font-medium text-sm sm:text-base"
+                    className="w-full px-4 py-3 bg-[#f1f5f9]/50 border border-slate-200 focus:border-brand-red focus:bg-white focus:outline-none rounded-xl text-slate-800 transition-all font-medium text-sm sm:text-base"
                     required
                   />
                 </div>
@@ -182,7 +182,7 @@ export const Contact: React.FC = () => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="email@contoh.com"
-                    className="w-full px-4 py-3 bg-[#f1f5f9]/50 border border-slate-200 focus:border-blue-500 focus:bg-white focus:outline-none rounded-xl text-slate-800 transition-all font-medium text-sm sm:text-base"
+                    className="w-full px-4 py-3 bg-[#f1f5f9]/50 border border-slate-200 focus:border-brand-red focus:bg-white focus:outline-none rounded-xl text-slate-800 transition-all font-medium text-sm sm:text-base"
                     required
                   />
                 </div>
@@ -196,7 +196,7 @@ export const Contact: React.FC = () => {
                   value={subject}
                   onChange={(e) => setSubject(e.target.value)}
                   placeholder="Contoh: Info Pendaftaran PPDB, Kunjungan Kerja"
-                  className="w-full px-4 py-3 bg-[#f1f5f9]/50 border border-slate-200 focus:border-blue-500 focus:bg-white focus:outline-none rounded-xl text-slate-800 transition-all font-medium text-sm sm:text-base"
+                  className="w-full px-4 py-3 bg-[#f1f5f9]/50 border border-slate-200 focus:border-brand-red focus:bg-white focus:outline-none rounded-xl text-slate-800 transition-all font-medium text-sm sm:text-base"
                   required
                 />
               </div>
@@ -209,7 +209,7 @@ export const Contact: React.FC = () => {
                   onChange={(e) => setMessage(e.target.value)}
                   rows={4}
                   placeholder="Tuliskan detail pertanyaan atau maksud Anda di sini..."
-                  className="w-full px-4 py-3 bg-[#f1f5f9]/50 border border-slate-200 focus:border-blue-500 focus:bg-white focus:outline-none rounded-xl text-slate-800 transition-all font-medium text-sm sm:text-base"
+                  className="w-full px-4 py-3 bg-[#f1f5f9]/50 border border-slate-200 focus:border-brand-red focus:bg-white focus:outline-none rounded-xl text-slate-800 transition-all font-medium text-sm sm:text-base"
                   required
                 />
               </div>
@@ -218,7 +218,7 @@ export const Contact: React.FC = () => {
                 id="form-submit-btn"
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full sm:w-auto px-7 py-3.5 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-all shadow-md shadow-blue-200 flex items-center justify-center gap-2 active:scale-95 cursor-pointer disabled:opacity-50 text-sm sm:text-base"
+                className="w-full sm:w-auto px-7 py-3.5 bg-brand-red hover:bg-brand-red-hover text-white font-bold rounded-xl transition-all shadow-md shadow-red-200 flex items-center justify-center gap-2 active:scale-95 cursor-pointer disabled:opacity-50 text-sm sm:text-base"
               >
                 {isSubmitting ? (
                   <>

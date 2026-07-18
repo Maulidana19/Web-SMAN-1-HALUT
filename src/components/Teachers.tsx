@@ -10,11 +10,11 @@ export const Teachers: React.FC = () => {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-8">
-          <h2 className="text-xs font-bold uppercase tracking-widest text-blue-600 mb-3">Guru & Tendik</h2>
+          <h2 className="text-xs font-bold uppercase tracking-widest text-brand-red mb-3">Guru & Tendik</h2>
           <p className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight font-display">
             Tenaga Pendidik & Kependidikan
           </p>
-          <div className="h-1 w-12 bg-blue-600 mx-auto mt-4 rounded-full" />
+          <div className="h-1 w-12 bg-brand-red mx-auto mt-4 rounded-full" />
           <p className="text-slate-500 text-sm sm:text-base mt-4 max-w-2xl mx-auto">
             Dibimbing dan didukung oleh tenaga profesional yang kompeten, berpengalaman, dan berdedikasi tinggi di bidangnya masing-masing.
           </p>
@@ -33,7 +33,7 @@ export const Teachers: React.FC = () => {
               {activeTab === 'guru' && (
                 <motion.div
                   layoutId="activeTabTeachers"
-                  className="absolute inset-0 bg-blue-600 rounded-full -z-10 shadow-md shadow-blue-600/30"
+                  className="absolute inset-0 bg-brand-navy rounded-full -z-10 shadow-md shadow-brand-navy/30"
                   transition={{ type: 'spring', stiffness: 400, damping: 30 }}
                 />
               )}
@@ -48,7 +48,7 @@ export const Teachers: React.FC = () => {
               {activeTab === 'tendik' && (
                 <motion.div
                   layoutId="activeTabTeachers"
-                  className="absolute inset-0 bg-blue-600 rounded-full -z-10 shadow-md shadow-blue-600/30"
+                  className="absolute inset-0 bg-brand-navy rounded-full -z-10 shadow-md shadow-brand-navy/30"
                   transition={{ type: 'spring', stiffness: 400, damping: 30 }}
                 />
               )}
@@ -65,13 +65,13 @@ export const Teachers: React.FC = () => {
               whileInView={{ opacity: 1, y: 0, transition: { duration: 0.5, delay: (idx % 4) * 0.1 } }}
               whileHover={{ y: -8, scale: 1.02, transition: { type: "spring", stiffness: 400, damping: 25, delay: 0 } }}
               viewport={{ once: true, margin: "-50px" }}
-              className="bg-white border border-slate-200 rounded-xl sm:rounded-2xl p-2 sm:p-6 shadow-sm sm:shadow-md hover:shadow-2xl hover:border-blue-300 transition-colors transition-shadow duration-300 group text-center relative overflow-hidden"
+              className="bg-white border border-slate-200 rounded-xl sm:rounded-2xl p-2 sm:p-3 shadow-sm sm:shadow-md hover:shadow-2xl hover:border-brand-red/50 transition-colors transition-shadow duration-300 group text-center relative overflow-hidden"
             >
               {/* Animasi latar belakang tipis saat di-hover */}
-              <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-blue-50/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-red-50/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
               {/* Image Frame (Pas Foto) - Dikembalikan seperti semula */}
-              <div className="relative z-10 w-full aspect-[3/4] bg-slate-100 rounded-md sm:rounded-xl overflow-hidden mb-2 sm:mb-5 border-2 sm:border-4 border-white shadow-sm sm:shadow-md flex items-center justify-center">
+              <div className="relative z-10 w-full aspect-[3/4] bg-slate-100 rounded-md sm:rounded-xl overflow-hidden mb-2 sm:mb-3 border-2 border-white shadow-sm flex items-center justify-center">
                 <img 
                   src={person.image} 
                   alt={person.name} 
