@@ -30,7 +30,7 @@ const EKSKUL_DATA = [
   {
     title: 'English Club',
     image: '/assets/englishclub.jpg',
-    description: 'Wadah siswa mengembangkan keterampilan berbahasa Inggris melalui diskusi dan kegiatan interaktif yang menyenangkan.',
+    description: 'Wadah siswa mengembangkan keterampilan berbahasa Inggris melalui diskusi dan kegiatan interaktif.',
   }
 ];
 
@@ -74,7 +74,7 @@ export const Ekstrakurikuler: React.FC = () => {
           className="bg-white rounded-[16px] sm:rounded-[24px] p-5 sm:p-10 shadow-sm border border-gray-100"
         >
           {/* Grid Layout for Ekstrakurikuler */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-3 sm:gap-6 lg:gap-8 max-w-6xl mx-auto">
             {EKSKUL_DATA.map((item, index) => (
               <div 
                 key={index}
@@ -89,14 +89,14 @@ export const Ekstrakurikuler: React.FC = () => {
                   }}
                 />
                 {/* Gradient overlay - kept tight so photo is visible */}
-                <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-brand-navy via-brand-navy/70 to-transparent pointer-events-none"></div>
+                <div className="absolute inset-x-0 bottom-0 h-[60%] sm:h-1/2 bg-gradient-to-t from-brand-navy via-brand-navy/70 to-transparent pointer-events-none"></div>
                 
                 {/* Text Content */}
-                <div className="absolute inset-x-0 bottom-0 p-5 sm:p-8 flex flex-col justify-end">
-                  <h3 className="text-white font-bold text-xl sm:text-2xl font-display mb-2 sm:mb-3 group-hover:text-blue-200 transition-colors">
+                <div className="absolute inset-x-0 bottom-0 p-3 sm:p-8 flex flex-col justify-end">
+                  <h3 className="text-white font-bold text-sm sm:text-2xl font-display mb-1 sm:mb-3 group-hover:text-blue-200 transition-colors">
                     {item.title}
                   </h3>
-                  <p className="text-blue-50 text-[11px] sm:text-xs leading-snug opacity-90 line-clamp-2">
+                  <p className="text-blue-50 text-[9px] sm:text-xs leading-snug opacity-90 line-clamp-2">
                     {item.description}
                   </p>
                 </div>
