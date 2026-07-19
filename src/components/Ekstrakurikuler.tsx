@@ -20,12 +20,12 @@ const EKSKUL_DATA = [
   {
     title: 'PMR',
     image: '/assets/pmr.jpg',
-    description: 'Wadah bagi siswa berlatih pertolongan pertama, serta menumbuhkan jiwa sosial dan rasa kemanusiaan.',
+    description: 'Wadah siswa berlatih pertolongan pertama dan menumbuhkan jiwa kemanusiaan.',
   },
   {
     title: 'Olahraga',
     image: '/assets/olahraga1.jpg',
-    description: 'Meningkatkan kebugaran jasmani, sportivitas, dan mewadahi bakat siswa di berbagai cabang olahraga.',
+    description: 'Meningkatkan kebugaran jasmani, sportivitas, dan bakat siswa di bidang olahraga.',
   }
 ];
 

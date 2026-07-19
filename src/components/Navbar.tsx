@@ -83,7 +83,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection 
             </span>
           </div>
           <div className="flex items-center">
-            <span>Mencetak Generasi Cerdas, Berkarakter, dan Berprestasi</span>
+            <span>{SCHOOL_INFO.slogan}</span>
           </div>
         </div>
       </div>

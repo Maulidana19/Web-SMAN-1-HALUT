@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { ExternalLink } from 'lucide-react';
+import { ComingSoonModal } from './ComingSoonModal';
 
 export const Portal: React.FC = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <div className="pt-10 pb-12 sm:pb-20 bg-[#f1f5f9] font-sans">
+      <ComingSoonModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header Section */}
@@ -53,7 +57,7 @@ export const Portal: React.FC = () => {
                 <p className="text-gray-500 text-xs sm:text-sm leading-snug sm:leading-relaxed font-medium mb-4 sm:mb-8 flex-grow text-justify">
                   Sistem Informasi Akademik sekolah untuk memantau nilai, kehadiran, jadwal, dan biodata siswa.
                 </p>
-                <button className="w-full bg-slate-100 hover:bg-brand-navy hover:text-white text-brand-navy font-bold text-[11px] sm:text-[13px] py-2.5 sm:py-3 px-4 rounded-lg sm:rounded-xl flex items-center justify-center gap-1.5 sm:gap-2 transition-colors duration-300">
+                <button onClick={() => setIsModalOpen(true)} className="w-full bg-slate-100 hover:bg-brand-navy hover:text-white text-brand-navy font-bold text-[11px] sm:text-[13px] py-2.5 sm:py-3 px-4 rounded-lg sm:rounded-xl flex items-center justify-center gap-1.5 sm:gap-2 transition-colors duration-300">
                   BUKA SIAKAD <ExternalLink className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                 </button>
               </div>
@@ -69,7 +73,7 @@ export const Portal: React.FC = () => {
                 <p className="text-gray-500 text-xs sm:text-sm leading-snug sm:leading-relaxed font-medium mb-4 sm:mb-8 flex-grow text-justify">
                   Platform Learning Management System untuk kuis online, tugas kelas, dan materi pembelajaran mandiri.
                 </p>
-                <button className="w-full bg-slate-100 hover:bg-brand-navy hover:text-white text-brand-navy font-bold text-[11px] sm:text-[13px] py-2.5 sm:py-3 px-4 rounded-lg sm:rounded-xl flex items-center justify-center gap-1.5 sm:gap-2 transition-colors duration-300">
+                <button onClick={() => setIsModalOpen(true)} className="w-full bg-slate-100 hover:bg-brand-navy hover:text-white text-brand-navy font-bold text-[11px] sm:text-[13px] py-2.5 sm:py-3 px-4 rounded-lg sm:rounded-xl flex items-center justify-center gap-1.5 sm:gap-2 transition-colors duration-300">
                   BUKA LMS <ExternalLink className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                 </button>
               </div>
@@ -85,7 +89,7 @@ export const Portal: React.FC = () => {
                 <p className="text-gray-500 text-xs sm:text-sm leading-snug sm:leading-relaxed font-medium mb-4 sm:mb-8 flex-grow text-justify">
                   Akses dashboard Rapor Pendidikan Kemendikbudristek untuk pemetaan berkala mutu pendidikan.
                 </p>
-                <button className="w-full bg-slate-100 hover:bg-brand-navy hover:text-white text-brand-navy font-bold text-[11px] sm:text-[13px] py-2.5 sm:py-3 px-4 rounded-lg sm:rounded-xl flex items-center justify-center gap-1.5 sm:gap-2 transition-colors duration-300">
+                <button onClick={() => setIsModalOpen(true)} className="w-full bg-slate-100 hover:bg-brand-navy hover:text-white text-brand-navy font-bold text-[11px] sm:text-[13px] py-2.5 sm:py-3 px-4 rounded-lg sm:rounded-xl flex items-center justify-center gap-1.5 sm:gap-2 transition-colors duration-300">
                   BUKA RAPOR <ExternalLink className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                 </button>
               </div>

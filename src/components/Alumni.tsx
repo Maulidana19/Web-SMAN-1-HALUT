@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { ExternalLink, Users, GraduationCap, Building, Briefcase } from 'lucide-react';
+import { ComingSoonModal } from './ComingSoonModal';
 
 export const Alumni: React.FC = () => {
   const stats = [
@@ -10,8 +11,11 @@ export const Alumni: React.FC = () => {
     { label: 'Wirausaha & Memasuki Dunia Kerja', percent: 10, color: 'bg-slate-500', icon: Briefcase },
   ];
 
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <div className="pt-10 pb-20 bg-[#f1f5f9] min-h-screen font-sans">
+      <ComingSoonModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header Section */}
@@ -62,7 +66,7 @@ export const Alumni: React.FC = () => {
               </div>
 
               <div className="relative z-10 mt-auto">
-                <button className="w-full sm:w-auto bg-brand-navy hover:bg-brand-red text-white font-bold text-sm py-4 px-8 rounded-xl flex items-center justify-center gap-2 transition-colors duration-300 shadow-md">
+                <button onClick={() => setIsModalOpen(true)} className="w-full sm:w-auto bg-brand-navy hover:bg-brand-red text-white font-bold text-sm py-4 px-8 rounded-xl flex items-center justify-center gap-2 transition-colors duration-300 shadow-md">
                   ISI FORMULIR TRACER <ExternalLink size={16} />
                 </button>
               </div>

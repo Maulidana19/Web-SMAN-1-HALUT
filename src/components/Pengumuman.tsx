@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { FileText, ArrowRight } from 'lucide-react';
+import { ComingSoonModal } from './ComingSoonModal';
 
 export const Pengumuman: React.FC = () => {
   const announcements = [
@@ -24,8 +25,11 @@ export const Pengumuman: React.FC = () => {
     }
   ];
 
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <div className="pt-10 pb-12 sm:pb-20 bg-[#f1f5f9] font-sans">
+      <ComingSoonModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header Section */}
@@ -67,6 +71,7 @@ export const Pengumuman: React.FC = () => {
             {announcements.map((item, idx) => (
               <motion.div 
                 key={item.id}
+                onClick={() => setIsModalOpen(true)}
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-50px" }}

@@ -2,15 +2,22 @@ import { Facility, Achievement, Testimonial } from "./types";
 
 export const SCHOOL_INFO = {
   name: "SMA Negeri 1 Halmahera Utara",
-  slogan: "Unggul dalam Prestasi, Berkarakter, dan Berwawasan Global",
-  shortDescription: "Sekolah Menengah Atas berstatus Sekolah Negeri Provinsi Maluku Utara yang berdedikasi membentuk generasi unggul, kreatif, dan mandiri dengan landasan nilai karakter luhur.",
-  vision: "Terwujudnya insan pendidikan yang bertaqwa, cerdas, kreatif, berkarakter luhur, dan siap bersaing di kancah global.",
+  slogan: "Berkarakter, Berprestasi, Inovatif, Adaptif terhadap Perkembangan Teknologi",
+  shortDescription: "SMA Negeri 1 Halmahera Utara merupakan sekolah model yang mengintegrasikan pembelajaran mendalam, koding, dan kecerdasan artifisial dalam kurikulum. Sebagai sekolah mitra pembelajaran jarak jauh, lembaga ini berkomitmen untuk memperluas akses pendidikan berkualitas melalui teknologi digital, mencetak generasi yang siap bersaing di tingkat nasional maupun global.",
+  vision: "Sekolah unggul, berkarakter, berprestasi, inovatif, adaptif, berwawasan global melalui pembelajaran mendalam, koding dan kecerdasan artifisial.",
   missions: [
-    "Menyelenggarakan proses pembelajaran yang inovatif, efektif, dan berbasis teknologi.",
-    "Menanamkan nilai-nilai karakter budi pekerti, disiplin, dan religius dalam keseharian sekolah.",
-    "Mengembangkan minat, bakat, dan potensi siswa melalui program ekstrakurikuler yang komprehensif.",
-    "Membangun kemitraan yang kuat dengan orang tua, masyarakat, dan institusi global untuk kemajuan pendidikan.",
-    "Mewujudkan lingkungan sekolah yang bersih, hijau, aman, dan kondusif untuk belajar."
+    "Menanamkan nilai-nilai karakter yang kuat, berlandaskan integritas, tanggung jawab, dan kepedulian sosial dalam setiap kegiatan pembelajaran.",
+    "Meningkatkan prestasi akademik dan non-akademik melalui penerapan pembelajaran mendalam (deep learning) yang berorientasi pada pemahaman konsep dan penerapan nyata.",
+    "Mengembangkan kompetensi digital peserta didik melalui pembelajaran koding, kecerdasan artifisial, dan teknologi informasi sebagai bekal menghadapi era industri 5.0.",
+    "Mendorong inovasi dalam proses belajar mengajar dengan memanfaatkan teknologi digital dan sumber belajar terbuka.",
+    "Menjalin kemitraan dengan lembaga pendidikan dan industri dalam pelaksanaan program pembelajaran jarak jauh serta pengembangan keterampilan abad ke-21.",
+    "Mewujudkan lingkungan sekolah yang adaptif, kolaboratif, dan berorientasi pada pengembangan potensi individu secara optimal."
+  ],
+  goals: [
+    "Menghasilkan lulusan yang berkarakter kuat, berpikir kritis, kreatif, dan mampu beradaptasi dengan perubahan teknologi.",
+    "Meningkatkan kualitas pembelajaran berbasis teknologi digital dan AI.",
+    "Menjadi sekolah model dalam penerapan pembelajaran mendalam dan kolaborasi pembelajaran jarak jauh.",
+    "Membangun budaya inovasi dan literasi digital di seluruh ekosistem sekolah."
   ],
   principal: {
     name: "Ellen Sintya Dewi, S.Pd., M.Si.",
@@ -217,6 +224,14 @@ export const NEWS_DATA = [
     content: "📣 Halo, calon SobSaa 2026! 📣\nMinSaa punya kabar baik nih! 🎉\n\n🚪✨ SPMB SMAN 1 Halmahera Utara Tahun Ajaran 2026/2027 resmi dibuka!\nSaatnya melangkah lebih dekat menuju sekolah dengan Akreditasi A (Unggul) dan predikat Sekolah Penggerak yang siap mendukung setiap langkah, mimpi, dan prestasimu. 🌟\n\nDi SMANSA, kamu tidak hanya belajar untuk meraih nilai terbaik, tetapi juga bertumbuh menjadi pribadi yang berkarakter, kreatif, berprestasi, dan siap menghadapi masa depan. 📚🏆\n\n💡 Jalur Pendaftaran:\n🏅 Jalur Prestasi\n📍 Jalur Domisili\n🤝 Jalur Afirmasi\n🔄 Jalur Mutasi\n\n📌 Pastikan seluruh berkas telah disiapkan dan lakukan pendaftaran sesuai jadwal yang telah ditentukan.\nKarena setiap perjalanan besar selalu dimulai dari satu langkah kecil. Dan siapa tahu, langkah itu dimulai dari SMAN 1 Halmahera Utara. 💙✨\n\n📍 Ayo bergabung menjadi bagian dari keluarga besar SMANSA! Mari belajar, berkembang, berprestasi, dan mengukir masa depan bersama.\nSMANSA Menyapa, SobSaa Menjawab! 💙🤍\n#SPMB2026 #SMAN1HalmaheraUtara #SobSaa2026 #minSaa",
     date: "6 Juni 2026",
     image: "/assets/spmb2026.png"
+  },
+  {
+    id: "news-4",
+    title: "Warga SMAN 1 Halmahera Utara Serahkan Hewan Qurban",
+    excerpt: "Sebagai wujud kepedulian sosial, keikhlasan, dan semangat berbagi, warga SMAN 1 Halmahera Utara menyerahkan hewan qurban untuk disembelih pada Hari Raya Iduladha.",
+    content: "Sebagai wujud kepedulian sosial, keikhlasan, dan semangat berbagi, keluarga besar warga SMAN 1 Halmahera Utara menyerahkan seekor hewan qurban kepada pengurus masjid setempat untuk disembelih pada perayaan Hari Raya Iduladha. Penyerahan hewan qurban ini merupakan tradisi tahunan sekolah dalam rangka meningkatkan ketakwaan serta mempererat tali silaturahmi antara sekolah dan masyarakat sekitar.\n\nKegiatan ini diharapkan mampu menumbuhkan karakter siswa tentang pentingnya berbagi dengan sesama, kepedulian, dan rasa syukur atas nikmat yang diberikan. Semoga semangat keikhlasan ini terus menjadi inspirasi bagi seluruh elemen pendidikan di SMAN 1 Halmahera Utara.",
+    date: "30 Mei 2026",
+    image: "/assets/news2.jpg"
   },
   {
     id: "news-2",
