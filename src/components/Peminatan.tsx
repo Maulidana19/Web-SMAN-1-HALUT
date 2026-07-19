@@ -1,0 +1,88 @@
+import React from 'react';
+import { motion } from 'motion/react';
+import { ChevronRight } from 'lucide-react';
+
+export const Peminatan: React.FC = () => {
+  return (
+    <div className="pt-10 pb-20 bg-[#f1f5f9] min-h-screen font-sans">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* Header Section */}
+        <div className="text-center max-w-4xl mx-auto mb-12 md:mb-16">
+          <motion.span 
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-brand-red text-xs font-bold uppercase tracking-widest block mb-3"
+          >
+            AKADEMIK
+          </motion.span>
+          <motion.h2 
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight font-display mb-4 leading-tight"
+          >
+            Program Peminatan
+          </motion.h2>
+          <motion.p 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.2 }}
+            className="text-gray-500 text-sm sm:text-base leading-relaxed"
+          >
+            Struktur kelompok mata pelajaran pilihan sesuai minat, bakat, dan rencana karir siswa.
+          </motion.p>
+        </div>
+
+        {/* Features Wrapper */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3 }}
+          className="bg-white rounded-[24px] p-6 sm:p-8 md:p-10 shadow-sm border border-gray-100"
+        >
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+            
+            {/* Card 1 */}
+            <div className="bg-white border border-slate-100 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-md hover:border-red-100 transition-all duration-300 flex flex-col h-full">
+              <span className="text-brand-red text-[10px] sm:text-xs font-bold uppercase tracking-widest block mb-2">KELAS X</span>
+              <h3 className="text-lg md:text-xl font-bold text-brand-navy mb-4">Fase E (Umum)</h3>
+              <p className="text-gray-500 text-sm leading-relaxed font-medium mb-8 flex-grow">
+                Siswa mempelajari seluruh mata pelajaran secara umum sebagai dasar pemetaan minat akademik untuk tahun berikutnya.
+              </p>
+              <button className="flex items-center gap-1 text-brand-navy font-bold text-xs sm:text-sm hover:text-brand-red transition-colors w-fit">
+                Selengkapnya <ChevronRight size={16} />
+              </button>
+            </div>
+
+            {/* Card 2 */}
+            <div className="bg-white border border-slate-100 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-md hover:border-red-100 transition-all duration-300 flex flex-col h-full">
+              <span className="text-brand-red text-[10px] sm:text-xs font-bold uppercase tracking-widest block mb-2">FASE F (KELAS XI & XII)</span>
+              <h3 className="text-lg md:text-xl font-bold text-brand-navy mb-4">MIPA (Matematika & Alam)</h3>
+              <p className="text-gray-500 text-sm leading-relaxed font-medium mb-8 flex-grow">
+                Fokus mendalam pada Matematika Lanjut, Fisika, Kimia, Biologi, dan Informatika untuk persiapan jurusan sains & teknologi.
+              </p>
+              <button className="flex items-center gap-1 text-brand-navy font-bold text-xs sm:text-sm hover:text-brand-red transition-colors w-fit">
+                Selengkapnya <ChevronRight size={16} />
+              </button>
+            </div>
+
+            {/* Card 3 */}
+            <div className="bg-white border border-slate-100 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-md hover:border-red-100 transition-all duration-300 flex flex-col h-full">
+              <span className="text-brand-red text-[10px] sm:text-xs font-bold uppercase tracking-widest block mb-2">FASE F (KELAS XI & XII)</span>
+              <h3 className="text-lg md:text-xl font-bold text-brand-navy mb-4">IPS (Sosial & Humaniora)</h3>
+              <p className="text-gray-500 text-sm leading-relaxed font-medium mb-8 flex-grow">
+                Fokus pada Ekonomi, Geografi, Sosiologi, Sejarah Lanjut, dan Bahasa untuk persiapan karir ilmu sosial, bisnis, dan hukum.
+              </p>
+              <button className="flex items-center gap-1 text-brand-navy font-bold text-xs sm:text-sm hover:text-brand-red transition-colors w-fit">
+                Selengkapnya <ChevronRight size={16} />
+              </button>
+            </div>
+
+          </div>
+        </motion.div>
+
+      </div>
+    </div>
+  );
+};

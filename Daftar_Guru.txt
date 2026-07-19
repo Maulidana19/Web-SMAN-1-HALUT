@@ -1,0 +1,43 @@
+Daftar Nama Guru, Mata Pelajaran, dan Tugas Tambahan
+
+No | Nama                                      | Mata Pelajaran                            | Tugas Tambahan
+---------------------------------------------------------------------------------------------------------
+1  | ELLEN SINTYA DEWI, S.Pd., M.Si            | KIMIA                                     | KEPSEK
+2  | LASMA J.M SITOMPUL, S.Pd                  | MATEMATIKA, MTK LANJUT                    | -
+3  | KRISMERY D. ANDALANGI, S.Pd., MM          | BIOLOGI                                   | WK. X-1
+4  | DONAL R. OLLO, S.Pd                       | PJOK                                      | WAKASIS
+5  | HENI K. MASAHE, S.Pd                      | EKONOMI                                   | Ka Perpustakaan
+6  | HAWA S. TOLUHULA, S.Pd                    | EKONOMI                                   | WK. XII-5
+7  | ROYANI POBELA, S.Pd., MM                  | PKn                                       | WK. XII-3
+8  | Dra. WENEFRIDA ARDIANTARI, MM             | BAHASA INDONESIA                          | WK. XII-1
+9  | THOMAS S. MATRUTTY, S.Pd                  | SOSIOLOGI                                 | WAKASARPRAS
+10 | AGUSTINE V. SINGAL, S.Pd                  | MATEMATIKA, MATEMATIKA LANJUT             | -
+11 | NETTI HANGKAMU, S.Pd., M.Pd               | BIOLOGI                                   | WK. XII-2
+12 | ADELEDA LETLORA, S.Pd                     | SOSIOLOGI                                 | WK. XII-6
+13 | YUSDI T. SURA, S.Pd                       | BAHASA INGGRIS, BAHASA INGGRIS PILIHAN    | WK. XII-4
+14 | FENDY V. HITIPEUW, S.Pd                   | KIMIA                                     | WAKAKUR
+15 | PUTRI M. FAJRIN, S.Pd                     | BAHASA INGGRIS                            | BEND. BOSP
+17 | LUCIANA M. NANLOHI, S.Si                  | PAK                                       | WK. X-8
+18 | SRI ANGGRIANI, S.Pd                       | BIOLOGI                                   | WK. XI-2
+19 | CRISTA T.Y KAKANGA, S.Pd                  | SOSIOLOGI, SEJARAH                        | WK. X-3
+20 | SUWARSI ABUBAKAR, S.Pd                    | EKONOMI                                   | WK. XI-4
+22 | NURHAYATI, SE                             | PRAKARYA, EKONOMI                         | WK. XII-8
+24 | DEIN L. SOLOHA, S.Pd                      | PJOK                                      | WK. XI-9
+25 | STEVI SARUNDAYANG, S.Si                   | KIMIA                                     | WK. XI-1
+26 | CHINTIA E.P NGABALINN, S.PAK              | PKn, PAK                                  | WK. X-4
+27 | CHRISTINA TIAWATA, S.Pd                   | BAHASA INDONESIA                          | WK. XI-7
+28 | STEVI A. TOBELO, S.Pd                     | BAHASA INDONESIA, BAHASA INDONESIA LANJUT | WK. XI-5
+29 | YURIKE F. MAKAOMING, S.Pd                 | FISIKA                                    | WK. X-2
+30 | RASNI BITJOLI, S.Si                       | MATEMATIKA                                | -
+31 | FAISAL GARUSU, S.Pd                       | MATEMATIKA                                | -
+38 | WARNI MESAK, S.Pd                         | BAHASA JEPANG, BAHASA JEPANG LANJUT       | WK. XII-9
+39 | HAIDIR YASMAN KARDI, S.Pd                 | MATEMATIKA, KKA                           | -
+40 | RINA APLING, S.Pd                         | FISIKA                                    | -
+42 | ELISABET A. ORING, S.Si                   | BAHASA INGGRIS                            | -
+43 | LUMIATI, S.Pd                             | BAHASA INGGRIS, BAHASA INGGRIS LANJUT     | WK. XI-8
+44 | EMINIA PAPULING, S.Pd                     | GEOGRAFI                                  | WK. X-6
+46 | WANDA CRISTIANITA LUKAS, S.Pd., M.Si      | FISIKA, INFORMATIKA                       | WK. X-5
+47 | YENI KATEMUNG, S.Pd                       | BK                                        | -
+48 | MERSY SAMEAPUTTY, S. Pd                   | KIMIA                                     | WK. X-7
+52 | HANDAYANE UTUBIRA, S. Pd                  | GEOGRAFI                                  | -
+53 | Elita Taramen, S.Pd.                      | -                                         | -

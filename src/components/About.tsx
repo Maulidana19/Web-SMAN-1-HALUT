@@ -157,6 +157,83 @@ export const About: React.FC = () => {
         </div>
       </div>
 
+      {/* 2.5. SEJARAH & LOGO SECTION */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 relative z-10 space-y-16 mt-16">
+        
+        {/* Sejarah Singkat */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          {/* Image Left */}
+          <div className="lg:col-span-5 relative">
+            <div className="w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-lg bg-gray-100">
+              <img 
+                src="/assets/utama.jpg" 
+                alt="Sejarah SMAN 1 Halut" 
+                className="w-full h-full object-cover"
+                onError={(e) => {
+                  (e.target as HTMLImageElement).style.opacity = '0';
+                }}
+              />
+            </div>
+          </div>
+          {/* Content Right */}
+          <div className="lg:col-span-7">
+            <span className="text-brand-red text-xs font-bold uppercase tracking-widest block mb-2">SEJARAH</span>
+            <h3 className="text-2xl sm:text-3xl font-bold font-display text-slate-900 mb-4">Sejarah Singkat Sekolah</h3>
+            <div className="text-gray-600 text-sm sm:text-base leading-relaxed space-y-4">
+              <p>SMA Negeri 1 Halmahera Utara didirikan sebagai wujud komitmen pemerintah dan masyarakat dalam memajukan pendidikan di wilayah Halmahera. Sejak awal berdirinya, sekolah ini telah menjadi pusat keunggulan dan pelopor pendidikan menengah atas di daerah ini.</p>
+              <p>Seiring berjalannya waktu, SMAN 1 Halmahera Utara terus bertransformasi dengan melengkapi fasilitas akademik dan non-akademik, serta meningkatkan kualitas pendidik, hingga berhasil meraih akreditasi A (Unggul) dan mencetak ribuan alumni yang tersebar di seluruh Indonesia dan mancanegara.</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Arti Logo */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          {/* Image Left */}
+          <div className="lg:col-span-5 relative flex justify-center">
+            <div className="w-48 sm:w-64 aspect-square flex items-center justify-center p-4 relative">
+              <div className="absolute inset-0 bg-blue-50 rounded-full blur-3xl opacity-50 -z-10"></div>
+              <img 
+                src="/assets/logo.png" 
+                alt="Logo SMAN 1 Halut" 
+                className="w-full h-full object-contain drop-shadow-xl hover:scale-105 transition-transform duration-500"
+                onError={(e) => {
+                  (e.target as HTMLImageElement).style.opacity = '0';
+                }}
+              />
+            </div>
+          </div>
+          {/* Content Right */}
+          <div className="lg:col-span-7 bg-white p-8 sm:p-10 rounded-3xl shadow-sm border border-gray-100">
+            <span className="text-brand-red text-xs font-bold uppercase tracking-widest block mb-2">IDENTITAS VISUAL</span>
+            <h3 className="text-2xl sm:text-3xl font-bold font-display text-slate-900 mb-6">Makna & Arti Logo</h3>
+            <ul className="space-y-5">
+              <li className="flex gap-4 items-start">
+                <div className="w-2 h-2 rounded-full bg-brand-red mt-2 shrink-0 shadow-sm"></div>
+                <div>
+                  <h4 className="font-bold text-brand-navy text-sm sm:text-base">Perisai Segi Lima</h4>
+                  <p className="text-gray-500 text-xs sm:text-sm mt-1 leading-relaxed">Melambangkan pertahanan diri yang kuat dan dasar negara Pancasila sebagai landasan utama pendidikan karakter siswa.</p>
+                </div>
+              </li>
+              <li className="flex gap-4 items-start">
+                <div className="w-2 h-2 rounded-full bg-brand-red mt-2 shrink-0 shadow-sm"></div>
+                <div>
+                  <h4 className="font-bold text-brand-navy text-sm sm:text-base">Buku dan Pena</h4>
+                  <p className="text-gray-500 text-xs sm:text-sm mt-1 leading-relaxed">Merupakan simbol proses belajar-mengajar yang tak pernah berhenti sebagai sumber utama ilmu pengetahuan dan teknologi.</p>
+                </div>
+              </li>
+              <li className="flex gap-4 items-start">
+                <div className="w-2 h-2 rounded-full bg-brand-red mt-2 shrink-0 shadow-sm"></div>
+                <div>
+                  <h4 className="font-bold text-brand-navy text-sm sm:text-base">Warna Identitas (Biru & Kuning Emas)</h4>
+                  <p className="text-gray-500 text-xs sm:text-sm mt-1 leading-relaxed">Biru mencerminkan wawasan luas layaknya samudera, sedangkan kuning emas melambangkan masa keemasan, kejayaan, dan prestasi tinggi.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
       {/* 3. JAJARAN PIMPINAN */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         <div className="text-center mb-12">
