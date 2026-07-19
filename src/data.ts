@@ -188,27 +188,35 @@ export const TENDIK_DATA = [
 
 export const NEWS_DATA = [
   {
+    id: "news-3",
+    title: "Meilan Widje Juarai Lomba Debat Bahasa Inggris Tingkat Kabupaten",
+    excerpt: "Meilan Widje, siswa kelas XII 3 SMAN 1 Halmahera Utara, berhasil meraih juara pertama Lomba Debat Bahasa Inggris Tingkat Kabupaten dan siap melaju ke ajang provinsi.",
+    content: "HALMAHERA UTARA – Kabar membanggakan kembali datang dari perwakilan siswa terbaik SMA Negeri 1 Halmahera Utara. Meilan Widje, siswa yang saat ini duduk di kelas XII 3, berhasil mengukir prestasi gemilang dengan keluar sebagai pemenang dalam ajang Lomba Debat Bahasa Inggris Tingkat Kabupaten. Keberhasilan Meilan ini menjadi bukti nyata dari dedikasi, kerja keras, serta ketajaman berpikir yang diasah dengan baik di lingkungan sekolah. Prestasi ini tidak hanya mengharumkan nama pribadi dan keluarga, tetapi juga membawa bendera SMA Negeri 1 Halmahera Utara semakin berkibar di tingkat daerah.\n\nKompetisi tidak berhenti sampai di sini. Atas kemenangan manis di tingkat kabupaten ini, Meilan Widje kini tengah mempersiapkan diri secara intensif untuk melaju ke babak berikutnya, yaitu Tingkat Provinsi. Pihak sekolah, guru pembimbing, serta seluruh rekan-rekan siswa memberikan dukungan penuh dan doa terbaik agar Meilan dapat kembali memberikan penampilan maksimal dan membawa pulang hasil yang membanggakan di tingkat yang lebih tinggi.\n\nKepala Sekolah SMA Negeri 1 Halmahera Utara turut menyampaikan apresiasi yang setinggi-tingginya atas pencapaian ini: \"Selamat dan sukses untuk Ananda Meilan Widje. Prestasi ini adalah buah dari ketekunan dan semangat pantang menyerah. Semoga pencapaian ini menjadi inspirasi bagi seluruh siswa SMA Negeri 1 Halmahera Utara untuk terus berprestasi dalam akademik, berkarakter mulia, dan siap menghadapi tantangan masa depan.\"",
+    date: "19 Juli 2026",
+    image: "/assets/beritabaru1.jpg"
+  },
+  {
     id: "news-new",
     title: "Puluhan Siswa SMA Negeri 1 Halmahera Utara Mengikuti Diklatsar Palang Merah Remaja Angkatan I Tahun 2026",
     excerpt: "Puluhan siswa mengikuti kegiatan Pendidikan dan Latihan Dasar (Diklatsar) PMR. Kegiatan ini bertujuan membekali siswa dengan keterampilan dasar kepalangmerahan, pertolongan pertama, dan kesiapsiagaan bencana.",
+    content: "Puluhan Siswa Sekolah Menengah Atas (SMA) Negeri 1 Halmahera Utara (Halut) mengikuti kegiatan Pendidikan Dan Pelatihan Dasar (Diklatsar) Palang Merah Remaja (PMR) angkatan I (Pertama) tahun 2026, Sabtu (18/07/2026).\n\nTujuan utama Diklatsar PMR adalah untuk membentuk karakter anggota yang berjiwa kemanusiaan, disiplin, dan bertanggung jawab. Kegiatan ini membekali siswa dengan keterampilan dasar kepalangmerahan, pertolongan pertama (First Aid), kepemimpinan, dan kesiapsiagaan bencana agar mereka siap menjadi relawan PMI di masa depan.\n\nTheovani Anu, S.Si Staf Markas PMI Halmahera Utara bidang relawan dan PMR menyampaikan bahwa siswa-siswi SMA Negeri 1 Halmahera Utara yang mengikuti kegiatan Pendidikan Dan Pelatihan Dasar atau DIKLATSAR PMR ini merupakan anggota PMR SMA Negeri 1 Halut angkatan pertama tahun 2026, dengan jumlah keseluruhan sebanyak 42 orang siswa.\n\n“Materi yang diberikan mulai dari pengenalan organisasi kemanusiaan Palang Merah Indonesia, peranan PMR hingga pada Kesiapsiagaan Bencana sekolah,” Jelasnya.\n\nTheo juga bilang, kegiatan tersebut dilaksanakan selama 2 hari dari tanggal 17 s/d 18 dan dilanjutkan dengan Pelantikan anggota PMR SMA Negeri 1 Halmahera Utara yang telah mengikuti kegiatan DIKLATSAR tersebut.\n\nSementara itu, Koordinator Bidang Kebencaan dan Relawan PMI Kabupaten Halmahera Sukitman Asgar, SH.,MH juga mengatakan bahwa anggota PMR tersebut dapat menjadi relawan Markas PMI Halmahera Utara kedepan yang akan menjadi ujung tombak PMI di Kabupaten Halmahera Utara. Selain itu, ia juga mengatakan kegiatan PMR tersebut akan dibuka di seluruh SMP dan SMA di Kabupaten Halmahera Utara. Sehingga, program Kesiapsiagaan Bencana di sekolah dapat berjalan dengan baik.\n\n“Jadi, anggota PMR yang telah terbentuk di beberapa SMA dan SMP di Halmahera Utara diharapkan dapat menjadi ujung tombak PMI di Halmahera Utara, sehingga dapat melaksanakan tugas kemanusiaan dengan rasa tanggungjawab,” harapnya.",
     date: "18 Juli 2026",
-    image: "/assets/news1.jpg",
-    link: "https://makuhida.com/puluhan-siswa-sma-negeri-1-halmahera-utara-mengikuti-diklatsar-palang-merah-remaja-angkatan-i-tahun-2026/"
+    image: "/assets/news1.jpg"
   },
   {
     id: "news-1",
     title: "SPMB SMAN 1 Halmahera Utara Tahun Ajaran 2026/2027 Resmi Dibuka",
     excerpt: "Saatnya melangkah lebih dekat menuju sekolah dengan Akreditasi A (Unggul) dan predikat Sekolah Penggerak yang siap mendukung setiap langkah, mimpi, dan prestasimu.",
+    content: "📣 Halo, calon SobSaa 2026! 📣\nMinSaa punya kabar baik nih! 🎉\n\n🚪✨ SPMB SMAN 1 Halmahera Utara Tahun Ajaran 2026/2027 resmi dibuka!\nSaatnya melangkah lebih dekat menuju sekolah dengan Akreditasi A (Unggul) dan predikat Sekolah Penggerak yang siap mendukung setiap langkah, mimpi, dan prestasimu. 🌟\n\nDi SMANSA, kamu tidak hanya belajar untuk meraih nilai terbaik, tetapi juga bertumbuh menjadi pribadi yang berkarakter, kreatif, berprestasi, dan siap menghadapi masa depan. 📚🏆\n\n💡 Jalur Pendaftaran:\n🏅 Jalur Prestasi\n📍 Jalur Domisili\n🤝 Jalur Afirmasi\n🔄 Jalur Mutasi\n\n📌 Pastikan seluruh berkas telah disiapkan dan lakukan pendaftaran sesuai jadwal yang telah ditentukan.\nKarena setiap perjalanan besar selalu dimulai dari satu langkah kecil. Dan siapa tahu, langkah itu dimulai dari SMAN 1 Halmahera Utara. 💙✨\n\n📍 Ayo bergabung menjadi bagian dari keluarga besar SMANSA! Mari belajar, berkembang, berprestasi, dan mengukir masa depan bersama.\nSMANSA Menyapa, SobSaa Menjawab! 💙🤍\n#SPMB2026 #SMAN1HalmaheraUtara #SobSaa2026 #minSaa",
     date: "6 Juni 2026",
-    image: "/assets/spmb2026.png",
-    link: "https://www.instagram.com/p/DZOa_YSko8A/?utm_source=chatgpt.com"
+    image: "/assets/spmb2026.png"
   },
   {
     id: "news-2",
     title: "Densus 88 AT Polri Gelar Densus Goes To School di SMAN 1 Halmahera Utara",
     excerpt: "Tim Pencegahan Densus 88 AT Polri melaksanakan kegiatan Densus Goes To School untuk meningkatkan kesadaran murid tentang bahaya penyebaran paham intoleransi dan radikalisme.",
+    content: "Halmahera Utara - Tim Pencegahan Densus 88 AT Polri melaksanakan kegiatan Densus Goes To School di SMA Negeri 1 Halmahera Utara, Senin (19/01/2026). Kegiatan ini diikuti oleh 500 murid SMA Negeri 1 Halmahera Utara dan bertujuan meningkatkan kesadaran mereka tentang bahaya penyebaran paham Intoleransi, Radikalisme, Ekstremisme, dan Terorisme (IRET).\n\n\"Saya sangat berterima kasih kepada Tim Densus 88 AT Polri yang telah meluangkan waktu untuk berkunjung dan bersedia memberikan sosialisasi dan edukasi kepada murid SMA Negeri 1 Halmahera Utara,\" ujar Bapak Doland Richard Ollo, Kepala Kesiswaan SMA Negeri 1 Halmahera Utara.\n\nIPTU Herry Rinsampessy, S.H, Katim Pencegahan Densus 88 , menyampaikan materi tentang ciri-ciri masyarakat dan anak muda yang mulai terpapar paham IRET, serta anak-anak yang terkena paham radikalisme melalui media sosial dan game online.\n\n\"Kita harus waspada terhadap modus baru aksi teror, seperti menempatkan perempuan dan anak sebagai pelaku teror, serta merekrut milenial yang sedang dalam pencarian jati diri dan identitas,\" ujar IPTU Herry Rinsampessy.\n\nKegiatan ini diakhiri dengan sesi tanya jawab dan foto bersama. Kepala Sekolah SMA Negeri 1 Halmahera Utara, Bapak Marthin Manuel, S.Pd., M.Pd, menyampaikan terima kasih kepada Tim Densus 88 AT Polri dan berharap kegiatan ini dapat berkelanjutan.",
     date: "20 Januari 2026",
-    image: "/assets/berita2_densus.jpg",
-    link: "https://humas.polri.go.id/news/detail/2251246-densus-88-at-polri-gelar-densus-goes-to-school-di-sma-negeri-1-halmahera-utara"
+    image: "/assets/berita2_densus.jpg"
   }
 ];

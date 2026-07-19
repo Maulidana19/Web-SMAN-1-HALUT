@@ -68,7 +68,7 @@ export const Contact: React.FC = () => {
           </p>
           <div className="h-1 w-12 bg-brand-red mx-auto mt-4 rounded-full" />
           <p className="text-slate-500 text-sm sm:text-base mt-4 max-w-2xl mx-auto">
-            Punya pertanyaan mengenai pendaftaran (PPDB), program akademik, atau ingin berkunjung? Tim humas kami siap membantu Anda.
+            Punya pertanyaan mengenai pendaftaran (SPMB), program akademik, atau ingin berkunjung? Tim humas kami siap membantu Anda.
           </p>
         </div>
 
@@ -195,7 +195,7 @@ export const Contact: React.FC = () => {
                   type="text"
                   value={subject}
                   onChange={(e) => setSubject(e.target.value)}
-                  placeholder="Contoh: Info Pendaftaran PPDB, Kunjungan Kerja"
+                  placeholder="Contoh: Info Pendaftaran SPMB, Kunjungan Kerja"
                   className="w-full px-4 py-3 bg-[#f1f5f9]/50 border border-slate-200 focus:border-brand-red focus:bg-white focus:outline-none rounded-xl text-slate-800 transition-all font-medium text-sm sm:text-base"
                   required
                 />

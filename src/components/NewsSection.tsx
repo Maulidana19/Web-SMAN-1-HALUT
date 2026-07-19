@@ -1,8 +1,13 @@
 import React from 'react';
-import { Calendar, User } from 'lucide-react';
+import { Calendar, User, ArrowRight } from 'lucide-react';
 import { NEWS_DATA } from '../data';
 
-export const NewsSection: React.FC = () => {
+interface NewsSectionProps {
+  onNavigateToNewsDetail?: (id: string) => void;
+  onNavigateToAllNews?: () => void;
+}
+
+export const NewsSection: React.FC<NewsSectionProps> = ({ onNavigateToNewsDetail, onNavigateToAllNews }) => {
   return (
     <section id="news-section" className="pt-20 pb-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -20,13 +25,11 @@ export const NewsSection: React.FC = () => {
 
         {/* 3 Column Grid for News */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {NEWS_DATA.map((news, idx) => (
-            <a
+          {NEWS_DATA.slice(0, 3).map((news, idx) => (
+            <div
               key={news.id}
-              href={news.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex flex-col bg-gray-50 hover:bg-brand-red transition-colors duration-300 overflow-hidden shadow-sm"
+              onClick={() => onNavigateToNewsDetail && onNavigateToNewsDetail(news.id)}
+              className="cursor-pointer group flex flex-col bg-gray-50 hover:bg-brand-red transition-colors duration-300 overflow-hidden shadow-sm"
             >
               {/* Image Container */}
               <div className="relative w-full aspect-[4/3] overflow-hidden">
@@ -63,9 +66,21 @@ export const NewsSection: React.FC = () => {
                   {news.excerpt}
                 </p>
               </div>
-            </a>
+            </div>
           ))}
         </div>
+
+        {/* View More Button */}
+        <div className="mt-16 flex justify-center">
+          <button
+            onClick={() => onNavigateToAllNews && onNavigateToAllNews()}
+            className="group flex items-center justify-center gap-3 px-8 py-4 bg-brand-navy hover:bg-brand-red text-white text-sm font-bold uppercase tracking-wider rounded-full shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer"
+          >
+            Lihat Selengkapnya
+            <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+          </button>
+        </div>
+
       </div>
     </section>
   );

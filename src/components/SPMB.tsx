@@ -2,12 +2,12 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { ExternalLink } from 'lucide-react';
 
-export const PPDB: React.FC = () => {
+export const SPMB: React.FC = () => {
   const steps = [
     {
       num: '01',
       title: 'Pendaftaran Online',
-      desc: 'Buat akun di portal PPDB Provinsi dan unggah berkas persyaratan.'
+      desc: 'Buat akun di portal SPMB Provinsi dan unggah berkas persyaratan.'
     },
     {
       num: '02',
@@ -17,7 +17,7 @@ export const PPDB: React.FC = () => {
     {
       num: '03',
       title: 'Seleksi Berkas',
-      desc: 'Pemeringkatan berdasarkan jalur masuk (Zonasi, Afirmasi, Prestasi).'
+      desc: 'Pemeringkatan berdasarkan jalur masuk (Domisili, Afirmasi, Prestasi, Mutasi).'
     },
     {
       num: '04',
@@ -31,7 +31,7 @@ export const PPDB: React.FC = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header Section */}
-        <div className="text-center max-w-4xl mx-auto mb-12 md:mb-16">
+        <div className="text-center max-w-4xl mx-auto mb-6 md:mb-8">
           <motion.span 
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -45,7 +45,7 @@ export const PPDB: React.FC = () => {
             transition={{ delay: 0.1 }}
             className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight font-display mb-4 leading-tight"
           >
-            Informasi PPDB Online
+            Informasi SPMB Online
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0 }}
@@ -53,7 +53,7 @@ export const PPDB: React.FC = () => {
             transition={{ delay: 0.2 }}
             className="text-gray-500 text-sm sm:text-base leading-relaxed"
           >
-            Panduan Penerimaan Peserta Didik Baru (PPDB) SMAN 1 Halmahera Utara
+            Panduan Sistem Penerimaan Murid Baru (SPMB) SMAN 1 Halmahera Utara
           </motion.p>
         </div>
 
@@ -62,7 +62,7 @@ export const PPDB: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
-          className="bg-white rounded-[16px] sm:rounded-[24px] p-5 sm:p-10 shadow-sm border border-gray-100"
+          className="bg-white rounded-[16px] sm:rounded-[24px] p-5 sm:p-6 lg:p-8 shadow-sm border border-gray-100"
         >
           {/* Steps Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-6 sm:mb-10">
@@ -101,13 +101,69 @@ export const PPDB: React.FC = () => {
               <div className="text-center md:text-left flex-grow">
                 <h3 className="text-lg sm:text-2xl font-bold text-white mb-1 sm:mb-2 font-display">Sudah Siap Melakukan Pendaftaran?</h3>
                 <p className="text-blue-100/80 text-xs sm:text-sm md:text-base leading-snug sm:leading-relaxed max-w-2xl text-justify md:text-left">
-                  Pendaftaran resmi PPDB dilakukan melalui portal PPDB Dinas Pendidikan Provinsi Maluku Utara.
+                  Pendaftaran resmi SPMB dilakukan melalui portal SPMB Dinas Pendidikan Provinsi Maluku Utara.
                 </p>
               </div>
               
-              <button className="flex-shrink-0 bg-brand-red hover:bg-red-700 text-white font-bold text-xs sm:text-sm md:text-base py-3 sm:py-4 px-6 sm:px-8 rounded-lg sm:rounded-xl flex items-center gap-1.5 sm:gap-2 transition-colors duration-300 shadow-md">
-                PORTAL PPDB PROVINSI <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5" />
+              <button 
+                onClick={() => window.open('https://spmb.malutprov.go.id', '_blank')}
+                className="flex-shrink-0 bg-brand-red hover:bg-red-700 text-white font-bold text-xs sm:text-sm md:text-base py-3 sm:py-4 px-6 sm:px-8 rounded-lg sm:rounded-xl flex items-center gap-1.5 sm:gap-2 transition-colors duration-300 shadow-md cursor-pointer"
+              >
+                PORTAL SPMB PROVINSI <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5" />
               </button>
+            </div>
+          </div>
+          {/* SPMB Activities Gallery */}
+          <div className="mt-6 sm:mt-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+              {[
+                { 
+                  title: 'Rapat Koordinasi SPMB', 
+                  image: '/assets/spmb1.jpg',
+                  desc: 'Evaluasi panitia bersama kepala sekolah untuk penentuan hasil akhir kelulusan siswa sesuai kuota.'
+                },
+                { 
+                  title: 'Persiapan SPMB', 
+                  image: '/assets/spmb2.jpg',
+                  desc: 'Rapat awal panitia untuk mempersiapkan seluruh kebutuhan teknis dan administrasi pendaftaran.'
+                },
+                { 
+                  title: 'Pelaksanaan SPMB', 
+                  image: '/assets/spmb3.jpg',
+                  desc: 'Proses seleksi penerimaan murid baru, tes tertulis, hingga wawancara yang berlangsung transparan.'
+                }
+              ].map((activity, idx) => (
+                <motion.div
+                  key={idx}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: idx * 0.1 }}
+                  className="group relative aspect-video overflow-hidden bg-black cursor-pointer shadow-sm hover:shadow-xl transition-shadow"
+                >
+                  {/* Background Image */}
+                  <img 
+                    src={activity.image} 
+                    alt={activity.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90 group-hover:opacity-100"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).style.opacity = '0';
+                      (e.target as HTMLImageElement).parentElement!.classList.add('bg-slate-300');
+                    }}
+                  />
+                  
+                  {/* Dark Gradient Overlay (Black/Gray instead of Blue) */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-80 group-hover:opacity-95 transition-opacity duration-300"></div>
+                  
+                  {/* Text Content */}
+                  <div className="absolute bottom-0 left-0 w-full p-5 sm:p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                    <h3 className="text-white font-bold text-lg sm:text-xl font-display mb-2">{activity.title}</h3>
+                    <p className="text-gray-300 text-sm line-clamp-2 opacity-80 group-hover:opacity-100 transition-opacity duration-300">
+                      {activity.desc}
+                    </p>
+                  </div>
+                </motion.div>
+              ))}
             </div>
           </div>
 

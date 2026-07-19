@@ -52,9 +52,10 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection 
       label: 'INFORMASI PUBLIK', 
       hasDropdown: true,
       subItems: [
-        { id: 'ppdb', label: 'Informasi PPDB' },
+        { id: 'ppdb', label: 'Informasi SPMB' },
         { id: 'pengumuman', label: 'Pengumuman Resmi' },
-        { id: 'berita', label: 'Berita Kegiatan' }
+        { id: 'berita', label: 'Berita Kegiatan' },
+        { id: 'galeri', label: 'Galeri Kegiatan' }
       ]
     },
     { id: 'contact', label: 'KONTAK', hasDropdown: false },
@@ -113,7 +114,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-4 xl:gap-7 text-[12px] xl:text-sm font-semibold text-brand-navy whitespace-nowrap">
             {navItems.map((item) => {
-              const isActive = activeSection === item.id || (item.subItems && item.subItems.some(sub => sub.id === activeSection));
+              const isActive = activeSection === item.id || (item.subItems && item.subItems.some(sub => sub.id === activeSection || (sub.id === 'berita' && activeSection === 'berita-detail')));
               return (
                 <div key={item.id} className="relative group py-2">
                   <button
@@ -168,7 +169,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection 
         <div className="md:hidden bg-white border-t border-gray-100 absolute w-full left-0 shadow-lg">
           <div className="px-4 pt-2 pb-6 space-y-1 flex flex-col">
             {navItems.map((item) => {
-              const isActive = activeSection === item.id || (item.subItems && item.subItems.some(sub => sub.id === activeSection));
+              const isActive = activeSection === item.id || (item.subItems && item.subItems.some(sub => sub.id === activeSection || (sub.id === 'berita' && activeSection === 'berita-detail')));
               return (
                 <div key={item.id} className="flex flex-col">
                   <button
@@ -194,7 +195,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection 
                   {item.subItems && expandedMenu === item.id && (
                     <div className="bg-gray-50/50 flex flex-col py-1 border-l-2 border-gray-100 ml-4 pl-4 pr-4">
                       {item.subItems.map((subItem) => {
-                        const isSubActive = activeSection === subItem.id;
+                        const isSubActive = activeSection === subItem.id || (subItem.id === 'berita' && activeSection === 'berita-detail');
                         return (
                           <button
                             key={subItem.id}

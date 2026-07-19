@@ -3,7 +3,11 @@ import { motion } from 'motion/react';
 import { Calendar, User } from 'lucide-react';
 import { NEWS_DATA } from '../data';
 
-export const Berita: React.FC = () => {
+interface BeritaProps {
+  onNavigateToNewsDetail?: (id: string) => void;
+}
+
+export const Berita: React.FC<BeritaProps> = ({ onNavigateToNewsDetail }) => {
   return (
     <div className="pt-10 pb-20 bg-[#f1f5f9] min-h-screen font-sans">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -45,12 +49,10 @@ export const Berita: React.FC = () => {
           {/* 3 Column Grid for News */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {NEWS_DATA.map((news, idx) => (
-              <a
+              <div
                 key={news.id}
-                href={news.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex flex-col bg-slate-50 hover:bg-brand-red transition-colors duration-300 overflow-hidden shadow-sm rounded-[20px] border border-slate-100"
+                onClick={() => onNavigateToNewsDetail && onNavigateToNewsDetail(news.id)}
+                className="cursor-pointer group flex flex-col bg-slate-50 hover:bg-brand-red transition-colors duration-300 overflow-hidden shadow-sm rounded-[20px] border border-slate-100"
               >
                 {/* Image Container */}
                 <div className="relative w-full aspect-[4/3] overflow-hidden">
@@ -87,7 +89,7 @@ export const Berita: React.FC = () => {
                     {news.excerpt}
                   </p>
                 </div>
-              </a>
+              </div>
             ))}
           </div>
         </motion.div>

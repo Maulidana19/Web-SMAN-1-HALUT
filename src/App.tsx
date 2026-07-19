@@ -22,11 +22,21 @@ import { Osis } from './components/Osis';
 import { Ekstrakurikuler } from './components/Ekstrakurikuler';
 import { Prestasi } from './components/Prestasi';
 import { Alumni } from './components/Alumni';
-import { PPDB } from './components/PPDB';
+import { SPMB } from './components/SPMB';
 import { Pengumuman } from './components/Pengumuman';
 import { Berita } from './components/Berita';
+import { BeritaDetail } from './components/BeritaDetail';
+import { Gallery } from './components/Gallery';
+
 export default function App() {
   const [activeSection, setActiveSection] = useState<string>('home');
+  const [selectedNewsId, setSelectedNewsId] = useState<string | null>(null);
+
+  const handleNavigateToNewsDetail = (id: string) => {
+    setSelectedNewsId(id);
+    setActiveSection('berita-detail');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   useEffect(() => {
     const sectionTitles: Record<string, string> = {
@@ -46,9 +56,10 @@ export default function App() {
       ekstrakurikuler: 'Ekstrakurikuler',
       prestasi: 'Prestasi',
       alumni: 'Ikatan Alumni',
-      ppdb: 'Informasi PPDB',
+      ppdb: 'Informasi SPMB',
       pengumuman: 'Pengumuman Resmi',
       berita: 'Berita Kegiatan',
+      galeri: 'Galeri Kegiatan',
     };
     document.title = sectionTitles[activeSection] || 'Beranda';
   }, [activeSection]);
@@ -80,7 +91,14 @@ export default function App() {
             <FacilitiesSection key="home-facilities" />
             <AchievementsHighlight key="home-achievements" />
             <TestimonialsSection key="home-testimonials" />
-            <NewsSection key="home-news" />
+            <NewsSection 
+              key="home-news" 
+              onNavigateToNewsDetail={handleNavigateToNewsDetail}
+              onNavigateToAllNews={() => {
+                setActiveSection('berita');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }} 
+            />
           </>
         );
       case 'about':
@@ -114,11 +132,24 @@ export default function App() {
       case 'alumni':
         return <Alumni key="alumni" />;
       case 'ppdb':
-        return <PPDB key="ppdb" />;
+        return <SPMB key="ppdb" />;
       case 'pengumuman':
         return <Pengumuman key="pengumuman" />;
       case 'berita':
-        return <Berita key="berita" />;
+        return <Berita key="berita" onNavigateToNewsDetail={handleNavigateToNewsDetail} />;
+      case 'berita-detail':
+        return (
+          <BeritaDetail 
+            key="berita-detail" 
+            newsId={selectedNewsId} 
+            onBack={() => {
+              setActiveSection('berita');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }} 
+          />
+        );
+      case 'galeri':
+        return <Gallery key="galeri" />;
       default:
         return (
           <Hero 
