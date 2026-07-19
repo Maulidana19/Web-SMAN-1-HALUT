@@ -27,11 +27,11 @@ export const SCHOOL_INFO = {
   stats: [
     { label: "NPSN", value: "60200296" },
     { label: "Akreditasi", value: "A (Unggul)" },
-    { label: "Ruang Kelas", value: "24" },
+    { label: "Ruang Kelas", value: "28" },
     { label: "Laboratorium", value: "Komputer" },
     { label: "Luas Tanah", value: "7.298 m²" },
     { label: "Luas Bangunan", value: "1.584 m²" },
-    { label: "Siswa Aktif", value: "350+" },
+    { label: "Siswa Aktif", value: "1000+" },
     { label: "Guru", value: "52" }
   ],
   contact: {
