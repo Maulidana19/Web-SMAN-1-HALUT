@@ -189,8 +189,8 @@ export const About: React.FC = () => {
         {/* Arti Logo */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           {/* Image Left */}
-          <div className="lg:col-span-5 relative flex justify-center">
-            <div className="w-48 sm:w-64 aspect-square flex items-center justify-center p-4 relative">
+          <div className="lg:col-span-5 relative flex justify-center items-center">
+            <div className="w-72 sm:w-80 lg:w-96 aspect-square flex items-center justify-center p-4 relative">
               <div className="absolute inset-0 bg-blue-50 rounded-full blur-3xl opacity-50 -z-10"></div>
               <img 
                 src="/assets/logo.png" 

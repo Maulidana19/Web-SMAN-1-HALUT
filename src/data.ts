@@ -115,6 +115,13 @@ export const TESTIMONIALS_DATA: Testimonial[] = [
     image: "/assets/alumni.jpg"
   },
   {
+    id: "test-4",
+    name: "Noel C. Luisan",
+    role: "Alumni",
+    content: "SMAN 1 Halut cukup baik menyajikan pembelajaran yang interaktif, dengan fasilitas pendukung yang memumpuni sehingga cocok untuk jadikan wadah berkembang lebih lagi kedepannya terbaik deh",
+    image: "/assets/alumni2.jpg"
+  },
+  {
     id: "test-2",
     name: "Siti Rahmawati",
     role: "Orang Tua Siswa Kelas XII",

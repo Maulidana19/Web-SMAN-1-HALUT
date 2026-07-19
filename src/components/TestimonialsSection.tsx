@@ -13,10 +13,10 @@ export const TestimonialsSection: React.FC = () => {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           {TESTIMONIALS_DATA.map((t, idx) => (
-            <div key={t.id} className="bg-white p-8 shadow-sm text-center border-t-4 border-transparent hover:border-brand-red transition-all duration-300">
-              <div className="w-20 h-20 mx-auto rounded-full bg-gray-100 overflow-hidden mb-6 border-2 border-gray-100 shadow-inner">
+            <div key={t.id} className="bg-white p-6 shadow-sm text-center border-t-4 border-transparent hover:border-brand-red transition-all duration-300">
+              <div className="w-16 h-16 mx-auto rounded-full bg-gray-100 overflow-hidden mb-4 border-2 border-gray-100 shadow-inner">
                 <img
                   src={t.image}
                   alt={`Foto ${t.name}`}
@@ -26,15 +26,15 @@ export const TestimonialsSection: React.FC = () => {
                   }}
                 />
               </div>
-              <div className="flex justify-center gap-1 mb-4">
-                {[1,2,3,4,5].map(star => <Star key={star} size={16} className="text-amber-400 fill-amber-400" />)}
+              <div className="flex justify-center gap-1 mb-3">
+                {[1, 2, 3, 4, 5].map(star => <Star key={star} size={14} className="text-amber-400 fill-amber-400" />)}
               </div>
-              <p className="text-gray-600 text-sm italic leading-relaxed mb-6">
+              <p className="text-gray-600 text-xs lg:text-[13px] leading-relaxed mb-4 italic">
                 "{t.content}"
               </p>
               <div>
-                <h5 className="font-bold text-slate-900 font-display">{t.name}</h5>
-                <span className="text-brand-red text-xs font-semibold uppercase">{t.role}</span>
+                <h5 className="font-bold text-sm lg:text-base text-slate-900 font-display">{t.name}</h5>
+                <span className="text-brand-red text-[10px] lg:text-xs font-semibold uppercase">{t.role}</span>
               </div>
             </div>
           ))}
