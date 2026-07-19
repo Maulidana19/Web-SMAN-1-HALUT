@@ -159,84 +159,86 @@ export const Teachers: React.FC = () => {
               initial={{ opacity: 0, scale: 0.95, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
-              className="bg-white rounded-3xl shadow-2xl relative w-full max-w-2xl overflow-hidden z-10 flex flex-col md:flex-row"
+              className="bg-white rounded-3xl shadow-2xl relative w-full max-w-[340px] md:max-w-2xl overflow-hidden z-10 flex flex-col md:flex-row max-h-[90vh] overflow-y-auto"
             >
               {/* Close Button */}
               <button 
                 onClick={() => setSelectedPerson(null)}
-                className="absolute top-4 right-4 z-20 w-8 h-8 flex items-center justify-center bg-black/10 hover:bg-brand-red text-slate-700 hover:text-white rounded-full transition-colors duration-300"
+                className="absolute top-3 right-3 sm:top-4 sm:right-4 z-20 w-8 h-8 flex items-center justify-center bg-white shadow-md border border-gray-100 hover:bg-brand-red text-slate-700 hover:text-white rounded-full transition-colors duration-300"
               >
                 <X size={18} />
               </button>
 
               {/* Left Side: Large Photo */}
-              <div className="w-full md:w-2/5 aspect-[3/4] bg-slate-100 relative shrink-0">
-                <img 
-                  src={selectedPerson.image} 
-                  alt={selectedPerson.name}
-                  className="w-full h-full object-cover object-top"
-                  onError={(e) => {
-                    (e.target as HTMLImageElement).style.opacity = '0';
-                  }}
-                />
+              <div className="w-full md:w-2/5 pt-8 pb-2 px-6 md:p-0 shrink-0">
+                <div className="w-[55%] md:w-full mx-auto aspect-[3/4] bg-slate-100 relative rounded-2xl md:rounded-none overflow-hidden shadow-lg md:shadow-none">
+                  <img 
+                    src={selectedPerson.image} 
+                    alt={selectedPerson.name}
+                    className="w-full h-full object-cover object-top"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).style.opacity = '0';
+                    }}
+                  />
+                </div>
               </div>
 
               {/* Right Side: Information Details */}
-              <div className="p-6 sm:p-8 w-full md:w-3/5 flex flex-col justify-center">
-                <span className="text-brand-red text-xs font-bold uppercase tracking-widest mb-2 block">
+              <div className="p-5 md:p-8 w-full md:w-3/5 flex flex-col justify-center">
+                <span className="text-brand-red text-[10px] md:text-xs font-bold uppercase tracking-widest mb-1 md:mb-2 block">
                   {selectedPerson.isTeacher ? 'Tenaga Pendidik' : 'Tenaga Kependidikan'}
                 </span>
-                <h3 className="text-xl sm:text-2xl font-bold font-display text-slate-900 leading-tight mb-6">
+                <h3 className="text-lg md:text-2xl font-bold font-display text-slate-900 leading-tight mb-5 md:mb-6">
                   {selectedPerson.name}
                 </h3>
 
                 {(() => {
                   const info = getPersonInfo(selectedPerson, selectedPerson.isTeacher, selectedPerson.index);
                   return (
-                    <div className="space-y-4">
+                    <div className="space-y-3 md:space-y-4">
                       {/* Email */}
                       <div className="flex items-start gap-3">
-                        <div className="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center shrink-0 text-slate-400">
-                          <Mail size={16} />
+                        <div className="w-7 h-7 md:w-8 md:h-8 rounded-full bg-slate-50 flex items-center justify-center shrink-0 text-slate-400">
+                          <Mail className="w-3.5 h-3.5 md:w-4 md:h-4" />
                         </div>
                         <div>
-                          <p className="text-xs font-bold text-slate-500 uppercase tracking-wider">Email</p>
-                          <p className="text-sm font-medium text-slate-900 mt-0.5">{info.email}</p>
+                          <p className="text-[10px] md:text-xs font-bold text-slate-500 uppercase tracking-wider">Email</p>
+                          <p className="text-xs md:text-sm font-medium text-slate-900 mt-0.5">{info.email}</p>
                         </div>
                       </div>
 
                       {/* No HP */}
                       <div className="flex items-start gap-3">
-                        <div className="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center shrink-0 text-slate-400">
-                          <Phone size={16} />
+                        <div className="w-7 h-7 md:w-8 md:h-8 rounded-full bg-slate-50 flex items-center justify-center shrink-0 text-slate-400">
+                          <Phone className="w-3.5 h-3.5 md:w-4 md:h-4" />
                         </div>
                         <div>
-                          <p className="text-xs font-bold text-slate-500 uppercase tracking-wider">No HP</p>
-                          <p className="text-sm font-medium text-slate-900 mt-0.5">{info.phone}</p>
+                          <p className="text-[10px] md:text-xs font-bold text-slate-500 uppercase tracking-wider">No HP</p>
+                          <p className="text-xs md:text-sm font-medium text-slate-900 mt-0.5">{info.phone}</p>
                         </div>
                       </div>
 
                       {/* Materi yang diampu */}
                       <div className="flex items-start gap-3">
-                        <div className="w-8 h-8 rounded-full bg-red-50 flex items-center justify-center shrink-0 text-brand-red">
-                          <BookOpen size={16} />
+                        <div className="w-7 h-7 md:w-8 md:h-8 rounded-full bg-red-50 flex items-center justify-center shrink-0 text-brand-red">
+                          <BookOpen className="w-3.5 h-3.5 md:w-4 md:h-4" />
                         </div>
                         <div>
-                          <p className="text-xs font-bold text-slate-500 uppercase tracking-wider">
+                          <p className="text-[10px] md:text-xs font-bold text-slate-500 uppercase tracking-wider">
                             {selectedPerson.isTeacher ? 'Materi yang diampu' : 'Bidang Tugas'}
                           </p>
-                          <p className="text-sm font-bold text-brand-navy mt-0.5">{info.subject}</p>
+                          <p className="text-xs md:text-sm font-bold text-brand-navy mt-0.5">{info.subject}</p>
                         </div>
                       </div>
 
                       {/* Tugas Tambahan */}
                       <div className="flex items-start gap-3">
-                        <div className="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center shrink-0 text-slate-400">
-                          <Briefcase size={16} />
+                        <div className="w-7 h-7 md:w-8 md:h-8 rounded-full bg-slate-50 flex items-center justify-center shrink-0 text-slate-400">
+                          <Briefcase className="w-3.5 h-3.5 md:w-4 md:h-4" />
                         </div>
                         <div>
-                          <p className="text-xs font-bold text-slate-500 uppercase tracking-wider">Tugas Tambahan</p>
-                          <p className="text-sm font-medium text-slate-900 mt-0.5">{info.extraDuty}</p>
+                          <p className="text-[10px] md:text-xs font-bold text-slate-500 uppercase tracking-wider">Tugas Tambahan</p>
+                          <p className="text-xs md:text-sm font-medium text-slate-900 mt-0.5">{info.extraDuty}</p>
                         </div>
                       </div>
                     </div>

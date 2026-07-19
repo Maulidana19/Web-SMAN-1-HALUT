@@ -104,7 +104,7 @@ export const About: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
           
           {/* Left Column */}
-          <div className="lg:col-span-5 flex flex-col gap-6">
+          <div className="lg:col-span-5 flex flex-col gap-4 sm:gap-6">
             {/* Image */}
             <div className="w-full aspect-[16/9] lg:aspect-auto lg:flex-1 rounded-3xl overflow-hidden shadow-lg relative bg-gray-100 group">
               <img 
@@ -118,35 +118,35 @@ export const About: React.FC = () => {
             </div>
             
             {/* Visi Box (Red) */}
-            <div className="bg-brand-red text-white p-8 sm:p-10 rounded-3xl shadow-lg shrink-0 transition-transform duration-300 hover:-translate-y-1">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 bg-white/20 text-white rounded-2xl flex items-center justify-center">
-                  <Target size={24} />
+            <div className="bg-brand-red text-white p-5 sm:p-10 rounded-[20px] sm:rounded-3xl shadow-lg shrink-0 transition-transform duration-300 hover:-translate-y-1">
+              <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white/20 text-white rounded-xl sm:rounded-2xl flex items-center justify-center shrink-0">
+                  <Target className="w-5 h-5 sm:w-6 sm:h-6" />
                 </div>
-                <h3 className="text-2xl font-bold font-display tracking-wide">Visi Sekolah</h3>
+                <h3 className="text-xl sm:text-2xl font-bold font-display tracking-wide">Visi Sekolah</h3>
               </div>
-              <p className="text-base sm:text-lg font-medium leading-relaxed italic text-red-50">
+              <p className="text-sm sm:text-lg font-medium leading-snug sm:leading-relaxed italic text-red-50 text-justify">
                 "{SCHOOL_INFO.vision}"
               </p>
             </div>
           </div>
 
           {/* Right Column (Misi Box - Blue) */}
-          <div className="lg:col-span-7 bg-brand-navy text-white p-8 sm:p-12 rounded-3xl shadow-lg flex flex-col h-full transition-transform duration-300 hover:-translate-y-1">
-            <div className="flex items-center gap-4 mb-8">
-              <div className="w-12 h-12 bg-white/10 text-white rounded-2xl flex items-center justify-center">
-                <Compass size={24} />
+          <div className="lg:col-span-7 bg-brand-navy text-white p-5 sm:p-12 rounded-[20px] sm:rounded-3xl shadow-lg flex flex-col h-full transition-transform duration-300 hover:-translate-y-1">
+            <div className="flex items-center gap-3 sm:gap-4 mb-5 sm:mb-8">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white/10 text-white rounded-xl sm:rounded-2xl flex items-center justify-center shrink-0">
+                <Compass className="w-5 h-5 sm:w-6 sm:h-6" />
               </div>
-              <h3 className="text-2xl sm:text-3xl font-bold font-display tracking-wide">Misi Sekolah</h3>
+              <h3 className="text-xl sm:text-3xl font-bold font-display tracking-wide">Misi Sekolah</h3>
             </div>
             
-            <div className="space-y-6 flex-1">
+            <div className="space-y-4 sm:space-y-6 flex-1">
               {SCHOOL_INFO.missions.map((misi, idx) => (
-                <div key={idx} className="flex gap-5 items-start group/misi">
-                  <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center shrink-0 mt-0.5 border border-white/20 text-white font-bold text-sm">
+                <div key={idx} className="flex gap-3 sm:gap-5 items-start group/misi">
+                  <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-white/10 flex items-center justify-center shrink-0 mt-0.5 border border-white/20 text-white font-bold text-xs sm:text-sm">
                     {idx + 1}
                   </div>
-                  <p className="text-gray-300 text-sm sm:text-base leading-relaxed group-hover/misi:text-white transition-colors duration-300">
+                  <p className="text-gray-300 text-xs sm:text-base leading-snug sm:leading-relaxed group-hover/misi:text-white transition-colors duration-300 text-justify">
                     {misi}
                   </p>
                 </div>
@@ -179,7 +179,7 @@ export const About: React.FC = () => {
           <div className="lg:col-span-7">
             <span className="text-brand-red text-xs font-bold uppercase tracking-widest block mb-2">SEJARAH</span>
             <h3 className="text-2xl sm:text-3xl font-bold font-display text-slate-900 mb-4">Sejarah Singkat Sekolah</h3>
-            <div className="text-gray-600 text-sm sm:text-base leading-relaxed space-y-4">
+            <div className="text-gray-600 text-sm sm:text-base leading-relaxed space-y-4 text-justify">
               <p>SMA Negeri 1 Halmahera Utara didirikan sebagai wujud komitmen pemerintah dan masyarakat dalam memajukan pendidikan di wilayah Halmahera. Sejak awal berdirinya, sekolah ini telah menjadi pusat keunggulan dan pelopor pendidikan menengah atas di daerah ini.</p>
               <p>Seiring berjalannya waktu, SMAN 1 Halmahera Utara terus bertransformasi dengan melengkapi fasilitas akademik dan non-akademik, serta meningkatkan kualitas pendidik, hingga berhasil meraih akreditasi A (Unggul) dan mencetak ribuan alumni yang tersebar di seluruh Indonesia dan mancanegara.</p>
             </div>
@@ -211,21 +211,21 @@ export const About: React.FC = () => {
                 <div className="w-2 h-2 rounded-full bg-brand-red mt-2 shrink-0 shadow-sm"></div>
                 <div>
                   <h4 className="font-bold text-brand-navy text-sm sm:text-base">Perisai Segi Lima</h4>
-                  <p className="text-gray-500 text-xs sm:text-sm mt-1 leading-relaxed">Melambangkan pertahanan diri yang kuat dan dasar negara Pancasila sebagai landasan utama pendidikan karakter siswa.</p>
+                  <p className="text-gray-500 text-xs sm:text-sm mt-1 leading-relaxed text-justify">Melambangkan pertahanan diri yang kuat dan dasar negara Pancasila sebagai landasan utama pendidikan karakter siswa.</p>
                 </div>
               </li>
               <li className="flex gap-4 items-start">
                 <div className="w-2 h-2 rounded-full bg-brand-red mt-2 shrink-0 shadow-sm"></div>
                 <div>
                   <h4 className="font-bold text-brand-navy text-sm sm:text-base">Buku dan Pena</h4>
-                  <p className="text-gray-500 text-xs sm:text-sm mt-1 leading-relaxed">Merupakan simbol proses belajar-mengajar yang tak pernah berhenti sebagai sumber utama ilmu pengetahuan dan teknologi.</p>
+                  <p className="text-gray-500 text-xs sm:text-sm mt-1 leading-relaxed text-justify">Merupakan simbol proses belajar-mengajar yang tak pernah berhenti sebagai sumber utama ilmu pengetahuan dan teknologi.</p>
                 </div>
               </li>
               <li className="flex gap-4 items-start">
                 <div className="w-2 h-2 rounded-full bg-brand-red mt-2 shrink-0 shadow-sm"></div>
                 <div>
                   <h4 className="font-bold text-brand-navy text-sm sm:text-base">Warna Identitas (Biru & Kuning Emas)</h4>
-                  <p className="text-gray-500 text-xs sm:text-sm mt-1 leading-relaxed">Biru mencerminkan wawasan luas layaknya samudera, sedangkan kuning emas melambangkan masa keemasan, kejayaan, dan prestasi tinggi.</p>
+                  <p className="text-gray-500 text-xs sm:text-sm mt-1 leading-relaxed text-justify">Biru mencerminkan wawasan luas layaknya samudera, sedangkan kuning emas melambangkan masa keemasan, kejayaan, dan prestasi tinggi.</p>
                 </div>
               </li>
             </ul>

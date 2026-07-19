@@ -4,7 +4,7 @@ import { ChevronRight } from 'lucide-react';
 
 export const Peminatan: React.FC = () => {
   return (
-    <div className="pt-10 pb-20 bg-[#f1f5f9] min-h-screen font-sans">
+    <div className="pt-10 pb-12 sm:pb-20 bg-[#f1f5f9] font-sans">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header Section */}
@@ -39,43 +39,43 @@ export const Peminatan: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
-          className="bg-white rounded-[24px] p-6 sm:p-8 md:p-10 shadow-sm border border-gray-100"
+          className="bg-white rounded-[16px] sm:rounded-[24px] p-5 sm:p-8 md:p-10 shadow-sm border border-gray-100"
         >
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
             
             {/* Card 1 */}
-            <div className="bg-white border border-slate-100 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-md hover:border-red-100 transition-all duration-300 flex flex-col h-full">
-              <span className="text-brand-red text-[10px] sm:text-xs font-bold uppercase tracking-widest block mb-2">KELAS X</span>
-              <h3 className="text-lg md:text-xl font-bold text-brand-navy mb-4">Fase E (Umum)</h3>
-              <p className="text-gray-500 text-sm leading-relaxed font-medium mb-8 flex-grow">
+            <div className="bg-white border border-slate-100 rounded-[16px] sm:rounded-[20px] p-4 sm:p-8 shadow-sm hover:shadow-md hover:border-red-100 transition-all duration-300 flex flex-col h-full">
+              <span className="text-brand-red text-[9px] sm:text-[10px] md:text-xs font-bold uppercase tracking-widest block mb-1.5 sm:mb-2">KELAS X</span>
+              <h3 className="text-base sm:text-lg md:text-xl font-bold text-brand-navy mb-2 sm:mb-4">Fase E (Umum)</h3>
+              <p className="text-gray-500 text-xs sm:text-sm leading-snug sm:leading-relaxed font-medium mb-4 sm:mb-8 flex-grow text-justify">
                 Siswa mempelajari seluruh mata pelajaran secara umum sebagai dasar pemetaan minat akademik untuk tahun berikutnya.
               </p>
-              <button className="flex items-center gap-1 text-brand-navy font-bold text-xs sm:text-sm hover:text-brand-red transition-colors w-fit">
-                Selengkapnya <ChevronRight size={16} />
+              <button className="flex items-center gap-1 text-brand-navy font-bold text-[11px] sm:text-xs md:text-sm hover:text-brand-red transition-colors w-fit">
+                Selengkapnya <ChevronRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
               </button>
             </div>
 
             {/* Card 2 */}
-            <div className="bg-white border border-slate-100 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-md hover:border-red-100 transition-all duration-300 flex flex-col h-full">
-              <span className="text-brand-red text-[10px] sm:text-xs font-bold uppercase tracking-widest block mb-2">FASE F (KELAS XI & XII)</span>
-              <h3 className="text-lg md:text-xl font-bold text-brand-navy mb-4">MIPA (Matematika & Alam)</h3>
-              <p className="text-gray-500 text-sm leading-relaxed font-medium mb-8 flex-grow">
+            <div className="bg-white border border-slate-100 rounded-[16px] sm:rounded-[20px] p-4 sm:p-8 shadow-sm hover:shadow-md hover:border-red-100 transition-all duration-300 flex flex-col h-full">
+              <span className="text-brand-red text-[9px] sm:text-[10px] md:text-xs font-bold uppercase tracking-widest block mb-1.5 sm:mb-2">FASE F (KELAS XI & XII)</span>
+              <h3 className="text-base sm:text-lg md:text-xl font-bold text-brand-navy mb-2 sm:mb-4">MIPA (Matematika & Alam)</h3>
+              <p className="text-gray-500 text-xs sm:text-sm leading-snug sm:leading-relaxed font-medium mb-4 sm:mb-8 flex-grow text-justify">
                 Fokus mendalam pada Matematika Lanjut, Fisika, Kimia, Biologi, dan Informatika untuk persiapan jurusan sains & teknologi.
               </p>
-              <button className="flex items-center gap-1 text-brand-navy font-bold text-xs sm:text-sm hover:text-brand-red transition-colors w-fit">
-                Selengkapnya <ChevronRight size={16} />
+              <button className="flex items-center gap-1 text-brand-navy font-bold text-[11px] sm:text-xs md:text-sm hover:text-brand-red transition-colors w-fit">
+                Selengkapnya <ChevronRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
               </button>
             </div>
 
             {/* Card 3 */}
-            <div className="bg-white border border-slate-100 rounded-[20px] p-6 sm:p-8 shadow-sm hover:shadow-md hover:border-red-100 transition-all duration-300 flex flex-col h-full">
-              <span className="text-brand-red text-[10px] sm:text-xs font-bold uppercase tracking-widest block mb-2">FASE F (KELAS XI & XII)</span>
-              <h3 className="text-lg md:text-xl font-bold text-brand-navy mb-4">IPS (Sosial & Humaniora)</h3>
-              <p className="text-gray-500 text-sm leading-relaxed font-medium mb-8 flex-grow">
+            <div className="bg-white border border-slate-100 rounded-[16px] sm:rounded-[20px] p-4 sm:p-8 shadow-sm hover:shadow-md hover:border-red-100 transition-all duration-300 flex flex-col h-full">
+              <span className="text-brand-red text-[9px] sm:text-[10px] md:text-xs font-bold uppercase tracking-widest block mb-1.5 sm:mb-2">FASE F (KELAS XI & XII)</span>
+              <h3 className="text-base sm:text-lg md:text-xl font-bold text-brand-navy mb-2 sm:mb-4">IPS (Sosial & Humaniora)</h3>
+              <p className="text-gray-500 text-xs sm:text-sm leading-snug sm:leading-relaxed font-medium mb-4 sm:mb-8 flex-grow text-justify">
                 Fokus pada Ekonomi, Geografi, Sosiologi, Sejarah Lanjut, dan Bahasa untuk persiapan karir ilmu sosial, bisnis, dan hukum.
               </p>
-              <button className="flex items-center gap-1 text-brand-navy font-bold text-xs sm:text-sm hover:text-brand-red transition-colors w-fit">
-                Selengkapnya <ChevronRight size={16} />
+              <button className="flex items-center gap-1 text-brand-navy font-bold text-[11px] sm:text-xs md:text-sm hover:text-brand-red transition-colors w-fit">
+                Selengkapnya <ChevronRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
               </button>
             </div>
 

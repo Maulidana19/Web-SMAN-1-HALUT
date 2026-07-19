@@ -27,7 +27,7 @@ export const PPDB: React.FC = () => {
   ];
 
   return (
-    <div className="pt-10 pb-20 bg-[#f1f5f9] min-h-screen font-sans">
+    <div className="pt-10 pb-12 sm:pb-20 bg-[#f1f5f9] font-sans">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header Section */}
@@ -62,10 +62,10 @@ export const PPDB: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
-          className="bg-white rounded-[24px] p-6 sm:p-10 shadow-sm border border-gray-100"
+          className="bg-white rounded-[16px] sm:rounded-[24px] p-5 sm:p-10 shadow-sm border border-gray-100"
         >
           {/* Steps Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-6 sm:mb-10">
             {steps.map((step, idx) => (
               <motion.div 
                 key={idx}
@@ -73,18 +73,18 @@ export const PPDB: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="relative bg-white border border-slate-100 rounded-[20px] p-6 shadow-sm hover:shadow-lg hover:border-brand-red/30 transition-all duration-300 group overflow-hidden h-full flex flex-col"
+                className="relative bg-white border border-slate-100 rounded-[16px] sm:rounded-[20px] p-5 sm:p-6 shadow-sm hover:shadow-lg hover:border-brand-red/30 transition-all duration-300 group overflow-hidden h-full flex flex-col"
               >
                 {/* Watermark Number */}
-                <div className="absolute -top-4 -right-2 text-8xl font-black text-slate-50 opacity-50 group-hover:text-brand-red/5 group-hover:scale-110 transition-all duration-500 select-none z-0">
+                <div className="absolute -top-2 sm:-top-4 -right-1 sm:-right-2 text-6xl sm:text-8xl font-black text-slate-50 opacity-50 group-hover:text-brand-red/5 group-hover:scale-110 transition-all duration-500 select-none z-0">
                   {step.num}
                 </div>
                 
                 <div className="relative z-10 flex-grow">
-                  <h3 className="text-lg font-bold text-brand-navy mb-3 group-hover:text-brand-red transition-colors">
+                  <h3 className="text-base sm:text-lg font-bold text-brand-navy mb-2 sm:mb-3 group-hover:text-brand-red transition-colors">
                     {step.title}
                   </h3>
-                  <p className="text-slate-500 text-sm leading-relaxed">
+                  <p className="text-slate-500 text-xs sm:text-sm leading-snug sm:leading-relaxed text-justify">
                     {step.desc}
                   </p>
                 </div>
@@ -93,20 +93,20 @@ export const PPDB: React.FC = () => {
           </div>
 
           {/* Action Banner */}
-          <div className="bg-brand-navy rounded-[20px] p-8 md:p-10 shadow-lg relative overflow-hidden group">
+          <div className="bg-brand-navy rounded-[16px] sm:rounded-[20px] p-6 sm:p-8 md:p-10 shadow-lg relative overflow-hidden group">
             {/* Background Decoration */}
             <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/3 group-hover:scale-125 transition-transform duration-700 pointer-events-none"></div>
             
-            <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
+            <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-8">
               <div className="text-center md:text-left flex-grow">
-                <h3 className="text-2xl font-bold text-white mb-2 font-display">Sudah Siap Melakukan Pendaftaran?</h3>
-                <p className="text-blue-100/80 text-sm sm:text-base leading-relaxed max-w-2xl">
+                <h3 className="text-lg sm:text-2xl font-bold text-white mb-1 sm:mb-2 font-display">Sudah Siap Melakukan Pendaftaran?</h3>
+                <p className="text-blue-100/80 text-xs sm:text-sm md:text-base leading-snug sm:leading-relaxed max-w-2xl text-justify md:text-left">
                   Pendaftaran resmi PPDB dilakukan melalui portal PPDB Dinas Pendidikan Provinsi Maluku Utara.
                 </p>
               </div>
               
-              <button className="flex-shrink-0 bg-brand-red hover:bg-red-700 text-white font-bold text-sm sm:text-base py-4 px-8 rounded-xl flex items-center gap-2 transition-colors duration-300 shadow-md">
-                PORTAL PPDB PROVINSI <ExternalLink size={18} />
+              <button className="flex-shrink-0 bg-brand-red hover:bg-red-700 text-white font-bold text-xs sm:text-sm md:text-base py-3 sm:py-4 px-6 sm:px-8 rounded-lg sm:rounded-xl flex items-center gap-1.5 sm:gap-2 transition-colors duration-300 shadow-md">
+                PORTAL PPDB PROVINSI <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5" />
               </button>
             </div>
           </div>

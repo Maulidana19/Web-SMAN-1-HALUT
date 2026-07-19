@@ -3,7 +3,7 @@ import { motion } from 'motion/react';
 
 export const Prestasi: React.FC = () => {
   return (
-    <div className="pt-10 pb-20 bg-[#f1f5f9] min-h-screen font-sans">
+    <div className="pt-10 pb-12 sm:pb-20 bg-[#f1f5f9] font-sans">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header Section */}
@@ -38,14 +38,14 @@ export const Prestasi: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
-          className="bg-white rounded-[24px] p-6 sm:p-10 shadow-sm border border-gray-100"
+          className="bg-white rounded-[16px] sm:rounded-[24px] p-5 sm:p-10 shadow-sm border border-gray-100"
         >
           
           {/* Image Grid Layout */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8 mb-8 sm:mb-12">
             
             {/* Card 1: Lomba Lari */}
-            <div className="group flex flex-col overflow-hidden cursor-pointer shadow-sm hover:shadow-xl transition-all duration-300 rounded-2xl border border-gray-100 bg-white">
+            <div className="group flex flex-col overflow-hidden cursor-pointer shadow-sm hover:shadow-xl transition-all duration-300 rounded-[16px] sm:rounded-2xl border border-gray-100 bg-white">
               <div className="relative w-full aspect-video overflow-hidden">
                 <img 
                   src="/assets/prestasi1.jpg" 
@@ -58,16 +58,16 @@ export const Prestasi: React.FC = () => {
                 />
               </div>
               {/* Content Box */}
-              <div className="relative mt-auto w-full bg-white group-hover:bg-brand-navy transition-colors duration-300 p-6 sm:p-8">
-                <h3 className="text-slate-900 group-hover:text-white transition-colors font-bold text-xl sm:text-2xl font-display mb-3">Prestasi di Ajang Lomba Lari</h3>
-                <p className="text-gray-600 group-hover:text-blue-100 transition-colors text-sm sm:text-base leading-relaxed">
+              <div className="relative mt-auto w-full bg-white group-hover:bg-brand-navy transition-colors duration-300 p-5 sm:p-8">
+                <h3 className="text-slate-900 group-hover:text-white transition-colors font-bold text-lg sm:text-2xl font-display mb-2 sm:mb-3">Prestasi di Ajang Lomba Lari</h3>
+                <p className="text-gray-600 group-hover:text-blue-100 transition-colors text-xs sm:text-base leading-relaxed text-justify">
                   Siswa kami terus berprestasi dengan menunjukkan kecepatan dan semangat juang yang tinggi dalam setiap ajang kejuaraan atletik.
                 </p>
               </div>
             </div>
 
             {/* Card 2: Lomba Pencak Silat */}
-            <div className="group flex flex-col overflow-hidden cursor-pointer shadow-sm hover:shadow-xl transition-all duration-300 rounded-2xl border border-gray-100 bg-white">
+            <div className="group flex flex-col overflow-hidden cursor-pointer shadow-sm hover:shadow-xl transition-all duration-300 rounded-[16px] sm:rounded-2xl border border-gray-100 bg-white">
               <div className="relative w-full aspect-video overflow-hidden">
                 <img 
                   src="/assets/prestasi2.jpg" 
@@ -80,9 +80,9 @@ export const Prestasi: React.FC = () => {
                 />
               </div>
               {/* Content Box */}
-              <div className="relative mt-auto w-full bg-white group-hover:bg-brand-navy transition-colors duration-300 p-6 sm:p-8">
-                <h3 className="text-slate-900 group-hover:text-white transition-colors font-bold text-xl sm:text-2xl font-display mb-3">Kejuaraan Pencak Silat Pelajar</h3>
-                <p className="text-gray-600 group-hover:text-blue-100 transition-colors text-sm sm:text-base leading-relaxed">
+              <div className="relative mt-auto w-full bg-white group-hover:bg-brand-navy transition-colors duration-300 p-5 sm:p-8">
+                <h3 className="text-slate-900 group-hover:text-white transition-colors font-bold text-lg sm:text-2xl font-display mb-2 sm:mb-3">Kejuaraan Pencak Silat Pelajar</h3>
+                <p className="text-gray-600 group-hover:text-blue-100 transition-colors text-xs sm:text-base leading-relaxed text-justify">
                   Menjunjung tinggi sportivitas dan nilai tradisi beladiri, siswa-siswi kami selalu tampil maksimal di berbagai kompetisi pencak silat.
                 </p>
               </div>
@@ -91,11 +91,11 @@ export const Prestasi: React.FC = () => {
           </div>
 
           {/* Motivation Board */}
-          <div className="bg-[#f1f5f9]/50 rounded-2xl p-6 sm:p-8 text-center max-w-4xl mx-auto border border-slate-100">
-            <p className="text-slate-600 text-sm sm:text-base font-semibold leading-relaxed">
+          <div className="bg-[#f1f5f9]/50 rounded-[16px] sm:rounded-2xl p-5 sm:p-8 text-center max-w-4xl mx-auto border border-slate-100">
+            <p className="text-slate-600 text-[13px] sm:text-base font-semibold leading-relaxed text-justify md:text-center">
               "Bukan hanya medali atau piala yang kami kejar, melainkan proses, daya juang, sportivitas, dan integritas kepribadian yang terbentuk di balik setiap perjuangan prestasi."
             </p>
-            <span className="block text-xs font-bold text-brand-red uppercase tracking-widest mt-3">— Dewan Pembina Prestasi Siswa</span>
+            <span className="block text-[10px] sm:text-xs font-bold text-brand-red uppercase tracking-widest mt-2.5 sm:mt-3">— Dewan Pembina Prestasi Siswa</span>
           </div>
 
         </motion.div>

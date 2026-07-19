@@ -9,6 +9,7 @@ interface NavbarProps {
 
 export const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [expandedMenu, setExpandedMenu] = useState<string | null>(null);
 
   const navItems = [
     { id: 'home', label: 'BERANDA', hasDropdown: false },
@@ -62,6 +63,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection 
   const handleNavClick = (id: string) => {
     setActiveSection(id);
     setIsOpen(false);
+    setExpandedMenu(null);
   };
 
   return (
@@ -171,16 +173,25 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection 
                 <div key={item.id} className="flex flex-col">
                   <button
                     onClick={() => {
-                      if (!item.hasDropdown) handleNavClick(item.id);
+                      if (item.hasDropdown) {
+                        setExpandedMenu(expandedMenu === item.id ? null : item.id);
+                      } else {
+                        handleNavClick(item.id);
+                      }
                     }}
                     className={`flex items-center justify-between w-full text-left px-4 py-3 text-sm font-bold uppercase tracking-wider ${
                       isActive ? 'text-brand-red bg-red-50' : 'text-brand-navy hover:text-brand-red hover:bg-gray-50'
                     }`}
                   >
                     {item.label}
-                    {item.hasDropdown && <ChevronDown size={18} className={isActive ? 'text-brand-red' : 'text-gray-400'} />}
+                    {item.hasDropdown && (
+                      <ChevronDown 
+                        size={18} 
+                        className={`transition-transform duration-200 ${expandedMenu === item.id ? 'rotate-180' : ''} ${isActive ? 'text-brand-red' : 'text-gray-400'}`} 
+                      />
+                    )}
                   </button>
-                  {item.subItems && (
+                  {item.subItems && expandedMenu === item.id && (
                     <div className="bg-gray-50/50 flex flex-col py-1 border-l-2 border-gray-100 ml-4 pl-4 pr-4">
                       {item.subItems.map((subItem) => {
                         const isSubActive = activeSection === subItem.id;

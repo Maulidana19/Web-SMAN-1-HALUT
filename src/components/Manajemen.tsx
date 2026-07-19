@@ -4,7 +4,7 @@ import { Layers, Users } from 'lucide-react';
 
 export const Manajemen: React.FC = () => {
   return (
-    <div className="pt-10 pb-20 bg-[#f1f5f9] min-h-screen font-sans">
+    <div className="pt-10 pb-12 sm:pb-20 bg-[#f1f5f9] font-sans">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header Section */}
@@ -35,7 +35,7 @@ export const Manajemen: React.FC = () => {
         </div>
 
         {/* Tim Wakil Kepala Sekolah */}
-        <div className="mb-16">
+        <div className="mb-10 sm:mb-16">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 max-w-6xl mx-auto">
             {[1, 2, 3, 4].map((idx) => {
               const names = ['Fendy V. Hitipeuw, S.Pd.', 'Donal R. Ollo, S.Pd.', 'Thomas S. Matrutty, S.Pd.', 'Reny Uktolseja, S.E., S.Pd.'];
@@ -53,9 +53,9 @@ export const Manajemen: React.FC = () => {
                     />
                     <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-brand-navy/90 via-brand-navy/40 to-transparent pointer-events-none"></div>
                   </div>
-                  <div className="absolute bottom-0 left-0 w-full p-4 sm:p-6">
-                    <h3 className="text-white font-bold text-sm sm:text-lg font-display mb-1 leading-tight">{names[idx-1]}</h3>
-                    <p className="text-blue-200 text-[10px] sm:text-xs font-medium uppercase tracking-wider">{roles[idx-1]}</p>
+                  <div className="absolute bottom-0 left-0 w-full p-3 sm:p-6">
+                    <h3 className="text-white font-bold text-xs sm:text-lg font-display mb-0.5 sm:mb-1 leading-tight">{names[idx-1]}</h3>
+                    <p className="text-blue-200 text-[8px] sm:text-xs font-medium uppercase tracking-wider">{roles[idx-1]}</p>
                   </div>
                 </div>
               );
@@ -64,27 +64,27 @@ export const Manajemen: React.FC = () => {
         </div>
 
         {/* Struktur & Komite Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 max-w-6xl mx-auto">
           {/* Card 1: Struktur Organisasi */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="bg-white rounded-[24px] p-8 md:p-10 shadow-sm border border-gray-100 flex flex-col h-full"
+            className="bg-white rounded-[16px] sm:rounded-[24px] p-5 sm:p-8 md:p-10 shadow-sm border border-gray-100 flex flex-col h-full"
           >
-            <div className="flex items-center gap-3 mb-4">
-              <Layers className="w-6 h-6 text-brand-red" />
-              <h4 className="text-lg md:text-xl font-bold text-brand-navy">Struktur Organisasi Sekolah</h4>
+            <div className="flex items-center gap-2.5 sm:gap-3 mb-3 sm:mb-4">
+              <Layers className="w-5 h-5 sm:w-6 sm:h-6 text-brand-red" />
+              <h4 className="text-base sm:text-lg md:text-xl font-bold text-brand-navy">Struktur Organisasi Sekolah</h4>
             </div>
-            <p className="text-gray-500 text-[14px] md:text-[15px] leading-relaxed font-medium mb-8">
+            <p className="text-gray-500 text-xs sm:text-[14px] md:text-[15px] leading-snug sm:leading-relaxed font-medium mb-5 sm:mb-8">
               Bagan pembagian komando kepemimpinan serta tanggung jawab administratif internal SMAN 1 Halmahera Utara.
             </p>
             
             {/* Inner box */}
-            <div className="mt-auto bg-slate-50 border border-slate-200 border-dashed rounded-xl p-8 flex flex-col items-center justify-center text-center h-48">
-              <Users className="w-8 h-8 text-slate-400 mb-3" />
-              <span className="text-slate-600 font-bold text-[13px] uppercase tracking-wider mb-1">Bagan Organisasi Digital</span>
-              <span className="text-slate-400 text-[12px]">Sedang dalam proses penyusunan bagan grafis terbaru.</span>
+            <div className="mt-auto bg-slate-50 border border-slate-200 border-dashed rounded-xl p-5 sm:p-8 flex flex-col items-center justify-center text-center h-32 sm:h-48">
+              <Users className="w-6 h-6 sm:w-8 sm:h-8 text-slate-400 mb-2 sm:mb-3" />
+              <span className="text-slate-600 font-bold text-[11px] sm:text-[13px] uppercase tracking-wider mb-1">Bagan Organisasi Digital</span>
+              <span className="text-slate-400 text-[10px] sm:text-[12px]">Sedang dalam proses penyusunan bagan grafis terbaru.</span>
             </div>
           </motion.div>
 
@@ -93,30 +93,30 @@ export const Manajemen: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="bg-white rounded-[24px] p-8 md:p-10 shadow-sm border border-gray-100 flex flex-col h-full"
+            className="bg-white rounded-[16px] sm:rounded-[24px] p-5 sm:p-8 md:p-10 shadow-sm border border-gray-100 flex flex-col h-full"
           >
-            <div className="flex items-center gap-3 mb-4">
-              <Users className="w-6 h-6 text-brand-red" />
-              <h4 className="text-lg md:text-xl font-bold text-brand-navy">Komite Sekolah</h4>
+            <div className="flex items-center gap-2.5 sm:gap-3 mb-3 sm:mb-4">
+              <Users className="w-5 h-5 sm:w-6 sm:h-6 text-brand-red" />
+              <h4 className="text-base sm:text-lg md:text-xl font-bold text-brand-navy">Komite Sekolah</h4>
             </div>
-            <p className="text-gray-500 text-[14px] md:text-[15px] leading-relaxed font-medium mb-8">
+            <p className="text-gray-500 text-xs sm:text-[14px] md:text-[15px] leading-snug sm:leading-relaxed font-medium mb-5 sm:mb-8">
               Lembaga mandiri yang mewakili peran serta orang tua siswa dalam mendukung program kerja dan peningkatan sarana mutu pendidikan.
             </p>
 
             {/* Inner box */}
-            <div className="mt-auto bg-slate-50 border border-slate-100 rounded-xl p-6 md:p-8">
-              <h5 className="font-bold text-brand-navy text-[15px] mb-4">Jajaran Pengurus Komite</h5>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-2 text-[14px]">
-                  <span className="w-1.5 h-1.5 rounded-full bg-brand-red mt-2 shrink-0"></span>
+            <div className="mt-auto bg-slate-50 border border-slate-100 rounded-xl p-5 sm:p-6 md:p-8">
+              <h5 className="font-bold text-brand-navy text-[13px] sm:text-[15px] mb-3 sm:mb-4">Jajaran Pengurus Komite</h5>
+              <ul className="space-y-2 sm:space-y-3">
+                <li className="flex items-start gap-2 text-[12px] sm:text-[14px]">
+                  <span className="w-1.5 h-1.5 rounded-full bg-brand-red mt-1.5 sm:mt-2 shrink-0"></span>
                   <span className="text-slate-700"><strong>Ketua Komite:</strong> Drs. H. Muhammad Saleh</span>
                 </li>
-                <li className="flex items-start gap-2 text-[14px]">
-                  <span className="w-1.5 h-1.5 rounded-full bg-brand-red mt-2 shrink-0"></span>
+                <li className="flex items-start gap-2 text-[12px] sm:text-[14px]">
+                  <span className="w-1.5 h-1.5 rounded-full bg-brand-red mt-1.5 sm:mt-2 shrink-0"></span>
                   <span className="text-slate-700"><strong>Wakil Ketua:</strong> Dr. Ir. Yohanes W.</span>
                 </li>
-                <li className="flex items-start gap-2 text-[14px]">
-                  <span className="w-1.5 h-1.5 rounded-full bg-brand-red mt-2 shrink-0"></span>
+                <li className="flex items-start gap-2 text-[12px] sm:text-[14px]">
+                  <span className="w-1.5 h-1.5 rounded-full bg-brand-red mt-1.5 sm:mt-2 shrink-0"></span>
                   <span className="text-slate-700"><strong>Sekretaris:</strong> Dra. Maria K.</span>
                 </li>
               </ul>

@@ -41,48 +41,48 @@ export const Kurikulum: React.FC = () => {
           transition={{ delay: 0.3 }}
           className="bg-white rounded-[24px] p-6 sm:p-8 md:p-10 shadow-sm border border-gray-100"
         >
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
             
             {/* Feature 1 */}
-            <div className="bg-slate-50 border border-slate-100 rounded-[20px] p-6 sm:p-8 hover:border-red-100 hover:bg-red-50/30 transition-colors duration-300">
-              <div className="flex items-start gap-3 mb-3">
-                <CheckCircle2 className="w-5 h-5 text-brand-red shrink-0 mt-0.5" />
-                <h3 className="text-base md:text-lg font-bold text-brand-navy">Kurikulum Merdeka</h3>
+            <div className="bg-slate-50 border border-slate-100 rounded-2xl sm:rounded-[20px] p-4 sm:p-8 hover:border-red-100 hover:bg-red-50/30 transition-colors duration-300">
+              <div className="flex items-start gap-2.5 sm:gap-3 mb-1.5 sm:mb-3">
+                <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-brand-red shrink-0 mt-0.5" />
+                <h3 className="text-sm sm:text-base md:text-lg font-bold text-brand-navy leading-tight">Kurikulum Merdeka</h3>
               </div>
-              <p className="text-gray-500 text-sm leading-relaxed font-medium pl-8">
+              <p className="text-gray-500 text-xs sm:text-sm leading-snug sm:leading-relaxed font-medium pl-6 sm:pl-8">
                 Pembelajaran intrakurikuler yang beragam di mana peserta didik memiliki cukup waktu untuk mendalami konsep dan menguatkan kompetensi.
               </p>
             </div>
 
             {/* Feature 2 */}
-            <div className="bg-slate-50 border border-slate-100 rounded-[20px] p-6 sm:p-8 hover:border-red-100 hover:bg-red-50/30 transition-colors duration-300">
-              <div className="flex items-start gap-3 mb-3">
-                <CheckCircle2 className="w-5 h-5 text-brand-red shrink-0 mt-0.5" />
-                <h3 className="text-base md:text-lg font-bold text-brand-navy">Projek Penguatan Profil Pelajar Pancasila (P5)</h3>
+            <div className="bg-slate-50 border border-slate-100 rounded-2xl sm:rounded-[20px] p-4 sm:p-8 hover:border-red-100 hover:bg-red-50/30 transition-colors duration-300">
+              <div className="flex items-start gap-2.5 sm:gap-3 mb-1.5 sm:mb-3">
+                <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-brand-red shrink-0 mt-0.5" />
+                <h3 className="text-sm sm:text-base md:text-lg font-bold text-brand-navy leading-tight">Projek Penguatan Profil Pelajar Pancasila (P5)</h3>
               </div>
-              <p className="text-gray-500 text-sm leading-relaxed font-medium pl-8">
+              <p className="text-gray-500 text-xs sm:text-sm leading-snug sm:leading-relaxed font-medium pl-6 sm:pl-8">
                 Pembelajaran kokurikuler lintas disiplin ilmu untuk mengamati dan memikirkan solusi terhadap permasalahan di lingkungan sekitar.
               </p>
             </div>
 
             {/* Feature 3 */}
-            <div className="bg-slate-50 border border-slate-100 rounded-[20px] p-6 sm:p-8 hover:border-red-100 hover:bg-red-50/30 transition-colors duration-300">
-              <div className="flex items-start gap-3 mb-3">
-                <CheckCircle2 className="w-5 h-5 text-brand-red shrink-0 mt-0.5" />
-                <h3 className="text-base md:text-lg font-bold text-brand-navy">Pembelajaran Berbasis IT</h3>
+            <div className="bg-slate-50 border border-slate-100 rounded-2xl sm:rounded-[20px] p-4 sm:p-8 hover:border-red-100 hover:bg-red-50/30 transition-colors duration-300">
+              <div className="flex items-start gap-2.5 sm:gap-3 mb-1.5 sm:mb-3">
+                <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-brand-red shrink-0 mt-0.5" />
+                <h3 className="text-sm sm:text-base md:text-lg font-bold text-brand-navy leading-tight">Pembelajaran Berbasis IT</h3>
               </div>
-              <p className="text-gray-500 text-sm leading-relaxed font-medium pl-8">
+              <p className="text-gray-500 text-xs sm:text-sm leading-snug sm:leading-relaxed font-medium pl-6 sm:pl-8">
                 Integrasi penuh platform digital dan LMS dalam kegiatan harian untuk efisiensi dan adaptabilitas teknologi modern.
               </p>
             </div>
 
             {/* Feature 4 */}
-            <div className="bg-slate-50 border border-slate-100 rounded-[20px] p-6 sm:p-8 hover:border-red-100 hover:bg-red-50/30 transition-colors duration-300">
-              <div className="flex items-start gap-3 mb-3">
-                <CheckCircle2 className="w-5 h-5 text-brand-red shrink-0 mt-0.5" />
-                <h3 className="text-base md:text-lg font-bold text-brand-navy">Asesmen Kompetensi Minimum</h3>
+            <div className="bg-slate-50 border border-slate-100 rounded-2xl sm:rounded-[20px] p-4 sm:p-8 hover:border-red-100 hover:bg-red-50/30 transition-colors duration-300">
+              <div className="flex items-start gap-2.5 sm:gap-3 mb-1.5 sm:mb-3">
+                <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-brand-red shrink-0 mt-0.5" />
+                <h3 className="text-sm sm:text-base md:text-lg font-bold text-brand-navy leading-tight">Asesmen Kompetensi Minimum</h3>
               </div>
-              <p className="text-gray-500 text-sm leading-relaxed font-medium pl-8">
+              <p className="text-gray-500 text-xs sm:text-sm leading-snug sm:leading-relaxed font-medium pl-6 sm:pl-8">
                 Fokus pada literasi membaca, numerasi, dan survei karakter untuk pemetaan kualitas mutu pendidikan secara objektif.
               </p>
             </div>

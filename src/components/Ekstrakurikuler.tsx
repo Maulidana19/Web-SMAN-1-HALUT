@@ -46,7 +46,7 @@ const EKSKUL_DATA = [
 
 export const Ekstrakurikuler: React.FC = () => {
   return (
-    <div className="pt-10 pb-20 bg-[#f1f5f9] min-h-screen font-sans">
+    <div className="pt-10 pb-12 sm:pb-20 bg-[#f1f5f9] font-sans">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header Section */}
@@ -81,24 +81,24 @@ export const Ekstrakurikuler: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
-          className="bg-white rounded-[24px] p-6 sm:p-10 shadow-sm border border-gray-100"
+          className="bg-white rounded-[16px] sm:rounded-[24px] p-5 sm:p-10 shadow-sm border border-gray-100"
         >
           {/* Grid Layout for Ekstrakurikuler */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {EKSKUL_DATA.map((item, index) => (
               <div 
                 key={index}
-                className="bg-white border border-slate-100 rounded-[20px] p-6 shadow-sm hover:shadow-md hover:border-brand-red/30 transition-all duration-300 flex flex-col h-full group"
+                className="bg-white border border-slate-100 rounded-[16px] sm:rounded-[20px] p-4 sm:p-6 shadow-sm hover:shadow-md hover:border-brand-red/30 transition-all duration-300 flex flex-col h-full group"
               >
-                <div className="mb-4">
-                  <span className="inline-block bg-red-50 text-brand-red text-[10px] sm:text-[11px] font-extrabold uppercase tracking-widest px-2.5 py-1 rounded-md mb-1">
+                <div className="mb-2 sm:mb-4">
+                  <span className="inline-block bg-red-50 text-brand-red text-[9px] sm:text-[11px] font-extrabold uppercase tracking-widest px-2 sm:px-2.5 py-1 rounded-md mb-1">
                     {item.tag}
                   </span>
                 </div>
-                <h3 className="text-lg font-bold text-brand-navy mb-3 group-hover:text-brand-red transition-colors">
+                <h3 className="text-base sm:text-lg font-bold text-brand-navy mb-2 sm:mb-3 group-hover:text-brand-red transition-colors">
                   {item.title}
                 </h3>
-                <p className="text-slate-500 text-sm leading-relaxed flex-grow">
+                <p className="text-slate-500 text-xs sm:text-sm leading-snug sm:leading-relaxed flex-grow text-justify">
                   {item.description}
                 </p>
               </div>
