@@ -56,48 +56,6 @@ export const About: React.FC = () => {
         </div>
       </div>
 
-      {/* 1. SAMBUTAN KEPALA SEKOLAH */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-20 sm:-mt-24 relative z-20 mb-16">
-        <div className="bg-white rounded-3xl p-8 sm:p-12 shadow-2xl border border-gray-100 relative overflow-hidden">
-          
-          {/* Decorative quote marks */}
-          <Quote className="absolute top-12 right-12 w-32 h-32 text-gray-50 opacity-50 rotate-180" />
-
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
-            
-            {/* Foto Kepsek */}
-            <div className="md:col-span-5 lg:col-span-4 flex flex-col items-center">
-              <div className="w-full max-w-[240px] sm:max-w-[260px] lg:max-w-[280px] aspect-[3/4] rounded-2xl overflow-hidden shadow-lg mb-6 border-[6px] border-gray-50 relative">
-                <div className="absolute inset-0 bg-gray-100 animate-pulse -z-10"></div>
-                <img 
-                  src="/assets/foto1.jpg" 
-                  alt={SCHOOL_INFO.principal.name}
-                  className="w-full h-full object-cover object-top"
-                  onError={(e) => {
-                    (e.target as HTMLImageElement).style.opacity = '0';
-                  }}
-                />
-              </div>
-              <div className="text-center">
-                <h4 className="font-bold text-slate-900 text-lg sm:text-xl font-display">{SCHOOL_INFO.principal.name}</h4>
-                <p className="text-blue-600 text-xs sm:text-sm font-semibold uppercase tracking-wide mt-1">{SCHOOL_INFO.principal.role}</p>
-              </div>
-            </div>
-
-            {/* Pesan Kepsek */}
-            <div className="md:col-span-7 lg:col-span-8">
-              <h3 className="text-lg sm:text-2xl lg:text-3xl font-bold font-display text-slate-900 mb-6 flex items-center gap-2 sm:gap-3">
-                <Quote className="w-6 h-6 sm:w-8 sm:h-8 text-blue-500 shrink-0" />
-                Sambutan Kepala Sekolah
-              </h3>
-              <div className="text-gray-600 text-sm sm:text-base lg:text-lg leading-relaxed italic space-y-4 text-justify">
-                <p>"{SCHOOL_INFO.principal.message}"</p>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
 
       {/* 2. VISI & MISI SECTION - NEW LAYOUT */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-4 relative z-10">
@@ -237,22 +195,23 @@ export const About: React.FC = () => {
       {/* 3. JAJARAN PIMPINAN */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         <div className="text-center mb-12">
-          <span className="text-brand-red text-xs font-bold uppercase tracking-widest block mb-2">JAJARAN PIMPINAN</span>
+          <span className="text-brand-red text-xs font-bold uppercase tracking-widest block mb-2">STRUKTUR KEPEMIMPINAN</span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 font-display">
-            Tim Wakil Kepala Sekolah
+            Jajaran Pimpinan
           </h2>
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
-          {[1, 2, 3, 4].map((idx) => {
-            const names = ['Fendy V. Hitipeuw, S.Pd.', 'Donal R. Ollo, S.Pd.', 'Thomas S. Matrutty, S.Pd.', 'Reny Uktolseja, S.E., S.Pd.'];
-            const roles = ['Bidang Kurikulum', 'Bidang Kesiswaan', 'Bidang Sarpras', 'Bidang Humas'];
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-6">
+          {[0, 1, 2, 3, 4].map((idx) => {
+            const photos = ['/assets/foto1.jpg', '/assets/waka1.jpg', '/assets/waka2.jpg', '/assets/waka3.jpg', '/assets/waka4.jpg'];
+            const names = ['Ellen Sintya Dewi, S.Pd., M.Si.', 'Fendy V. Hitipeuw, S.Pd.', 'Donal R. Ollo, S.Pd.', 'Thomas S. Matrutty, S.Pd.', 'Reny Uktolseja, S.E., S.Pd.'];
+            const roles = ['Kepala Sekolah', 'Bidang Kurikulum', 'Bidang Kesiswaan', 'Bidang Sarpras', 'Bidang Humas'];
             return (
               <div key={idx} className="relative group cursor-pointer overflow-hidden bg-brand-navy">
                 <div className="aspect-[3/4] w-full">
                   <img 
-                    src={`/assets/waka${idx}.jpg`} 
-                    alt={`Wakil Kepala Sekolah ${idx}`}
+                    src={photos[idx]} 
+                    alt={roles[idx]}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     onError={(e) => {
                       (e.target as HTMLImageElement).style.opacity = '0';
@@ -261,9 +220,9 @@ export const About: React.FC = () => {
                   {/* Overlay only for text readability */}
                   <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-brand-navy/90 via-brand-navy/40 to-transparent pointer-events-none"></div>
                 </div>
-                <div className="absolute bottom-0 left-0 w-full p-3 sm:p-6">
-                  <h3 className="text-white font-bold text-sm sm:text-lg font-display mb-0.5 sm:mb-1 leading-tight">{names[idx-1]}</h3>
-                  <p className="text-blue-200 text-[9px] sm:text-xs font-medium uppercase tracking-wider">{roles[idx-1]}</p>
+                <div className="absolute bottom-0 left-0 w-full p-3 sm:p-5">
+                  <h3 className="text-white font-bold text-xs sm:text-sm font-display mb-0.5 sm:mb-1 leading-tight">{names[idx]}</h3>
+                  <p className="text-blue-200 text-[8px] sm:text-[10px] font-medium uppercase tracking-wider">{roles[idx]}</p>
                 </div>
               </div>
             );

@@ -3,44 +3,29 @@ import { motion } from 'motion/react';
 
 const EKSKUL_DATA = [
   {
-    tag: 'WAJIB / KARAKTER',
+    title: 'OSIS',
+    image: '/assets/osis1.jpg',
+    description: 'Wadah bagi siswa untuk melatih kepemimpinan, berorganisasi, serta menyalurkan minat dan bakat.',
+  },
+  {
+    title: 'Paskibraka',
+    image: '/assets/paskibraka.jpg',
+    description: 'Melatih kedisiplinan tingkat tinggi, baris-berbaris, fisik mental, serta memupuk rasa nasionalisme.',
+  },
+  {
     title: 'Pramuka',
-    description: 'Pendidikan kepanduan pembentuk watak, kemandirian, dan kerjasama.',
+    image: '/assets/pramuka.jpg',
+    description: 'Pendidikan kepanduan untuk membentuk karakter tangguh, kemandirian, dan menanamkan kerja sama tim.',
   },
   {
-    tag: 'SEMI-MILITER',
-    title: 'Paskibra',
-    description: 'Kedisiplinan tinggi, baris-berbaris, dan pembinaan fisik mental.',
+    title: 'PMR',
+    image: '/assets/pmr.jpg',
+    description: 'Wadah bagi siswa berlatih pertolongan pertama, serta menumbuhkan jiwa sosial dan rasa kemanusiaan.',
   },
   {
-    tag: 'KEMANUSIAAN',
-    title: 'PMR (PMR Wira)',
-    description: 'Keterampilan dasar medis pertolongan pertama & kesehatan remaja.',
-  },
-  {
-    tag: 'PRESTASI / FISIK',
-    title: 'Klub Olahraga',
-    description: 'Futsal, Basket, Voli, Badminton, dan Bela Diri (Karate/Silat).',
-  },
-  {
-    tag: 'KREATIVITAS',
-    title: 'Seni & Paduan Suara',
-    description: 'Vokal grup, band sekolah, tari tradisional, tari kreasi, dan seni rupa.',
-  },
-  {
-    tag: 'SAINS / RISET',
-    title: 'KIR (Karya Ilmiah Remaja)',
-    description: 'Penelitian sederhana, eksperimen sains, dan persiapan kompetisi karya tulis.',
-  },
-  {
-    tag: 'TEKNOLOGI',
-    title: 'Klub IT & Robotik',
-    description: 'Belajar pemrograman dasar, desain grafis, perakitan robot, dan multimedia.',
-  },
-  {
-    tag: 'SPIRITUAL',
-    title: 'Rohis & Rokris',
-    description: 'Pembinaan kerohanian, pendalaman iman, dan toleransi antar umat beragama.',
+    title: 'Olahraga',
+    image: '/assets/olahraga1.jpg',
+    description: 'Meningkatkan kebugaran jasmani, sportivitas, dan mewadahi bakat siswa di berbagai cabang olahraga.',
   }
 ];
 
@@ -64,7 +49,7 @@ export const Ekstrakurikuler: React.FC = () => {
             transition={{ delay: 0.1 }}
             className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight font-display mb-4 leading-tight"
           >
-            Kegiatan Ekstrakurikuler
+            Organisasi & Ekstrakurikuler
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0 }}
@@ -72,7 +57,7 @@ export const Ekstrakurikuler: React.FC = () => {
             transition={{ delay: 0.2 }}
             className="text-gray-500 text-sm sm:text-base leading-relaxed"
           >
-            Daftar unit kegiatan siswa untuk mengasah potensi non-akademik di luar jam belajar.
+            Wadah kegiatan utama siswa untuk mengasah potensi kepemimpinan dan non-akademik di luar jam belajar.
           </motion.p>
         </div>
 
@@ -84,23 +69,32 @@ export const Ekstrakurikuler: React.FC = () => {
           className="bg-white rounded-[16px] sm:rounded-[24px] p-5 sm:p-10 shadow-sm border border-gray-100"
         >
           {/* Grid Layout for Ekstrakurikuler */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 max-w-6xl mx-auto">
             {EKSKUL_DATA.map((item, index) => (
               <div 
                 key={index}
-                className="bg-white border border-slate-100 rounded-[16px] sm:rounded-[20px] p-4 sm:p-6 shadow-sm hover:shadow-md hover:border-brand-red/30 transition-all duration-300 flex flex-col h-full group"
+                className="group relative overflow-hidden rounded-[16px] sm:rounded-[24px] aspect-[3/4] cursor-pointer shadow-sm hover:shadow-xl transition-all duration-300"
               >
-                <div className="mb-2 sm:mb-4">
-                  <span className="inline-block bg-red-50 text-brand-red text-[9px] sm:text-[11px] font-extrabold uppercase tracking-widest px-2 sm:px-2.5 py-1 rounded-md mb-1">
-                    {item.tag}
-                  </span>
+                <img 
+                  src={item.image} 
+                  alt={item.title} 
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).style.opacity = '0';
+                  }}
+                />
+                {/* Gradient overlay - kept tight so photo is visible */}
+                <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-brand-navy via-brand-navy/70 to-transparent pointer-events-none"></div>
+                
+                {/* Text Content */}
+                <div className="absolute inset-x-0 bottom-0 p-5 sm:p-8 flex flex-col justify-end">
+                  <h3 className="text-white font-bold text-xl sm:text-2xl font-display mb-2 sm:mb-3 group-hover:text-blue-200 transition-colors">
+                    {item.title}
+                  </h3>
+                  <p className="text-blue-50 text-[11px] sm:text-xs leading-snug opacity-90 line-clamp-2">
+                    {item.description}
+                  </p>
                 </div>
-                <h3 className="text-base sm:text-lg font-bold text-brand-navy mb-2 sm:mb-3 group-hover:text-brand-red transition-colors">
-                  {item.title}
-                </h3>
-                <p className="text-slate-500 text-xs sm:text-sm leading-snug sm:leading-relaxed flex-grow text-justify">
-                  {item.description}
-                </p>
               </div>
             ))}
           </div>

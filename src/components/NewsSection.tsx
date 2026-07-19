@@ -9,7 +9,7 @@ interface NewsSectionProps {
 
 export const NewsSection: React.FC<NewsSectionProps> = ({ onNavigateToNewsDetail, onNavigateToAllNews }) => {
   return (
-    <section id="news-section" className="pt-20 pb-24 bg-white">
+    <section id="news-section" className="pt-20 pb-12 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}

@@ -14,7 +14,7 @@ export const SCHOOL_INFO = {
   ],
   principal: {
     name: "Ellen Sintya Dewi, S.Pd., M.Si.",
-    role: "Kepala Sekolah SMAN 1 Halmahera Utara",
+    role: "Kepala SMA Negeri 1 Halmahera Utara",
     message: "Selamat datang di website resmi SMA Negeri 1 Halmahera Utara. Berbekal pengalaman lebih dari 19 tahun mengabdi, saya berkomitmen menjadikan sekolah ini sebagai lingkungan belajar yang inklusif, inovatif, dan berpihak pada peserta didik. Kami tidak hanya berfokus pada peningkatan kemampuan akademik, tetapi juga berupaya kuat dalam pengembangan profesionalisme guru serta pembentukan karakter siswa yang mandiri, kreatif, dan adaptif. Dengan semangat kolaborasi, mari bersama-sama kita persiapkan generasi masa depan yang kompeten, berakhlak mulia, dan siap menghadapi tantangan perkembangan zaman."
   },
   stats: [
@@ -30,7 +30,7 @@ export const SCHOOL_INFO = {
   contact: {
     address: "Jalan Siswa, Desa Gamsungi, Kecamatan Tobelo, Kabupaten Halmahera Utara, Provinsi Maluku Utara, Kodepos 97762",
     phone: "(0924) 2621113",
-    email: "smansahalutTobelo1969@gmail.com",
+    email: "smanegeri1halut@gmail.com",
     hours: "07.00 - 17.40 WIT",
     mapsEmbedUrl: "https://www.google.com/maps?q=SMA+Negeri+1+Halmahera+Utara,+Tobelo&output=embed"
   }
