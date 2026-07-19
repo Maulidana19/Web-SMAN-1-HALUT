@@ -186,7 +186,12 @@ export const TEACHERS_DATA = [
   { id: "teacher-39", name: "Elita Taramen, S.Pd.", image: "/assets/foto39.jpg", subject: "-", extraDuty: "-" },
   { id: "teacher-40", name: "Warni A. Mezak, S.Pd.", image: "/assets/foto40.jpg", subject: "Bahasa Jepang, Bahasa Jepang Lanjut", extraDuty: "Wali Kelas XII-9" },
   { id: "teacher-41", name: "Oktofianus Lasa, S.Pd.K.", image: "/assets/foto41.jpg" },
-  { id: "teacher-42", name: "Haidir Yasman Kardi, S.Pd.", image: "/assets/foto42.jpg", subject: "Matematika, KKA", extraDuty: "-" }
+  { id: "teacher-42", name: "Haidir Yasman Kardi, S.Pd.", image: "/assets/foto42.jpg", subject: "Matematika, KKA", extraDuty: "-" },
+  { id: "teacher-43", name: "Arifin Dolosi, S.Pd.I", image: "/assets/foto43.jpg", subject: "Pendidikan Agama Islam", extraDuty: "Wali Kelas X-9" },
+  { id: "teacher-44", name: "Elisabet A. Uring, S.Si.", image: "/assets/foto44.jpg", subject: "Bahasa Inggris", extraDuty: "-" },
+  { id: "teacher-45", name: "Oktadwilaras A.P. Papuling, S.Ds., M.M.", image: "/assets/foto45.jpg", subject: "Informatika", extraDuty: "-" },
+  { id: "teacher-46", name: "Rena Dewirna, S.Psi.", image: "/assets/foto46.jpg", subject: "Antropologi/Bimbingan dan Konseling", extraDuty: "-" },
+  { id: "teacher-47", name: "Teresia D. Aritonang, S.Pd.", image: "/assets/foto47.jpg", subject: "Sejarah", extraDuty: "Wali Kelas XI-6" }
 ];
 
 export const TENDIK_DATA = [
@@ -197,7 +202,9 @@ export const TENDIK_DATA = [
   { id: "tendik-5", name: "Meyanti Sartin Gumabo, S.T.", image: "/assets/tendik5.jpg" },
   { id: "tendik-6", name: "Novenci Garo, S.AP.", image: "/assets/tendik6.jpg" },
   { id: "tendik-7", name: "Opsalina Tawar", image: "/assets/tendik7.jpg" },
-  { id: "tendik-8", name: "Boy G. Talaba", image: "/assets/tendik8.jpg" }
+  { id: "tendik-8", name: "Boy G. Talaba", image: "/assets/tendik8.jpg" },
+  { id: "tendik-9", name: "Andreas Kristianto Samawi", image: "/assets/tendik9.jpg", extraDuty: "Satpam" },
+  { id: "tendik-10", name: "Andri Matruty", image: "/assets/tendik10.jpg", extraDuty: "Satpam" }
 ];
 
 export const NEWS_DATA = [

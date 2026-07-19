@@ -53,7 +53,7 @@ export const Teachers: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-4xl mx-auto mb-12 md:mb-16">
+        <div className="text-center max-w-4xl mx-auto mb-6 md:mb-8">
           <h2 className="text-xs font-bold uppercase tracking-widest text-brand-red mb-3">DIREKTORI GURU</h2>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight font-display mb-4 leading-tight">
             Tenaga Pendidik & Kependidikan
@@ -196,28 +196,6 @@ export const Teachers: React.FC = () => {
                   const info = getPersonInfo(selectedPerson, selectedPerson.isTeacher, selectedPerson.index);
                   return (
                     <div className="space-y-3 md:space-y-4">
-                      {/* Email */}
-                      <div className="flex items-start gap-3">
-                        <div className="w-7 h-7 md:w-8 md:h-8 rounded-full bg-slate-50 flex items-center justify-center shrink-0 text-slate-400">
-                          <Mail className="w-3.5 h-3.5 md:w-4 md:h-4" />
-                        </div>
-                        <div>
-                          <p className="text-[10px] md:text-xs font-bold text-slate-500 uppercase tracking-wider">Email</p>
-                          <p className="text-xs md:text-sm font-medium text-slate-900 mt-0.5">{info.email}</p>
-                        </div>
-                      </div>
-
-                      {/* No HP */}
-                      <div className="flex items-start gap-3">
-                        <div className="w-7 h-7 md:w-8 md:h-8 rounded-full bg-slate-50 flex items-center justify-center shrink-0 text-slate-400">
-                          <Phone className="w-3.5 h-3.5 md:w-4 md:h-4" />
-                        </div>
-                        <div>
-                          <p className="text-[10px] md:text-xs font-bold text-slate-500 uppercase tracking-wider">No HP</p>
-                          <p className="text-xs md:text-sm font-medium text-slate-900 mt-0.5">{info.phone}</p>
-                        </div>
-                      </div>
-
                       {/* Materi yang diampu */}
                       <div className="flex items-start gap-3">
                         <div className="w-7 h-7 md:w-8 md:h-8 rounded-full bg-red-50 flex items-center justify-center shrink-0 text-brand-red">
@@ -239,6 +217,28 @@ export const Teachers: React.FC = () => {
                         <div>
                           <p className="text-[10px] md:text-xs font-bold text-slate-500 uppercase tracking-wider">Tugas Tambahan</p>
                           <p className="text-xs md:text-sm font-medium text-slate-900 mt-0.5">{info.extraDuty}</p>
+                        </div>
+                      </div>
+
+                      {/* Email */}
+                      <div className="flex items-start gap-3">
+                        <div className="w-7 h-7 md:w-8 md:h-8 rounded-full bg-slate-50 flex items-center justify-center shrink-0 text-slate-400">
+                          <Mail className="w-3.5 h-3.5 md:w-4 md:h-4" />
+                        </div>
+                        <div>
+                          <p className="text-[10px] md:text-xs font-bold text-slate-500 uppercase tracking-wider">Email</p>
+                          <p className="text-xs md:text-sm font-medium text-slate-900 mt-0.5">{info.email}</p>
+                        </div>
+                      </div>
+
+                      {/* No HP */}
+                      <div className="flex items-start gap-3">
+                        <div className="w-7 h-7 md:w-8 md:h-8 rounded-full bg-slate-50 flex items-center justify-center shrink-0 text-slate-400">
+                          <Phone className="w-3.5 h-3.5 md:w-4 md:h-4" />
+                        </div>
+                        <div>
+                          <p className="text-[10px] md:text-xs font-bold text-slate-500 uppercase tracking-wider">No HP</p>
+                          <p className="text-xs md:text-sm font-medium text-slate-900 mt-0.5">{info.phone}</p>
                         </div>
                       </div>
                     </div>

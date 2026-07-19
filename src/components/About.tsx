@@ -125,10 +125,10 @@ export const About: React.FC = () => {
             <h3 className="text-2xl sm:text-3xl font-bold font-display tracking-wide text-brand-navy">Tujuan Sekolah</h3>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
             {SCHOOL_INFO.goals.map((tujuan, idx) => (
-              <div key={idx} className="flex gap-3 sm:gap-4 items-start group/tujuan bg-slate-50 p-4 sm:p-5 rounded-2xl hover:bg-red-50 transition-colors duration-300">
-                <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-brand-navy text-white flex items-center justify-center shrink-0 mt-0.5 shadow-sm font-bold text-xs sm:text-sm">
+              <div key={idx} className="flex gap-3 sm:gap-5 items-start group/tujuan">
+                <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-brand-navy flex items-center justify-center shrink-0 mt-0.5 text-white font-bold text-xs sm:text-sm">
                   {idx + 1}
                 </div>
                 <p className="text-gray-600 text-sm sm:text-base leading-relaxed group-hover/tujuan:text-brand-navy transition-colors duration-300 text-justify">

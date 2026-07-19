@@ -26,6 +26,11 @@ const EKSKUL_DATA = [
     title: 'Olahraga',
     image: '/assets/olahraga1.jpg',
     description: 'Meningkatkan kebugaran jasmani, sportivitas, dan bakat siswa di bidang olahraga.',
+  },
+  {
+    title: 'English Club',
+    image: '/assets/englishclub.jpg',
+    description: 'Wadah siswa mengembangkan keterampilan berbahasa Inggris melalui diskusi dan kegiatan interaktif yang menyenangkan.',
   }
 ];
 

@@ -25,7 +25,7 @@ export const WelcomeSection: React.FC<WelcomeSectionProps> = ({ onNavigateToAbou
                 <div className="w-full max-w-[240px] sm:max-w-[260px] lg:max-w-[280px] aspect-[3/4] rounded-2xl overflow-hidden shadow-lg mb-6 border-[6px] border-gray-50 relative">
                   <div className="absolute inset-0 bg-gray-100 animate-pulse -z-10"></div>
                   <img 
-                    src="/assets/foto1.jpg" 
+                    src="/assets/kepalasekolah.jpg" 
                     alt={SCHOOL_INFO.principal.name}
                     className="w-full h-full object-cover object-top"
                     onError={(e) => {
