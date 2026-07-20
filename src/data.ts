@@ -31,7 +31,7 @@ export const SCHOOL_INFO = {
     { label: "Laboratorium", value: "Komputer" },
     { label: "Luas Tanah", value: "7.298 m²" },
     { label: "Luas Bangunan", value: "1.584 m²" },
-    { label: "Siswa Aktif", value: "350+" },
+    { label: "Siswa Aktif", value: "1000+" },
     { label: "Guru", value: "52" }
   ],
   contact: {
