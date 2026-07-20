@@ -27,7 +27,7 @@ export const SCHOOL_INFO = {
   stats: [
     { label: "NPSN", value: "60200296" },
     { label: "Akreditasi", value: "A (Unggul)" },
-    { label: "Ruang Kelas", value: "24" },
+    { label: "Ruang Kelas", value: "28" },
     { label: "Laboratorium", value: "Komputer" },
     { label: "Luas Tanah", value: "7.298 m²" },
     { label: "Luas Bangunan", value: "1.584 m²" },
@@ -156,7 +156,7 @@ export const TEACHERS_DATA = [
   { id: "teacher-9", name: "Adeleda Letlora, S.Pd.", image: "/assets/foto9.jpg", subject: "Sosiologi", extraDuty: "Wali Kelas XII-6" },
   { id: "teacher-10", name: "Agustine V. Singal, S.Pd.", image: "/assets/foto10.jpg", subject: "Matematika, Matematika Lanjut", extraDuty: "-" },
   { id: "teacher-11", name: "Christina Tiawata, S.Pd.", image: "/assets/foto11.jpg", subject: "Bahasa Indonesia", extraDuty: "Wali Kelas XI-7" },
-  { id: "teacher-12", name: "Chintia E.P. Ngabalinn, S.PAK.", image: "/assets/foto12.jpg", subject: "PKn, PAK", extraDuty: "Wali Kelas X-4" },
+  { id: "teacher-12", name: "Chintia E.P. Ngabalinn, S.Pd.K.", image: "/assets/foto12.jpg", subject: "PKn, PAK", extraDuty: "Wali Kelas X-4" },
   { id: "teacher-13", name: "Crista T.Y. Kakanga, S.Pd.", image: "/assets/foto13.jpg", subject: "Sosiologi, Sejarah", extraDuty: "Wali Kelas X-3" },
   { id: "teacher-14", name: "Dein L. Soloha, S.Pd.", image: "/assets/foto14.jpg", subject: "PJOK", extraDuty: "Wali Kelas XI-9" },
   { id: "teacher-15", name: "Dra. Wenefrida Ardiantari, M.M.", image: "/assets/foto15.jpg", subject: "Bahasa Indonesia", extraDuty: "Wali Kelas XII-1" },
