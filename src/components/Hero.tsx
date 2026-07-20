@@ -20,7 +20,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateToAbout, onNavigateToTeach
 
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-0 flex-1 flex flex-col justify-center w-full">
-          <div className="max-w-4xl space-y-6">
+          <div className="max-w-5xl space-y-6">
             
             {/* Accreditation Badge */}
             <div className="inline-block bg-brand-red/90 text-white text-xs sm:text-sm font-bold uppercase tracking-widest px-4 py-1.5 rounded-sm shadow-md backdrop-blur-sm border border-red-400/30">
@@ -28,9 +28,8 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateToAbout, onNavigateToTeach
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight font-display tracking-tight">
-              Membangun Masa Depan <br className="hidden md:block" />
-              Untuk Pendidikan <br className="hidden md:block" />
-              Karakter Unggul
+              Membangun Masa Depan Untuk <br className="hidden md:block" />
+              Pendidikan Karakter Unggul
             </h1>
             
             <p className="text-base md:text-lg text-gray-200 leading-relaxed max-w-3xl font-light">

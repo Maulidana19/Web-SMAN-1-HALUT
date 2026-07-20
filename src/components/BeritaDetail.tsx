@@ -12,7 +12,7 @@ export const BeritaDetail: React.FC<BeritaDetailProps> = ({ newsId, onBack }) =>
   const news = NEWS_DATA.find((n) => n.id === newsId) || NEWS_DATA[0];
 
   return (
-    <div className="pt-10 pb-20 bg-[#f1f5f9] min-h-screen font-sans">
+    <div className="pt-16 md:pt-20 pb-20 bg-[#f1f5f9] min-h-screen font-sans">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Back Button */}
